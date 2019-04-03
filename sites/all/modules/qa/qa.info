@@ -1,0 +1,4 @@
+name = QA
+description = Question and answers extensions
+package = QA
+core = 7.x
