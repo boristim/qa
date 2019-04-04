@@ -1,11 +1,6 @@
-name = B2 extennds Bartik
+name = B2 extends Bartik
 description = A flexible, recolorable theme with many regions.
 package = Core
-version = VERSION
+version = 1.0
 core = 7.x
-base theme = batrik
-
-; Information added by Drupal.org packaging script on 2019-03-20
-version = "7.65"
-project = "drupal"
-datestamp = "1553100118"
+base theme = Bartik
