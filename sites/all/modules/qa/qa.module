@@ -33,7 +33,6 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $extra) {
     if (($question = node_load(arg(1))) && ($question->type = 'question')) {
       $form['field_question_ref']['und']['#options'] = [$question->nid => $question->title];
       $form['field_question_ref']['und']['#default_value'] = [$question->nid];
-//      $form['#action'] = url('question/' . $question->nid);
     }
     $form['title']['#access'] = false;
     $form['title']['#default_value'] = DEFAULT_ANSWER_TITLE;
@@ -48,26 +47,31 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $extra) {
 }
 CSS;
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
+    dpm($form);
   }
-//  dpm($form);
 }
 
-function _qa_form_answer_node_form_validate($form, $form_state) {
-//  form_set_error('error name', 'error message');
+function _qa_form_answer_node_form_validate($form, &$form_state) {
+  global $user;
+
 }
 
-function _qa_form_answer_node_form_submit($form, $form_state) {
-  unset($form_state['rebuild']);
-  $form_state['redirect'] = url('question/' . $form_state['values']['field_question_ref']['und'][0]['target_id']);
-  if(!user_access('edit any answer content')){
-    drupal_set_message('После проверки ваш ответ будет опубликован');
+function _qa_form_answer_node_form_submit($form, &$form_state) {
+  if (!user_access('edit any answer content')) {
+    drupal_set_message('После модерации ваш ответ будет опубликован');
   }
+  $_GET['destination'] = '/question/' . $form_state['values']['field_question_ref']['und'][0]['target_id'];
 }
 
 /**
  * Implements hook_node_submit().
  */
 function qa_node_submit($node, $form, &$form_state) {
-  $node->title = mb_substr($node->body['und'][0]['value'], 0, 255);
-  $node->status = user_access('edit any answer content') ? 1 : 0;
+  switch ($node->type) {
+    case 'answer':
+      $node->title = mb_substr($node->body['und'][0]['value'], 0, 255);
+      $node->status = user_access('edit any answer content') ? 1 : 0;
+      break;
+    default:
+  }
 }
