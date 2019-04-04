@@ -1,0 +1,65 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: salem
+ * Date: 03.04.2019
+ * Time: 22:40
+ */
+define('DEFAULT_ANSWER_TITLE', 'some answer title');
+/**
+ * Implements hook_views_pre_render().
+ */
+function qa_views_pre_render(&$view) {
+  if ($view->name == 'question' && $view->current_display == 'page') {
+    $view->build_info['title'] = $view->build_info['substitutions']['%1'];
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function qa_form_alter(&$form, &$form_state, $form_id) {
+//  dsm($form_id);
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function qa_form_answer_node_form_alter(&$form, &$form_state, $extra) {
+  if (!isset($form['nid']['#value'])) {
+    $form['field_question_ref']['#access'] = false;
+    $form['field_question_ref']['und']['#options'] = [];
+    if (($question = node_load(arg(1))) && ($question->type = 'question')) {
+      $form['field_question_ref']['und']['#options'] = [$question->nid => $question->title];
+      $form['field_question_ref']['und']['#default_value'] = [$question->nid];
+      $form_state['redirect'] = '/question/' . $question->nid;
+    }
+    $form['title']['#access'] = false;
+    $form['title']['#default_value'] = DEFAULT_ANSWER_TITLE;
+    $form['field_rate']['#access'] = user_access('edit any answer content');
+    $form['#submit'][] = '_qa_form_answer_node_form_submit';
+    $form['#validate'][] = '_qa_form_answer_node_form_validate';
+    $css = <<<CSS
+.node-form.node-answer-form .filter-wrapper.form-wrapper,
+.node-form.node-answer-form #edit-field-question-ref,
+.node-form.node-answer-form .vertical-tabs.clearfix {
+  display: none;
+}
+CSS;
+    $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
+  }
+}
+
+function _qa_form_answer_node_form_validate($form, $form_state) {
+//  form_set_error('error name', 'error message');
+}
+
+function _qa_form_answer_node_form_submit($form, $form_state) {
+  unset($_GET['destination']);
+  unset($form_state['rebuild']);
+  $form_state['redirect'] = 'question/' . $form_state['values']['field_question_ref']['und'][0]['target_id'];
+  $title = mb_substr($form_state['values']['body']['und'][0]['value'], 0, 255);
+  form_set_value($form['title'], $title, $form_state);
+  dpm($form_state);
+}
