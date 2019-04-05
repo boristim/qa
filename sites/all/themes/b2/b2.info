@@ -1,9 +1,11 @@
-name = B2 extends Bartik
+name = B2 extends Dawn
 description = A flexible, recolorable theme with many regions.
 package = Core
 version = VERSION
 core = 7.x
 base theme = dawn
+
+stylesheets[all][] = css/b2.css
 
 regions[menu] = 'Menu'
 regions[header] = 'Header'

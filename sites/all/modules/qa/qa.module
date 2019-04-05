@@ -99,22 +99,24 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
   dpm($form);
   $form['title']['#access'] = false;
   $form['title']['#default_value'] = QA_DEFAULT_TITLE;
-  $form['field_rate']['#access'] = user_access('edit any question content');
+  $form['field_categories']['#access'] =
+  $form['field_rate']['#access'] =
   $form['field_view_count']['#access'] = user_access('edit any question content');
   $form['#submit'][] = '_qa_form_question_node_form_submit';
   $form['#validate'][] = '_qa_form_question_node_form_validate';
+
 }
 
 function _qa_form_question_node_form_validate($form, &$from_alter) {
   if (!user_access('create question content')) {
-    drupal_set_message(t('For asking you need to nbe authorised'));
+    drupal_set_message(t('For question you must be authorised'));
     drupal_goto('user/login');
   }
 }
 
 function _qa_form_question_node_form_submit($form, &$from_alter) {
   if (!user_access('create question content')) {
-    drupal_set_message(t('Your question will be published after modertation'));
+    drupal_set_message(t('Your question will be published after review by administration'));
 //    drupal_set_message(t('После модерации ваш вопрос будет опубликован'));
   }
   $_GET['destination'] = '/';
