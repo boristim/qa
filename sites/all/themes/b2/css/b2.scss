@@ -1,6 +1,28 @@
+@font-face {
+  font-family: Helvetica;
+  src: url("../font/HelveticaRegular.eot");
+  src: url("../font/HelveticaRegular.eot?iefix") format('eot'),
+  url("../font/HelveticaRegular.woff") format('woff'),
+  url("../font/HelveticaRegular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaBold;
+  src: url("../font/HelveticaBold.eot");
+  src: url("../font/HelveticaBold.eot?iefix") format('eot'),
+  url("../font/HelveticaBold.woff") format('woff'),
+  url("../font/HelveticaBold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   body {
     background: #EDEDED;
+    font-family: Helvetica, Serif;
+
     .region-header {
       #block-locale-language {
         float: left;
@@ -58,9 +80,10 @@ html {
         }
 
         #block-views-categories-block-1 {
-          .block-title{
+          .block-title {
             display: none;
           }
+
           .view-categories {
             td {
               padding: 5px 10px
