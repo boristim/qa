@@ -86,7 +86,7 @@ function dawn_preprocess_page(&$variables) {
   // add tpl suggestions for node type..
   if (isset($variables['node']->type)) {
     $nodetype = $variables['node']->type;
-    $nodeviewmode = $variables['node']->view_mode;
+    $nodeviewmode = isset($variables['node']->view_mode) ? $variables['node']->view_mode : 'full';
     $variables['theme_hook_suggestions'][] = 'page__node__' . $nodetype;
     $variables['theme_hook_suggestions'][] = 'page__node__' . $nodetype.'__' . $nodeviewmode;
   }

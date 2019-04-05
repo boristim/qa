@@ -1,4 +1,38 @@
-html body .region-header #block-views-categories-block .view-categories .views-row {
-  float: left; }
+html body {
+  background: #EDEDED; }
+  html body .region-header #block-locale-language {
+    float: left; }
+    html body .region-header #block-locale-language .block-title {
+      display: none; }
+    html body .region-header #block-locale-language .language-switcher-locale-url {
+      list-style: none; }
+      html body .region-header #block-locale-language .language-switcher-locale-url li {
+        float: left;
+        width: 2em;
+        margin: 1em;
+        overflow: hidden;
+        text-transform: uppercase;
+        background: transparent; }
+        html body .region-header #block-locale-language .language-switcher-locale-url li a {
+          text-decoration: none; }
+  html body .region-header #block-views-categories-block {
+    float: left; }
+    html body .region-header #block-views-categories-block .block-title {
+      display: none; }
+    html body .region-header #block-views-categories-block .view-categories .views-row {
+      float: left;
+      margin: 10px; }
+  html body footer {
+    background: #0F70B7; }
+    html body footer .region-footer a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none; }
+      html body footer .region-footer a:hover {
+        text-decoration: underline; }
+    html body footer .region-footer #block-views-categories-block-1 .block-title {
+      display: none; }
+    html body footer .region-footer #block-views-categories-block-1 .view-categories td {
+      padding: 5px 10px; }
 
 /*# sourceMappingURL=b2.css.map */
