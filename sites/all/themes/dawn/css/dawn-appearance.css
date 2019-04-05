@@ -1,0 +1,73 @@
+#edit-grids fieldset .form-item {
+  display:inline;
+  float:left;
+  margin-right:10px;
+}
+#edit-grids .fieldset-description dl,
+#edit-grids .fieldset-description dt,
+#edit-grids .fieldset-description dd,
+#edit-grids .fieldset-description ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -moz-padding-start: 0;
+}
+#edit-grids .fieldset-description dd {
+  font-size:12px;
+}
+#edit-grids .fieldset-description ul {
+  list-style-position: inside;
+  margin-left:1.4em;
+  text-indent:-1.4em;
+}
+
+.block-demo-link {
+  float:right;
+  margin-top:-3em;
+  font-size:10px;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  font-weight:600;
+  color:black;
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-gutter {
+    margin: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.to-right {
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}

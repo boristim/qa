@@ -1,9 +1,10 @@
-name = B2 extends Bartik
-description = A flexible, recolorable theme with many regions.
-package = Core
-version = VERSION
+name = Dawn
+description = a basic theme built with Bootstrap Grids (v3)
 core = 7.x
-base theme = dawn
+
+stylesheets[all][] = css/grids.css
+stylesheets[all][] = css/bootstrap-big-grid/dist/css/bootstrap-big-grid.min.css
+stylesheets[all][] = css/style.css
 
 regions[menu] = 'Menu'
 regions[header] = 'Header'
@@ -39,7 +40,8 @@ settings[fluid_footer] = 1
 
 features[] = favicon
 
-; Information added by Drupal.org packaging script on 2019-03-20
-version = "7.65"
-project = "drupal"
-datestamp = "1553100118"
+; Information added by Drupal.org packaging script on 2018-09-09
+version = "7.x-1.2"
+core = "7.x"
+project = "dawn"
+datestamp = "1536499087"

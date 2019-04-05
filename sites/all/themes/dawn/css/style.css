@@ -1,0 +1,100 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin:0 0 0 0;
+  padding:0 0 0 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+dl,
+dt,
+dd,
+ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -moz-padding-start: 0;
+}
+
+.form-item,
+.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+select {
+  max-width: 100%;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-gutter {
+    margin: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.to-right {
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+ul.inline-list {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: inline;
+}
+
+ul.inline-list li {
+    display: inline;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  font-weight:600;
+  color:black;
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
