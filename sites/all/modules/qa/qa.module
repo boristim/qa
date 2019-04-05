@@ -5,7 +5,7 @@
  * Date: 03.04.2019
  * Time: 22:40
  */
-define('DEFAULT_ANSWER_TITLE', 'some answer title');
+define('QA_DEFAULT_TITLE', 'some title');
 /**
  * Implements hook_views_pre_render().
  */
@@ -26,16 +26,20 @@ function qa_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function qa_form_answer_node_form_alter(&$form, &$form_state, $extra) {
+function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
+  $files = (isset($form_state['build_info']['files'])) ? $form_state['build_info']['files'] : array();
+  $files[] = drupal_get_path('module', 'node') . '/node.pages.inc';
+  $form_state['build_info']['files'] = $files;
   if (!isset($form['nid']['#value'])) {
     $form['field_question_ref']['#access'] = false;
     $form['field_question_ref']['und']['#options'] = [];
     if (($question = node_load(arg(1))) && ($question->type = 'question')) {
       $form['field_question_ref']['und']['#options'] = [$question->nid => $question->title];
       $form['field_question_ref']['und']['#default_value'] = [$question->nid];
+      $form_state['values']['field_question_ref']['und'][0]['target_id'] = $question->nid;
     }
     $form['title']['#access'] = false;
-    $form['title']['#default_value'] = DEFAULT_ANSWER_TITLE;
+    $form['title']['#default_value'] = QA_DEFAULT_TITLE;
     $form['field_rate']['#access'] = user_access('edit any answer content');
     $form['#submit'][] = '_qa_form_answer_node_form_submit';
     $form['#validate'][] = '_qa_form_answer_node_form_validate';
@@ -47,20 +51,25 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $extra) {
 }
 CSS;
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
-    dpm($form);
   }
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {
-  global $user;
+
+  if (!user_access('create answer content')) {
+    drupal_set_message(t('For answer you must be authorized'));
+//    drupal_set_message('Для ответа вам необходимо авторизоваться');
+    drupal_goto('user/login');
+  }
 
 }
 
 function _qa_form_answer_node_form_submit($form, &$form_state) {
-  if (!user_access('edit any answer content')) {
-    drupal_set_message('После модерации ваш ответ будет опубликован');
+  if (!user_access('create answer content')) {
+    drupal_set_message(t('Your answer will be published after moderation'));
+//    drupal_set_message('После модерации ваш ответ будет опубликован');
   }
-  $_GET['destination'] = '/question/' . $form_state['values']['field_question_ref']['und'][0]['target_id'];
+  $_GET['destination'] = '/question/' . arg(1);
 }
 
 /**
@@ -69,9 +78,44 @@ function _qa_form_answer_node_form_submit($form, &$form_state) {
 function qa_node_submit($node, $form, &$form_state) {
   switch ($node->type) {
     case 'answer':
-      $node->title = mb_substr($node->body['und'][0]['value'], 0, 255);
-      $node->status = user_access('edit any answer content') ? 1 : 0;
+      $node->title = mb_substr($node->body[LANGUAGE_NONE][0]['value'], 0, 255);
+      $node->status = user_access('create answer content') ? 1 : 0;
+      if ((!isset($node->nid)) && (arg(0) == 'question')) {
+        $node->field_question_ref[LANGUAGE_NONE][0]['target_id'] = arg(1);
+      }
+      break;
+    case 'question':
+      $node->title = mb_substr($node->field_question[LANGUAGE_NONE][0]['value'], 0, 255);
+      $node->status = user_access('create question content') ? 1 : 0;
       break;
     default:
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
+  dpm($form);
+  $form['title']['#access'] = false;
+  $form['title']['#default_value'] = QA_DEFAULT_TITLE;
+  $form['field_rate']['#access'] = user_access('edit any question content');
+  $form['field_view_count']['#access'] = user_access('edit any question content');
+  $form['#submit'][] = '_qa_form_question_node_form_submit';
+  $form['#validate'][] = '_qa_form_question_node_form_validate';
+}
+
+function _qa_form_question_node_form_validate($form, &$from_alter) {
+  if (!user_access('create question content')) {
+    drupal_set_message(t('For asking you need to nbe authorised'));
+    drupal_goto('user/login');
+  }
+}
+
+function _qa_form_question_node_form_submit($form, &$from_alter) {
+  if (!user_access('create question content')) {
+    drupal_set_message(t('Your question will be published after modertation'));
+//    drupal_set_message(t('После модерации ваш вопрос будет опубликован'));
+  }
+  $_GET['destination'] = '/';
 }
