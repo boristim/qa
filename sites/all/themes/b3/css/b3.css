@@ -74,5 +74,7 @@ html body {
             color: #1d71d8; }
     html body #navbar a {
       color: white; }
+  html body #breadcrub .breadcrumb {
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=b3.css.map */

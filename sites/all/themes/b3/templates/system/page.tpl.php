@@ -127,6 +127,13 @@
   </header> <!-- /#page-header -->
 
   <div class="row">
+    <?php if (!empty($breadcrumb)) : ?>
+      <section id="breadcrumb" class="col-sm-12 hidden-xs">
+        <?php print $breadcrumb; ?>
+      </section>
+    <?php
+    endif;
+    ?>
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3 hidden-xs" role="complementary">
         <?php print render($page['sidebar_first']); ?>
@@ -136,10 +143,6 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)) : ?
-        print $breadcrumb;
-      endif;
-      ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

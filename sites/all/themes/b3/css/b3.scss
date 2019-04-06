@@ -21,6 +21,7 @@ $bg: #1d71d8;
 
 html {
   body {
+
     background: #EDEDED;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
@@ -137,6 +138,11 @@ html {
 
       a {
         color: white;
+      }
+    }
+    #breadcrub{
+      .breadcrumb{
+        margin-bottom: 0;
       }
     }
   }
