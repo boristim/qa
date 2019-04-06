@@ -76,7 +76,15 @@
   <nav id="site-menu">
     <div class="container">
       <div class="row">
-        <div class="column col-xs-12"><?php print render($page['menu']); ?></div>
+        <div class="col-sm-3 hidden-xs">
+          <a href="//<?php print $_SERVER["SERVER_NAME"]; ?>" class="logo-top">
+            <img src="/<?php print $directory; ?>/img/logo-book.svg" alt="<?php print $site_slogan; ?>">
+            <img src="/<?php print $directory; ?>/img/logo-text.svg" alt="<?php print $site_slogan; ?>">
+          </a>
+        </div>
+        <div class="column col-xs-12 col-sm-9">
+          <?php print render($page['menu']); ?>
+        </div>
       </div>
       <div>
   </nav>
@@ -85,8 +93,6 @@
   <header class="header-content">
     <div class="<?php echo $fluid_header; ?>">
       <div class="container">
-        <img src="/<?php print $directory; ?>/img/logo-book.svg" alt="" height="40">
-        <img src="/<?php print $directory; ?>/img/logo-text.svg" alt="" height="40">
         <div class="row">
           <div class="column col-xs-12">
             <?php print render($page['header']); ?>

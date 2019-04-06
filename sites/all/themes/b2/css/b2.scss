@@ -24,62 +24,48 @@ html {
     font-family: Helvetica, sans-serif;
     font-size: 18px;
 
-    header {
+    #site-menu {
       background: #0F70B7;
-      img{
-        height:41.4px;
+
+      a, span {
+        color: white;
+        font-weight: bold;
       }
-      .region-header {
-        #block-locale-language {
-          float: left;
 
-          a {
-            color: white;
-            font-weight: bold;
-          }
+      img {
+        min-height: 41.4px;
+        height: 41.4px;
+      }
 
-          .block-title {
-            display: none;
-          }
-
-          .language-switcher-locale-url {
-            list-style: none;
-
-            li {
-              float: left;
-              width: 2em;
-              margin: 1em;
-              overflow: hidden;
-              text-transform: uppercase;
-              background: transparent;
-
-              a {
-                text-decoration: none;
-              }
-            }
-          }
+      #block-menu-menu-top-menu {
+        li{
+          list-style: none;
+          display: inline-block;
+          padding: 11px;
         }
       }
 
-      #block-views-categories-block {
+      .block-title {
+        display: none;
+      }
+
+      #block-locale-language {
         float: left;
 
-        .block-title {
-          display: none;
-        }
 
-        .view-categories {
-          .views-row {
+        .language-switcher-locale-url {
+          list-style: none;
+
+          li {
             float: left;
-            margin: 10px;
+            width: 2em;
+            margin: 1em;
+            overflow: hidden;
+            text-transform: uppercase;
+            background: transparent;
 
             a {
-              color: white;
               text-decoration: none;
-
-              &:hover {
-                text-decoration: underline;
-              }
             }
           }
         }
