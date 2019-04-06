@@ -1,0 +1,53 @@
+/*
+Error: File to import not found or unreadable: ../bootstrap/assets/stylesheets/bootstrap.
+        on line 5 of style.scss
+
+1: // Default variables.
+2: @import 'default-variables';
+3: 
+4: // Bootstrap Framework.
+5: @import '../bootstrap/assets/stylesheets/bootstrap';
+6: 
+7: // Base-theme overrides.
+8: @import 'overrides';
+
+Backtrace:
+style.scss:5
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/import_node.rb:44:in `import'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:407:in `run'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/gems/gems/sass-3.4.14/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/gems/gems/sass-3.4.14/bin/scss:13:in `<top (required)>'
+e:\cygwin64\bin\scss:23:in `load'
+e:\cygwin64\bin\scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../bootstrap/assets/stylesheets/bootstrap.\A         on line 5 of style.scss\A \A 1: // Default variables.\A 2: @import 'default-variables';\A 3: \A 4: // Bootstrap Framework.\A 5: @import '../bootstrap/assets/stylesheets/bootstrap';\A 6: \A 7: // Base-theme overrides.\A 8: @import 'overrides';"; }

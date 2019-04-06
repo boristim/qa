@@ -9,7 +9,11 @@
 
 function b2_menu_tree__menu_top_menu(&$variables) {
 
-  dsm($variables);
   $variables['tree'] = '<ul>' . $variables['tree'] . '</ul>';
+  dsm($variables);
   return $variables['tree'];
+}
+
+function b2_menu_link(array &$variables) {
+  dpm($variables);
 }
