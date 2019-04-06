@@ -99,11 +99,18 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
   dpm($form);
   $form['title']['#access'] = false;
   $form['title']['#default_value'] = QA_DEFAULT_TITLE;
+  $form['field_question_details']['#access'] =
   $form['field_categories']['#access'] =
   $form['field_rate']['#access'] =
   $form['field_view_count']['#access'] = user_access('edit any question content');
   $form['#submit'][] = '_qa_form_question_node_form_submit';
   $form['#validate'][] = '_qa_form_question_node_form_validate';
+  foreach ($form as &$element) {
+    if ($element['#type'] == 'fieldset') {
+      $element['#access'] = user_access('edit any question content');
+    }
+
+  }
 
 }
 

@@ -19,6 +19,12 @@ $bg: #1d71d8;
   font-style: normal;
 }
 
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../font/pfdintextcondpro-regular.ttf");
+  font-style: normal;
+}
+
 html {
   body {
 
@@ -34,7 +40,9 @@ html {
       .block-title {
         display: none;
       }
+
       margin-bottom: 0;
+
       .menu {
         &.nav {
           &.navbar-nav {
@@ -60,22 +68,27 @@ html {
                   background: #1f3d82;
                 }
               }
-              &:hover{
+
+              &:hover {
                 background: #1f3d82;
               }
+
               &.expanded.open {
                 background: #1f3d82;
+
                 & > a {
                   background: #1f3d82;
                 }
 
                 .dropdown-menu {
                   background: #c6c6c6;
+
                   li {
                     text-align: center;
 
                     a {
                       background: #c6c6c6;
+
                       &:hover {
                         background: #e30613;
                       }
@@ -140,21 +153,56 @@ html {
         color: white;
       }
     }
-    #breadcrumb{
+
+    .question-query {
+      position: relative;
+      margin-bottom: 10px;
+
+      .cat-shifter {
+        width: 83px;
+      }
+
+      .query-sign {
+        width: 16px;
+        position: absolute;
+        bottom: 3px;
+        right: 120px
+      }
+
+      a {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: white;
+        background: $bg;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: PFDinTextCondPro, sans-serif;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    #breadcrumb {
       padding: 0;
       background: #f5f5f5;
-      .breadcrumb{
+
+      .breadcrumb {
         margin-bottom: 0;
         padding: 0;
         text-transform: lowercase;
-        color:#878787;
+        color: #878787;
         font-size: 90%;
         font-style: italic;
         overflow: hidden;
         white-space: nowrap;
+
         li {
           display: inline-block;
           white-space: nowrap;
+
           a {
             color: #878787;
             font-style: italic;

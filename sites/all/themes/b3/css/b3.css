@@ -10,6 +10,10 @@
   src: url("../font/HelveticaBold.eot?iefix") format("eot"), url("../font/HelveticaBold.woff") format("woff"), url("../font/HelveticaBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../font/pfdintextcondpro-regular.ttf");
+  font-style: normal; }
 html body {
   background: #EDEDED;
   font-family: Helvetica, sans-serif;
@@ -75,6 +79,27 @@ html body {
             color: #1d71d8; }
     html body #navbar a {
       color: white; }
+  html body .question-query {
+    position: relative;
+    margin-bottom: 10px; }
+    html body .question-query .cat-shifter {
+      width: 83px; }
+    html body .question-query .query-sign {
+      width: 16px;
+      position: absolute;
+      bottom: 3px;
+      right: 120px; }
+    html body .question-query a {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: white;
+      background: #1d71d8;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: PFDinTextCondPro, sans-serif; }
+      html body .question-query a:hover {
+        text-decoration: none; }
   html body #breadcrumb {
     padding: 0;
     background: #f5f5f5; }
