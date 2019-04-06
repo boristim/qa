@@ -16,6 +16,8 @@ html body {
   font-size: 18px; }
   html body header {
     background: #0F70B7; }
+    html body header img {
+      height: 41.4px; }
     html body header .region-header #block-locale-language {
       float: left; }
       html body header .region-header #block-locale-language a {

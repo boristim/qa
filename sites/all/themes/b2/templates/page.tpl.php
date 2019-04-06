@@ -85,8 +85,8 @@
   <header class="header-content">
     <div class="<?php echo $fluid_header; ?>">
       <div class="container">
-        <img src="<?php print $directory; ?>/img/logo-book.svg" alt="" height="40">
-        <img src="<?php print $directory; ?>/img/logo-text.svg" alt="" height="40">
+        <img src="/<?php print $directory; ?>/img/logo-book.svg" alt="" height="40">
+        <img src="/<?php print $directory; ?>/img/logo-text.svg" alt="" height="40">
         <div class="row">
           <div class="column col-xs-12">
             <?php print render($page['header']); ?>
