@@ -136,7 +136,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)) : ?
+      <?php if (!empty($breadcrumb)) :
         print $breadcrumb;
       endif;
       ?>
