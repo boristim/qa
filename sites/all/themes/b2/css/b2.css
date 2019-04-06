@@ -12,29 +12,40 @@
   font-style: normal; }
 html body {
   background: #EDEDED;
-  font-family: Helvetica, Serif; }
-  html body .region-header #block-locale-language {
-    float: left; }
-    html body .region-header #block-locale-language .block-title {
-      display: none; }
-    html body .region-header #block-locale-language .language-switcher-locale-url {
-      list-style: none; }
-      html body .region-header #block-locale-language .language-switcher-locale-url li {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px; }
+  html body header {
+    background: #0F70B7; }
+    html body header .region-header #block-locale-language {
+      float: left; }
+      html body header .region-header #block-locale-language a {
+        color: white;
+        font-weight: bold; }
+      html body header .region-header #block-locale-language .block-title {
+        display: none; }
+      html body header .region-header #block-locale-language .language-switcher-locale-url {
+        list-style: none; }
+        html body header .region-header #block-locale-language .language-switcher-locale-url li {
+          float: left;
+          width: 2em;
+          margin: 1em;
+          overflow: hidden;
+          text-transform: uppercase;
+          background: transparent; }
+          html body header .region-header #block-locale-language .language-switcher-locale-url li a {
+            text-decoration: none; }
+    html body header #block-views-categories-block {
+      float: left; }
+      html body header #block-views-categories-block .block-title {
+        display: none; }
+      html body header #block-views-categories-block .view-categories .views-row {
         float: left;
-        width: 2em;
-        margin: 1em;
-        overflow: hidden;
-        text-transform: uppercase;
-        background: transparent; }
-        html body .region-header #block-locale-language .language-switcher-locale-url li a {
+        margin: 10px; }
+        html body header #block-views-categories-block .view-categories .views-row a {
+          color: white;
           text-decoration: none; }
-  html body .region-header #block-views-categories-block {
-    float: left; }
-    html body .region-header #block-views-categories-block .block-title {
-      display: none; }
-    html body .region-header #block-views-categories-block .view-categories .views-row {
-      float: left;
-      margin: 10px; }
+          html body header #block-views-categories-block .view-categories .views-row a:hover {
+            text-decoration: underline; }
   html body footer {
     background: #0F70B7; }
     html body footer .region-footer a {
