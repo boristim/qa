@@ -118,7 +118,7 @@
           <?php endif; ?>
           <?php if (!empty($page['navigation'])): ?>
             <?php print render($page['navigation']); ?>
-            <a href="/user/login"><img src="/<?php print $directory; ?>/img/homo.svg"> </a>
+            <a href="/user/login"><img src="/sites/default/files/theme-img/homo.svg"> </a>
           <?php endif; ?>
         </nav>
       </div>
