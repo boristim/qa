@@ -72,31 +72,79 @@
  * @ingroup themeable
  */
 ?>
-<?php if (!empty($page['menu'])): ?><nav id="site-menu"><div class="container"><div class="row"><div class="column col-xs-12"><?php print render($page['menu']); ?></div></div><div></nav><?php endif; ?>
-<?php if (!empty($page['header'])): ?><header class="header-content"><div class="<?php echo $fluid_header; ?>"><div class="container"><div class="row"><div class="column col-xs-12"><?php print render($page['header']);?></div></div></div></div></header><?php endif; ?>
-<?php if ($breadcrumb): ?><section id="breadcrumb" aria-label="Breadcrumb" class="container"><div class="row"><div class="column col-xs-12"><?php print $breadcrumb; ?></div></div></section><?php endif; ?>
-<?php if (!empty($page['leaderboard_top'])){echo '<div class="container leaderboard leaderboard-top"><div class="row"><div class="column col-xs-12 center">'. render($page['leaderboard_top']).'</div></div></div>';} ?>
+<?php if (!empty($page['menu'])): ?>
+  <nav id="site-menu">
+    <div class="container">
+      <div class="row">
+        <div class="column col-xs-12"><?php print render($page['menu']); ?></div>
+      </div>
+      <div>
+  </nav>
+<?php endif; ?>
+<?php if (!empty($page['header'])): ?>
+  <header class="header-content">
+    <div class="<?php echo $fluid_header; ?>">
+      <div class="container">
+        <img src="<?php print $directory; ?>/img/logo-book.svg" alt="" height="40">
+        <img src="<?php print $directory; ?>/img/logo-text.svg" alt="" height="40">
+        <div class="row">
+          <div class="column col-xs-12">
+            <?php print render($page['header']); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<?php endif; ?>
+<?php if ($breadcrumb): ?>
+  <section id="breadcrumb" aria-label="Breadcrumb" class="container">
+  <div class="row">
+    <div class="column col-xs-12"><?php print $breadcrumb; ?></div>
+  </div></section><?php endif; ?>
+<?php if (!empty($page['leaderboard_top'])) {
+  echo '<div class="container leaderboard leaderboard-top"><div class="row"><div class="column col-xs-12 center">' . render($page['leaderboard_top']) . '</div></div></div>';
+} ?>
 
 <section id="page-wrapper" class="<?php echo $fluid_content; ?> clearfix">
   <main id="main-wrapper" class="<?php echo $grid_main; ?> column">
-    <?php if (!empty($page['content_top'])): ?><div class="row"><div id="content-top" class="column col-md-12"><?php print render($page['content_top']);?></div></div><?php endif; ?>
+    <?php if (!empty($page['content_top'])): ?>
+      <div class="row">
+      <div id="content-top" class="column col-md-12"><?php print render($page['content_top']); ?></div>
+      </div><?php endif; ?>
     <div class="row">
       <div id="content" class="column <?php echo $grid_content; ?>">
-        <?php if (!empty($page['highlighted'])): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><div class="clearfix"></div><?php endif; ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><div class="clearfix"></div><?php endif; ?>
-        <?php if (!empty($page['help'])){ print render($page['help']);} ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><div class="clearfix"></div><?php endif; ?>
+        <?php if (!empty($page['highlighted'])): ?>
+          <div id="highlighted"><?php print render($page['highlighted']); ?></div>
+          <div class="clearfix"></div><?php endif; ?>
+        <?php if ($tabs): ?>
+          <div class="tabs"><?php print render($tabs); ?></div>
+          <div class="clearfix"></div><?php endif; ?>
+        <?php if (!empty($page['help'])) {
+          print render($page['help']);
+        } ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+          <div class="clearfix"></div><?php endif; ?>
         <div class="clearfix"></div>
         <a id="main-content"></a>
         <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php if ($messages): ?><div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
+        <?php if ($messages): ?>
+          <div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
         <?php print render($page['content']); ?>
       </div>
-      <?php if (!empty($page['sidebar_first'])): ?><aside id="sidebar-first" class="column <?php echo $grid_sidebar_first; ?>"><?php print render($page['sidebar_first']); ?></aside><?php endif; ?>
+      <?php if (!empty($page['sidebar_first'])): ?>
+        <aside id="sidebar-first"
+               class="column <?php echo $grid_sidebar_first; ?>"><?php print render($page['sidebar_first']); ?></aside><?php endif; ?>
     </div>
- </main>
-<?php if (!empty($page['sidebar_second'])): ?><aside id="sidebar-second" class="column <?php echo $grid_sidebar_second; ?>"><?php print render($page['sidebar_second']); ?></aside><?php endif; ?>
+  </main>
+  <?php if (!empty($page['sidebar_second'])): ?>
+    <aside id="sidebar-second"
+           class="column <?php echo $grid_sidebar_second; ?>"><?php print render($page['sidebar_second']); ?></aside><?php endif; ?>
 </section>
 
-<?php if (!empty($page['leaderboard_bottom'])){echo '<div class="container leaderboard leaderboard-bottom"><div class="row"><div class="column col-xs-12 center">'. render($page['leaderboard_bottom']).'</div></div></div>';} ?>
-<?php if (!empty($page['footer'])): ?><footer class="<?php echo $fluid_footer; ?> "><div class="container"><?php print render($page['footer']); ?></div></footer><?php endif; ?>
+<?php if (!empty($page['leaderboard_bottom'])) {
+  echo '<div class="container leaderboard leaderboard-bottom"><div class="row"><div class="column col-xs-12 center">' . render($page['leaderboard_bottom']) . '</div></div></div>';
+} ?>
+<?php if (!empty($page['footer'])): ?>
+<footer class="<?php echo $fluid_footer; ?> ">
+  <div class="container"><?php print render($page['footer']); ?></div></footer><?php endif; ?>
