@@ -33,9 +33,10 @@ html {
       .block-title {
         display: none;
       }
+
       .menu {
         &.nav {
-          &.navbar-nav{
+          &.navbar-nav {
             display: none;
           }
         }
@@ -43,52 +44,97 @@ html {
 
       #block-menu-menu-top-menu {
         display: inline-block;
+
         .menu {
           &.nav {
             & > li {
               list-style: none;
               display: inline-block;
               padding: 10px;
-              a{
+
+              a {
                 text-transform: uppercase;
+
+                &:hover {
+                  background: #1f3d82;
+                }
+              }
+              &:hover{
+                background: #1f3d82;
+              }
+              &.expanded.open {
+                background: #1f3d82;
+                & > a {
+                  background: #1f3d82;
+                }
+
+                .dropdown-menu {
+                  background: #c6c6c6;
+                  li {
+                    text-align: center;
+
+                    a {
+                      background: #c6c6c6;
+                      &:hover {
+                        background: #e30613;
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
+
       #block-block-2 {
         display: inline-block;
         white-space: nowrap;
+
         .logo-top-svg {
           text-decoration: none;
-          &:hover{
+
+          &:hover {
             text-decoration: none;
           }
+
           img {
             height: 41.4px;
           }
         }
       }
+
       background: $bg;
-      #block-locale-language{
+
+      #block-locale-language {
         display: inline-block;
-        li{
+
+        li {
           list-style: none;
           display: inline-block;
           padding: 3px 6px;
           border-radius: 5px;
           background: transparent;
-          a{
+
+          a {
             text-transform: uppercase;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: none;
+            }
           }
-          &.active{
+
+          &.active {
             background: white;
-            a{
+
+            a {
               color: $bg;
             }
           }
         }
       }
+
       a {
         color: white;
       }

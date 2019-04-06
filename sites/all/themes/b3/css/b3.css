@@ -30,6 +30,22 @@ html body {
         padding: 10px; }
         html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
           text-transform: uppercase; }
+          html body #navbar #block-menu-menu-top-menu .menu.nav > li a:hover {
+            background: #1f3d82; }
+        html body #navbar #block-menu-menu-top-menu .menu.nav > li:hover {
+          background: #1f3d82; }
+        html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open {
+          background: #1f3d82; }
+          html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open > a {
+            background: #1f3d82; }
+          html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdown-menu {
+            background: #c6c6c6; }
+            html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdown-menu li {
+              text-align: center; }
+              html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdown-menu li a {
+                background: #c6c6c6; }
+                html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdown-menu li a:hover {
+                  background: #e30613; }
     html body #navbar #block-block-2 {
       display: inline-block;
       white-space: nowrap; }
@@ -48,7 +64,10 @@ html body {
         border-radius: 5px;
         background: transparent; }
         html body #navbar #block-locale-language li a {
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          text-decoration: none; }
+          html body #navbar #block-locale-language li a:hover {
+            text-decoration: none; }
         html body #navbar #block-locale-language li.active {
           background: white; }
           html body #navbar #block-locale-language li.active a {
