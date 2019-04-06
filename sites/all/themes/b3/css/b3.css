@@ -118,6 +118,16 @@ html body {
         html body #breadcrumb .breadcrumb li a {
           color: #878787;
           font-style: italic; }
+  html body #login_button.login-icon {
+    border-radius: 50%;
+    width: 60px;
+    line-height: 60px;
+    padding: 0;
+    margin: 0; }
+    html body #login_button.login-icon img {
+      width: 26px; }
+    html body #login_button.login-icon .open, html body #login_button.login-icon:hover {
+      background: #1f3d82; }
   html body #colorbox #cboxLoadedContent #breadcrumb,
   html body #colorbox #cboxLoadedContent .page-header,
   html body #colorbox #cboxLoadedContent aside,
