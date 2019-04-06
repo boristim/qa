@@ -17,3 +17,4 @@ function b2_menu_tree__menu_top_menu(&$variables) {
 function b2_menu_link(array &$variables) {
   dpm($variables);
 }
+

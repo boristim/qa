@@ -1,8 +1,97 @@
 $bg: #1d71d8;
+@font-face {
+  font-family: Helvetica;
+  src: url("../font/HelveticaRegular.eot");
+  src: url("../font/HelveticaRegular.eot?iefix") format('eot'),
+  url("../font/HelveticaRegular.woff") format('woff'),
+  url("../font/HelveticaRegular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HelveticaBold;
+  src: url("../font/HelveticaBold.eot");
+  src: url("../font/HelveticaBold.eot?iefix") format('eot'),
+  url("../font/HelveticaBold.woff") format('woff'),
+  url("../font/HelveticaBold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   body {
+    background: #EDEDED;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+
+    h3 {
+      font-size: 18px;
+    }
+
     #navbar {
+      .block-title {
+        display: none;
+      }
+      .menu {
+        &.nav {
+          &.navbar-nav{
+            display: none;
+          }
+        }
+      }
+
+      #block-menu-menu-top-menu {
+        display: inline-block;
+        .menu {
+          &.nav {
+            & > li {
+              list-style: none;
+              display: inline-block;
+              padding: 10px;
+              a{
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+      #block-block-2 {
+        display: inline-block;
+        white-space: nowrap;
+        .logo-top-svg {
+          text-decoration: none;
+          &:hover{
+            text-decoration: none;
+          }
+          img {
+            height: 41.4px;
+          }
+        }
+      }
       background: $bg;
+      #block-locale-language{
+        display: inline-block;
+        li{
+          list-style: none;
+          display: inline-block;
+          padding: 3px 6px;
+          border-radius: 5px;
+          background: transparent;
+          a{
+            text-transform: uppercase;
+          }
+          &.active{
+            background: white;
+            a{
+              color: $bg;
+            }
+          }
+        }
+      }
+      a {
+        color: white;
+      }
     }
   }
 }
