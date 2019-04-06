@@ -17,6 +17,7 @@ html body {
   html body h3 {
     font-size: 18px; }
   html body #navbar {
+    margin-bottom: 0;
     background: #1d71d8; }
     html body #navbar .block-title {
       display: none; }
@@ -74,7 +75,23 @@ html body {
             color: #1d71d8; }
     html body #navbar a {
       color: white; }
-  html body #breadcrub .breadcrumb {
-    margin-bottom: 0; }
+  html body #breadcrumb {
+    padding: 0;
+    background: #f5f5f5; }
+    html body #breadcrumb .breadcrumb {
+      margin-bottom: 0;
+      padding: 0;
+      text-transform: lowercase;
+      color: #878787;
+      font-size: 90%;
+      font-style: italic;
+      overflow: hidden;
+      white-space: nowrap; }
+      html body #breadcrumb .breadcrumb li {
+        display: inline-block;
+        white-space: nowrap; }
+        html body #breadcrumb .breadcrumb li a {
+          color: #878787;
+          font-style: italic; }
 
 /*# sourceMappingURL=b3.css.map */

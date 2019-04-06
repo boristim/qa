@@ -34,7 +34,7 @@ html {
       .block-title {
         display: none;
       }
-
+      margin-bottom: 0;
       .menu {
         &.nav {
           &.navbar-nav {
@@ -140,9 +140,26 @@ html {
         color: white;
       }
     }
-    #breadcrub{
+    #breadcrumb{
+      padding: 0;
+      background: #f5f5f5;
       .breadcrumb{
         margin-bottom: 0;
+        padding: 0;
+        text-transform: lowercase;
+        color:#878787;
+        font-size: 90%;
+        font-style: italic;
+        overflow: hidden;
+        white-space: nowrap;
+        li {
+          display: inline-block;
+          white-space: nowrap;
+          a {
+            color: #878787;
+            font-style: italic;
+          }
+        }
       }
     }
   }

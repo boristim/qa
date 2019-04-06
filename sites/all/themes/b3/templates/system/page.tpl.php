@@ -129,7 +129,10 @@
   <div class="row">
     <?php if (!empty($breadcrumb)) : ?>
       <section id="breadcrumb" class="col-sm-12 hidden-xs">
-        <?php print $breadcrumb; ?>
+<!--        <div class="col-sm-3">&nbsp;</div>-->
+        <div class="col-sm-9 col-sm-offset-3">
+          <?php print $breadcrumb; ?>
+        </div>
       </section>
     <?php
     endif;
