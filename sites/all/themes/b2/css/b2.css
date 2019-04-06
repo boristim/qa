@@ -22,7 +22,7 @@ html body {
     html body #site-menu img {
       min-height: 41.4px;
       height: 41.4px; }
-    html body #site-menu #block-menu-menu-top-menu li {
+    html body #site-menu #block-menu-menu-top-menu .content > ul > li {
       list-style: none;
       display: inline-block;
       padding: 11px; }

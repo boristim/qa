@@ -5,7 +5,12 @@ version = VERSION
 core = 7.x
 base theme = dawn
 
+stylesheets[all][reboot] = bootstrap/css/bootstrap-reboot.min.css
+stylesheets[all][] = bootstrap/css/bootstrap.min.css
+stylesheets[all][bs-grid] = bootstrap/css/bootstrap-grid.min.css
 stylesheets[all][] = css/b2.css
+scripts[] = bootstrap/js/bootstrap.min.js
+scripts[] = bootstrap/js/bootstrap.bundle.min.js
 
 regions[menu] = 'Menu'
 regions[header] = 'Header'

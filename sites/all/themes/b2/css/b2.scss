@@ -38,10 +38,14 @@ html {
       }
 
       #block-menu-menu-top-menu {
-        li{
-          list-style: none;
-          display: inline-block;
-          padding: 11px;
+        .content {
+          & > ul {
+            & > li {
+              list-style: none;
+              display: inline-block;
+              padding: 11px;
+            }
+          }
         }
       }
 
