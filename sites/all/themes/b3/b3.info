@@ -1,4 +1,4 @@
-name = B3 extends Bootstrap
+name = B3 extends Bootstrap 3
 ;description =
 package = Core
 version = 0.1

@@ -73,6 +73,15 @@
  *
  * @ingroup templates
  */
+/**
+ * @var string $directory
+ * @var string $navbar_classes
+ * @var string $container_class
+ * @var string $logo
+ * @var string $front_page
+ * @var string $content_column_class
+ * @var string $messages
+ */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
@@ -109,6 +118,7 @@
           <?php endif; ?>
           <?php if (!empty($page['navigation'])): ?>
             <?php print render($page['navigation']); ?>
+            <a href="/user/login"><img src="/<?php print $directory; ?>/img/homo.svg"> </a>
           <?php endif; ?>
         </nav>
       </div>
