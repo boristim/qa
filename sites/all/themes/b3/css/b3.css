@@ -118,5 +118,11 @@ html body {
         html body #breadcrumb .breadcrumb li a {
           color: #878787;
           font-style: italic; }
+  html body #colorbox #cboxLoadedContent #breadcrumb,
+  html body #colorbox #cboxLoadedContent .page-header,
+  html body #colorbox #cboxLoadedContent aside,
+  html body #colorbox #cboxLoadedContent header,
+  html body #colorbox #cboxLoadedContent footer {
+    display: none; }
 
 /*# sourceMappingURL=b3.css.map */

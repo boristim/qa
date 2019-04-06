@@ -210,5 +210,17 @@ html {
         }
       }
     }
+
+    #colorbox {
+      #cboxLoadedContent {
+        #breadcrumb,
+        .page-header,
+        aside,
+        header,
+        footer {
+          display: none;
+        }
+      }
+    }
   }
 }
