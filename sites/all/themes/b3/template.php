@@ -29,7 +29,8 @@ function b3_links__locale_block(&$vars) {
     $abbr = $langInfo['language']->language;
     $name = $langInfo['language']->name;
     $short_name = mb_substr($langInfo['language']->name,0,3);
-    $vars['links'][$language]['title'] = '<abbr title="' . $name . '">' . $short_name . '</abbr>';
+    $vars['links'][$language]['title'] = $short_name ;
+//    $vars['links'][$language]['title'] = '<abbr title="' . $name . '">' . $short_name . '</abbr>';
     $vars['links'][$language]['html'] = TRUE;
   }
   $content = theme_links($vars);
