@@ -176,7 +176,10 @@ html body {
     color: white; }
     html body .question-row .question-so {
       font-size: 48px;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 1rem .5rem 1rem 1.5rem;
+      border: 3px solid white;
+      padding: .5rem; }
   html body #search-block-form .form-control.form-text {
     background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
     background-size: 7%;
