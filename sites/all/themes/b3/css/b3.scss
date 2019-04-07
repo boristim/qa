@@ -310,8 +310,17 @@ html {
     #search-block-form {
       .form-control{
         &.form-text{
-          background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 1% 50% transparent;
-          background-size: contain;
+          background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 3% 50% transparent;
+          background-size: 7%;
+          padding-left: 3rem;
+          border: 1px solid $bg;
+          color: $bg;
+          border-radius: 0;
+          &::placeholder{
+            color:$bg;
+            font-size: 90%;
+            text-transform: lowercase;
+          }
         }
       }
       .btn {

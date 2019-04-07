@@ -172,8 +172,16 @@ html body {
       color: #9d9d9c;
       font-size: 16px; }
   html body #search-block-form .form-control.form-text {
-    background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 1% 50% transparent;
-    background-size: contain; }
+    background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 3% 50% transparent;
+    background-size: 7%;
+    padding-left: 3rem;
+    border: 1px solid #1d71d8;
+    color: #1d71d8;
+    border-radius: 0; }
+    html body #search-block-form .form-control.form-text::placeholder {
+      color: #1d71d8;
+      font-size: 90%;
+      text-transform: lowercase; }
   html body #search-block-form .btn.btn-primary {
     color: #1d71d8;
     background: white;

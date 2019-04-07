@@ -50,6 +50,27 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
+  if(!user_access('edit any question content')) {
+    $js = <<<JS
+    
+  jQuery(document).on('change','#edit-field-qa-picture-und-0-upload',function(t){
+    jQuery('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
+    return false;
+  })
+JS;
+    $css = <<<CSS
+#edit-field-qa-picture-und-0-ajax-wrapper{
+  opacity:0;
+  height:1px;
+  width:1px;
+  overflow:hidden
+}
+CSS;
+    $form['upload_button'] = ['#markup' => '<label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">' . t('Insert image') . '</label>', '#weight' => -3.5];
+    $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
+    $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
+    dpm($form);
+  }
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {
@@ -152,14 +173,37 @@ function _qa_form_question_node_form_submit($form, &$form_state) {
   if (!user_access('edit any question content')) {
     drupal_set_message(t('Your question will be published after review by administration'));;
   }
-  dpm($form_state);
+  if (!$GLOBALS['user']->uid) {
+    $name = $form_state['values']['field_username']['und'][0]['value'];
+    $mail = $form_state['values']['field_e_mail']['und'][0]['value'];
+    if ($params['account'] = user_load_by_mail($mail)) {
+      drupal_mail('user', 'password_reset', $mail, null, array('account' => $params['account']), variable_get('site_mail', 'me@localhost.com'));
+      drupal_set_message(t('Reset password instructions sent to your e-mail'));
+    } else {
+      $password = user_password(8);
+      $fields = [
+        'name' => $name,
+        'mail' => $mail,
+        'pass' => $password,
+        'status' => 1,
+        'init' => 'email address',
+        'roles' => [DRUPAL_AUTHENTICATED_RID => 'authenticated user',],
+      ];
+      try {
+        $account = user_save('', $fields);
+      } catch (Exception $exception) {
+        watchdog(__FUNCTION__, $exception->getMessage());
+      }
+      drupal_mail('user', 'password_reset', $mail, NULL, array('account' => $account), variable_get('site_mail', 'me@localhost.com'));
+      drupal_set_message(t('Init account instructions sent to your e-mail'));
+    }
+  }
   $_GET['destination'] = '/';
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function qa_form_search_block_form_alter(&$form, &$form_state, $form_id) {
-
-//  dpm($form);
+function qa_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['#attached']['css'][] = ['data' => '#edit-locale,#edit-timezone{display:none}', 'type' => 'inline'];
 }
