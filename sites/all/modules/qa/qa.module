@@ -34,13 +34,16 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
     $form['field_question_ref']['#access'] = false;
     $form['field_question_ref']['und']['#options'] = [];
     if (($question = node_load(arg(1))) && ($question->type = 'question')) {
-      $form['field_question_ref']['und']['#options'] = [$question->nid => $question->title];
-      $form['field_question_ref']['und']['#default_value'] = [$question->nid];
+      $form['field_question_ref'][LANGUAGE_NONE]['#options'] = [$question->nid => $question->title];
+      $form['field_question_ref'][LANGUAGE_NONE]['#default_value'] = [$question->nid];
       $form_state['values']['field_question_ref']['und'][0]['target_id'] = $question->nid;
     }
     $form['title']['#access'] = false;
     $form['title']['#default_value'] = QA_DEFAULT_TITLE;
     $form['field_rate']['#access'] = user_access('edit any answer content');
+    if (!user_access('edit any answer content')) {
+      $form['field_video_link']['#attributes']['class'][] = 'element-invisible';
+    }
     $form['#submit'][] = '_qa_form_answer_node_form_submit';
     $form['#validate'][] = '_qa_form_answer_node_form_validate';
     foreach ($form as $name => &$element) {
@@ -50,7 +53,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
       }
     }
   }
-  if(!user_access('edit any question content')) {
+  if (!user_access('edit any question content')) {
     $js = <<<JS
     
   jQuery(document).on('change','#edit-field-qa-picture-und-0-upload',function(t){    
@@ -69,8 +72,8 @@ CSS;
     $form['upload_button'] = ['#markup' => '<label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">' . t('Insert image') . '</label>', '#weight' => -3.5];
     $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
-//    dpm($form);
   }
+//  dpm($form);
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {

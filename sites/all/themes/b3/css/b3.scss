@@ -1,4 +1,5 @@
 $bg: #1d71d8;
+$red: #e30613;
 @font-face {
   font-family: Helvetica;
   src: url("../font/HelveticaRegular.eot");
@@ -27,7 +28,7 @@ $bg: #1d71d8;
 
 @font-face {
   font-family: OpenSans;
-  src: url("../font/OpenSans-Regular");
+  src: url("../font/OpenSans-Regular.ttf");
   font-style: normal;
 }
 
@@ -312,16 +313,19 @@ html {
         }
       }
     }
+
     &.page-question {
-      .views-field-field-question-details{
-        .field-content{
+      .views-field-field-question-details {
+        .field-content {
           padding-top: 1em;
-          &:first-letter{
+
+          &:first-letter {
             font-size: 46px;
             font-weight: bold;
           }
         }
       }
+
       .question-row {
         background: $bg;
         color: white;
@@ -329,8 +333,8 @@ html {
         .question-so {
           font-size: 48px;
           font-weight: bold;
-          margin-top:2rem;
-          margin-bottom:2rem;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
           margin-left: 3rem;
           border: 6px solid white;
           padding: 1rem 2rem;
@@ -338,27 +342,28 @@ html {
 
           &:before {
             display: block;
-            width:3rem;
+            width: 3rem;
             height: 3rem;
             font-size: 48px;
             font-weight: bold;
             content: " ";
-            color:white;
+            color: white;
             background: url(/sites/default/files/theme-img/quote-left.png) no-repeat center center $bg;
             background-size: contain;
             z-index: 1000;
             top: -2.2rem;
             left: 2rem;
             position: absolute;
-            color:white;
+            color: white;
             border: 6px solid $bg;
           }
+
           &:after {
             border: 6px solid $bg;
             display: block;
             content: " ";
 
-            width:3rem;
+            width: 3rem;
             height: 3rem;
             font-size: 48px;
             font-weight: bold;
@@ -368,32 +373,133 @@ html {
             bottom: -2.2rem;
             right: 3rem;
             position: absolute;
-            color:white;
+            color: white;
           }
         }
-        .question-info{
+
+        .question-info {
           margin-top: 2rem;
           margin-bottom: 2rem;
-          font-family: OpenSans,sans-serif;
+          font-family: OpenSans, sans-serif;
+          font-size: 17px;
+
+          .question-views {
+            display: inline-block;
+            background: url(/sites/default/files/theme-img/views.svg) no-repeat center left transparent;
+            background-size: 40%;
+            padding: 0 20px 0 25px;
+          }
+
+          .question-answers {
+            display: inline-block;
+            background: url(/sites/default/files/theme-img/answers.svg) no-repeat center left transparent;
+            background-size: 60%;
+            padding: 0 0 0 20px;
+          }
+
+          .question-post {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .answers-list {
+        margin-top: 20px;
+
+        .answers-title {
+          color: $bg;
+          font-weight: bold;
+          font-size: 34px;
+          text-transform: uppercase;
+          font-family: HelveticaBold, sans-serif;
+        }
+
+        .answers-to-question {
+          .views-field-field-rate {
+            .answer-row {
+              background: white;
+              margin: 10px 0;
+              border-radius: 5px;
+              padding: 20px;
+
+              .row {
+                .user-picture {
+                  width: 100px;
+                  padding-right: 0;
+                  min-height: 100px;
+
+                  img {
+                    width: 100px;
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                  }
+                }
+
+                .user-info {
+                  min-height: 100px;
+                  height: 100%;
+
+                  table {
+                    min-height: 100px;
+                    height: 100%;
+
+                    td {
+                      height: 50%;
+
+                      &.user-name-td {
+                        vertical-align: bottom;
+                        font-size: 20px;
+                        font-family: HelveticaBold, sans-serif;
+                        color: black;
+                      }
+
+                      &.user-email-td {
+                        vertical-align: top;
+                        font-size: 12px;
+                        color: #9d9d9c;
+                      }
+                    }
+                  }
+                }
+
+                .answer-body {
+                  font-size: 14px;
+                  font-family: OpenSans, sans-serif;
+                  color: black;
+                }
+
+                .answer-rate {
+                  background: url("/sites/default/files/theme-img/heart.png") no-repeat 50% 40% transparent;
+                  background-size: contain;
+                  min-height: 100px;
+                  color: $red;
+                }
+              }
+            }
+          }
         }
       }
     }
+
     #search-block-form {
-      .form-control{
-        &.form-text{
+      .form-control {
+        &.form-text {
           background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
           background-size: 7%;
           padding-left: 30px;
           border: 1px solid $bg;
           color: $bg;
           border-radius: 0;
-          &::placeholder{
-            color:$bg;
+
+          &::placeholder {
+            color: $bg;
             font-size: 90%;
             text-transform: lowercase;
           }
         }
       }
+
       .btn {
         &.btn-primary {
           color: $bg;

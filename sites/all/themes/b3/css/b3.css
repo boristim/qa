@@ -16,7 +16,7 @@
   font-style: normal; }
 @font-face {
   font-family: OpenSans;
-  src: url("../font/OpenSans-Regular");
+  src: url("../font/OpenSans-Regular.ttf");
   font-style: normal; }
 html body {
   background: #EDEDED;
@@ -226,7 +226,68 @@ html body {
     html body.page-question .question-row .question-info {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      font-family: OpenSans,sans-serif; }
+      font-family: OpenSans, sans-serif;
+      font-size: 17px; }
+      html body.page-question .question-row .question-info .question-views {
+        display: inline-block;
+        background: url(/sites/default/files/theme-img/views.svg) no-repeat center left transparent;
+        background-size: 40%;
+        padding: 0 20px 0 25px; }
+      html body.page-question .question-row .question-info .question-answers {
+        display: inline-block;
+        background: url(/sites/default/files/theme-img/answers.svg) no-repeat center left transparent;
+        background-size: 60%;
+        padding: 0 0 0 20px; }
+      html body.page-question .question-row .question-info .question-post {
+        white-space: nowrap; }
+  html body.page-question .answers-list {
+    margin-top: 20px; }
+    html body.page-question .answers-list .answers-title {
+      color: #1d71d8;
+      font-weight: bold;
+      font-size: 34px;
+      text-transform: uppercase;
+      font-family: HelveticaBold, sans-serif; }
+    html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row {
+      background: white;
+      margin: 10px 0;
+      border-radius: 5px;
+      padding: 20px; }
+      html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-picture {
+        width: 100px;
+        padding-right: 0;
+        min-height: 100px; }
+        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-picture img {
+          width: 100px;
+          display: block;
+          max-width: 100%;
+          height: auto; }
+      html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-info {
+        min-height: 100px;
+        height: 100%; }
+        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-info table {
+          min-height: 100px;
+          height: 100%; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-info table td {
+            height: 50%; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-info table td.user-name-td {
+              vertical-align: bottom;
+              font-size: 20px;
+              font-family: HelveticaBold, sans-serif;
+              color: black; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .user-info table td.user-email-td {
+              vertical-align: top;
+              font-size: 12px;
+              color: #9d9d9c; }
+      html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .answer-body {
+        font-size: 14px;
+        font-family: OpenSans, sans-serif;
+        color: black; }
+      html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row .row .answer-rate {
+        background: url("/sites/default/files/theme-img/heart.png") no-repeat 50% 40% transparent;
+        background-size: contain;
+        min-height: 100px;
+        color: #e30613; }
   html body #search-block-form .form-control.form-text {
     background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
     background-size: 7%;
