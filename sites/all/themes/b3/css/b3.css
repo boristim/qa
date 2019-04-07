@@ -77,6 +77,31 @@ html body {
           background: white; }
           html body #navbar #block-locale-language li.active a {
             color: #1d71d8; }
+    html body #navbar #block-block-4 {
+      display: inline-block;
+      position: relative; }
+      html body #navbar #block-block-4 #login_button.login-icon {
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        padding: 0;
+        margin: 0; }
+        html body #navbar #block-block-4 #login_button.login-icon img {
+          height: 26px; }
+        html body #navbar #block-block-4 #login_button.login-icon .open, html body #navbar #block-block-4 #login_button.login-icon:hover {
+          background: #1f3d82; }
+      html body #navbar #block-block-4 .dropdown-menu {
+        background: #c6c6c6;
+        text-align: center; }
+        html body #navbar #block-block-4 .dropdown-menu a {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold; }
+          html body #navbar #block-block-4 .dropdown-menu a:hover {
+            background: #e30613; }
     html body #navbar a {
       color: white; }
   html body .question-query {
@@ -118,21 +143,33 @@ html body {
         html body #breadcrumb .breadcrumb li a {
           color: #878787;
           font-style: italic; }
-  html body #login_button.login-icon {
-    border-radius: 50%;
-    width: 60px;
-    line-height: 60px;
-    padding: 0;
-    margin: 0; }
-    html body #login_button.login-icon img {
-      width: 26px; }
-    html body #login_button.login-icon .open, html body #login_button.login-icon:hover {
-      background: #1f3d82; }
   html body #colorbox #cboxLoadedContent #breadcrumb,
   html body #colorbox #cboxLoadedContent .page-header,
   html body #colorbox #cboxLoadedContent aside,
   html body #colorbox #cboxLoadedContent header,
   html body #colorbox #cboxLoadedContent footer {
     display: none; }
+  html body #colorbox #cboxLoadedContent .main-container.container {
+    width: 600px; }
+    html body #colorbox #cboxLoadedContent .main-container.container > .row {
+      width: 600px; }
+      html body #colorbox #cboxLoadedContent .main-container.container > .row .col-sm-6 {
+        width: 100%; }
+  html body #block-views-articles-block .block-title {
+    color: #1d71d8;
+    font-size: 24px; }
+  html body #block-views-articles-block .views-field-title {
+    padding: 0; }
+    html body #block-views-articles-block .views-field-title h3 {
+      margin: 0; }
+      html body #block-views-articles-block .views-field-title h3 a {
+        color: black;
+        font-size: 18px; }
+  html body #block-views-articles-block .views-field-created {
+    padding: 0;
+    margin-bottom: 3rem; }
+    html body #block-views-articles-block .views-field-created span {
+      color: #9d9d9c;
+      font-size: 16px; }
 
 /*# sourceMappingURL=b3.css.map */

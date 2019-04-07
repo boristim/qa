@@ -1,5 +1,5 @@
 #backtotop {
-  background: url(../backtotop.png) no-repeat center center;
+  background: url(../backtotop.png?v=1) no-repeat center center;
   bottom: 20px;
   cursor: pointer;
   display: none;
@@ -17,7 +17,7 @@
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #backtotop {
-    background: url(../backtotop2x.png) no-repeat center center;
+    background: url(../backtotop2x.png?v=1) no-repeat center center;
     background-size: 70px 70px;
   }
 }

@@ -100,6 +100,7 @@ html {
           }
         }
       }
+
       #block-block-2 {
         display: inline-block;
         white-space: nowrap;
@@ -143,6 +144,43 @@ html {
 
             a {
               color: $bg;
+            }
+          }
+        }
+      }
+
+      #block-block-4 {
+        display: inline-block;
+        position: relative;
+        #login_button.login-icon {
+          display: inline-block;
+          text-align: center;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
+          padding: 0;
+          margin: 0;
+
+          img {
+            height: 26px;
+          }
+
+          .open,
+          &:hover {
+            background: #1f3d82;
+          }
+        }
+
+        .dropdown-menu {
+          background: #c6c6c6;
+          text-align: center;
+          a {
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover {
+              background: #e30613;
             }
           }
         }
@@ -209,21 +247,7 @@ html {
         }
       }
     }
-    #login_button.login-icon{
-      //display: inline-block;
-      border-radius: 50%;
-      width:60px;
-      line-height: 60px;
-      padding: 0;
-      margin: 0;
-      img{
-        width: 26px;
-      }
-      .open,
-      &:hover{
-        background: #1f3d82;
-      }
-    }
+
     #colorbox {
       #cboxLoadedContent {
         #breadcrumb,
@@ -232,6 +256,41 @@ html {
         header,
         footer {
           display: none;
+        }
+        .main-container{
+          &.container{
+            width: 600px;
+            &>.row{
+              width: 600px;
+              .col-sm-6{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    #block-views-articles-block{
+      .block-title{
+        color:$bg;
+        font-size: 24px;
+      }
+      .views-field-title{
+        padding: 0;
+        h3 {
+          margin: 0;
+          a {
+            color: black;
+            font-size: 18px;
+          }
+        }
+      }
+      .views-field-created{
+        padding: 0;
+        margin-bottom: 3rem;
+        span{
+          color:#9d9d9c;
+          font-size: 16px;
         }
       }
     }

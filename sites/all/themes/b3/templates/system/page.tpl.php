@@ -118,12 +118,6 @@
           <?php endif; ?>
           <?php if (!empty($page['navigation'])): ?>
             <?php print render($page['navigation']); ?>
-            <a href="/user" id="login_button" class="login-icon dropdown-toggle" data-toggle="dropdown"><img
-                src="/sites/default/files/theme-img/homo.svg" alt="login"></a>
-            <ul class="dropdown-menu">
-              <li><a href="/user/login"><?php print t('Login'); ?></a></li>
-              <li><a href="/register"><?php t('Register'); ?></a></li>
-            </ul>
           <?php endif; ?>
         </nav>
       </div>
