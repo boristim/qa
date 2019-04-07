@@ -125,7 +125,8 @@
   </div>
 </header>
 
-<div class="main-container <?php print $container_class; ?>">
+<!--<div class="main-container container-fluid">-->
+<div class="main-container <?php print $container_class; ?> ">
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
@@ -157,7 +158,11 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <?php if (arg(0) != 'question'): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php
+        endif;
+        ?>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>

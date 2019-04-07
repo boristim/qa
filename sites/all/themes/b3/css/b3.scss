@@ -306,13 +306,20 @@ html {
         }
       }
     }
-
+    .question-row{
+      background: $bg;
+      color:white;
+      .question-so{
+        font-size: 48px;
+        font-weight: bold;
+      }
+    }
     #search-block-form {
       .form-control{
         &.form-text{
-          background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 3% 50% transparent;
+          background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
           background-size: 7%;
-          padding-left: 3rem;
+          padding-left: 30px;
           border: 1px solid $bg;
           color: $bg;
           border-radius: 0;

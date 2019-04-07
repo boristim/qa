@@ -171,10 +171,16 @@ html body {
     html body #block-views-articles-block .views-field-created span {
       color: #9d9d9c;
       font-size: 16px; }
+  html body .question-row {
+    background: #1d71d8;
+    color: white; }
+    html body .question-row .question-so {
+      font-size: 48px;
+      font-weight: bold; }
   html body #search-block-form .form-control.form-text {
-    background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 3% 50% transparent;
+    background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
     background-size: 7%;
-    padding-left: 3rem;
+    padding-left: 30px;
     border: 1px solid #1d71d8;
     color: #1d71d8;
     border-radius: 0; }
