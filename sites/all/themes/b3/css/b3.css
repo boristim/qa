@@ -313,17 +313,56 @@ html body {
     background: white;
     border: 1px solid silver;
     border-left: none; }
-  html body footer {
+  html body .footer {
     background: #1d71d8;
-    color: white; }
-    html body footer a {
-      color: white; }
-    html body footer .logo-bottom-svg {
-      text-align: center;
-      float: left; }
-      html body footer .logo-bottom-svg img {
-        height: 41.4px;
-        display: block;
-        margin: 5px auto; }
+    color: white;
+    margin-top: 0;
+    padding-top: 15px; }
+    html body .footer .region-footer {
+      position: relative;
+      text-align: justify-all; }
+      html body .footer .region-footer a {
+        color: white; }
+      html body .footer .region-footer #block-block-5 {
+        display: inline-block; }
+        html body .footer .region-footer #block-block-5 .logo-bottom-svg {
+          text-align: center;
+          display: block; }
+          html body .footer .region-footer #block-block-5 .logo-bottom-svg img {
+            height: 41.4px;
+            display: block;
+            margin: 5px auto; }
+      html body .footer .region-footer #block-views-categories-block-1 {
+        display: inline-block; }
+        html body .footer .region-footer #block-views-categories-block-1 .block-title {
+          display: none; }
+        html body .footer .region-footer #block-views-categories-block-1 .views-view-grid tr td {
+          padding: 10px 0 0 50px; }
+          html body .footer .region-footer #block-views-categories-block-1 .views-view-grid tr td a {
+            font-size: 18px;
+            line-height: 30px;
+            font-family: HelveticaBold, sans-serif;
+            text-transform: uppercase; }
+            html body .footer .region-footer #block-views-categories-block-1 .views-view-grid tr td a:hover {
+              text-decoration: none;
+              color: white; }
+      html body .footer .region-footer #block-block-6 {
+        float: right;
+        padding-top: 10px; }
+        html body .footer .region-footer #block-block-6 a {
+          font-size: 18px;
+          line-height: 30px;
+          font-family: HelveticaBold, sans-serif;
+          text-transform: uppercase;
+          display: block;
+          text-align: center;
+          text-decoration: none; }
+          html body .footer .region-footer #block-block-6 a:hover {
+            text-decoration: none; }
+          html body .footer .region-footer #block-block-6 a.creator {
+            color: #1d71d8;
+            background: white;
+            padding: 4px 6px;
+            border-radius: 4px; }
 
 /*# sourceMappingURL=b3.css.map */

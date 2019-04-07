@@ -469,13 +469,16 @@ html {
                   color: black;
                   width: 51.66666667%;
                 }
-                .answer-media{
+
+                .answer-media {
                   text-align: right;
-                  a{
+
+                  a {
                     display: inline-block;
                     float: right;
                   }
                 }
+
                 .answer-rate {
                   min-height: 100px;
                   color: $red;
@@ -519,19 +522,84 @@ html {
         }
       }
     }
-    footer{
+
+    .footer {
       background: $bg;
-      color:white;
-      a{
-        color:white;
-      }
-      .logo-bottom-svg{
-        text-align: center;
-        float:left;
-        img{
-          height:41.4px;
-          display: block;
-          margin: 5px auto;
+      color: white;
+      margin-top: 0;
+      padding-top: 15px;
+      .region-footer {
+        position: relative;
+        a {
+          color: white;
+        }
+        text-align: justify-all;
+        #block-block-5 {
+          display: inline-block;
+          .logo-bottom-svg {
+            text-align: center;
+            display: block;
+
+            img {
+              height: 41.4px;
+              display: block;
+              margin: 5px auto;
+            }
+          }
+        }
+
+        #block-views-categories-block-1 {
+          display: inline-block;
+          .block-title {
+            display: none;
+          }
+
+          .views-view-grid {
+            tr {
+              td {
+                padding: 10px 0 0 50px;
+
+                a {
+                  font-size: 18px;
+                  line-height: 30px;
+                  font-family: HelveticaBold, sans-serif;
+                  text-transform: uppercase;
+
+                  &:hover {
+                    text-decoration: none;
+                    color: white;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        #block-block-6 {
+          //display: inline-block;
+          float:right;
+          padding-top: 10px;
+          a {
+            font-size: 18px;
+            line-height: 30px;
+            font-family: HelveticaBold, sans-serif;
+            text-transform: uppercase;
+
+            display: block;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            &.creator {
+              color: $bg;
+              background: white;
+              padding: 4px 6px;
+              border-radius: 4px;
+            }
+          }
         }
       }
     }
