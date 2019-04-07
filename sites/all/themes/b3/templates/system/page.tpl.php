@@ -126,7 +126,7 @@
 </header>
 
 <div class="main-container container-fluid">
-<!--<div class="main-container --><?php //print $container_class; ?><!-- ">-->
+  <!--<div class="main-container --><?php //print $container_class; ?><!-- ">-->
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
@@ -152,7 +152,7 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
     <section class="col-sm-8">
-<!--    <section--><?php //print $content_column_class; ?><!-- > -->
+      <!--    <section--><?php //print $content_column_class; ?><!-- > -->
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -189,7 +189,9 @@
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
+  <footer class="footer container-fluid">
+    <div class="<?php print $container_class; ?>">
+      <?php print render($page['footer']); ?>
+    </div>
   </footer>
 <?php endif; ?>
