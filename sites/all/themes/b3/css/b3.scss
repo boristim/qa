@@ -25,6 +25,12 @@ $bg: #1d71d8;
   font-style: normal;
 }
 
+@font-face {
+  font-family: OpenSans;
+  src: url("../font/OpenSans-Regular");
+  font-style: normal;
+}
+
 html {
   body {
 
@@ -306,23 +312,69 @@ html {
         }
       }
     }
-    .question-row{
-      background: $bg;
-      color:white;
-      .question-so{
-        font-size: 48px;
-        font-weight: bold;
-        margin: 1rem .5rem 1rem 1.5rem;
-        border:3px solid white;
-        padding: .5rem;
-        position: relative;
-        &:before{
-          display: block;
-          content: " ";
-          background: url(/sites/default/files/theme-img/quote-left.png) no-repeat center center $bg;
-          z-index: 1;
-          top:-10px;
-          left:10px;
+    &.page-question {
+      .views-field-field-question-details{
+        .field-content{
+          padding-top: 1em;
+          &:first-letter{
+            font-size: 46px;
+            font-weight: bold;
+          }
+        }
+      }
+      .question-row {
+        background: $bg;
+        color: white;
+
+        .question-so {
+          font-size: 48px;
+          font-weight: bold;
+          margin-top:2rem;
+          margin-bottom:2rem;
+          margin-left: 3rem;
+          border: 6px solid white;
+          padding: 1rem 2rem;
+          position: relative;
+
+          &:before {
+            display: block;
+            width:3rem;
+            height: 3rem;
+            font-size: 48px;
+            font-weight: bold;
+            content: " ";
+            color:white;
+            background: url(/sites/default/files/theme-img/quote-left.png) no-repeat center center $bg;
+            background-size: contain;
+            z-index: 1000;
+            top: -2.2rem;
+            left: 2rem;
+            position: absolute;
+            color:white;
+            border: 6px solid $bg;
+          }
+          &:after {
+            border: 6px solid $bg;
+            display: block;
+            content: " ";
+
+            width:3rem;
+            height: 3rem;
+            font-size: 48px;
+            font-weight: bold;
+            background: url(/sites/default/files/theme-img/quote-right.png) no-repeat center center $bg;
+            background-size: contain;
+            z-index: 1000;
+            bottom: -2.2rem;
+            right: 3rem;
+            position: absolute;
+            color:white;
+          }
+        }
+        .question-info{
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          font-family: OpenSans,sans-serif;
         }
       }
     }

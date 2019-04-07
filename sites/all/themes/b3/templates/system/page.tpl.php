@@ -125,8 +125,8 @@
   </div>
 </header>
 
-<!--<div class="main-container container-fluid">-->
-<div class="main-container <?php print $container_class; ?> ">
+<div class="main-container container-fluid">
+<!--<div class="main-container --><?php //print $container_class; ?><!-- ">-->
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
@@ -139,7 +139,7 @@
   <div class="row">
     <?php if (!empty($breadcrumb)) : ?>
       <section id="breadcrumb" class="col-sm-12 hidden-xs">
-        <div class="col-sm-9 col-sm-offset-3">
+        <div class="col-sm-9 col-sm-offset-2">
           <?php print $breadcrumb; ?>
         </div>
       </section>
@@ -147,11 +147,12 @@
     endif;
     ?>
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3 hidden-xs" role="complementary">
+      <aside class="col-sm-2 hidden-xs" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
-    <section<?php print $content_column_class; ?>>
+    <section class="col-sm-8">
+<!--    <section--><?php //print $content_column_class; ?><!-- > -->
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -179,7 +180,7 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3 hidden-xs" role="complementary">
+      <aside class="col-sm-2 hidden-xs" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
