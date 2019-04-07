@@ -171,5 +171,13 @@ html body {
     html body #block-views-articles-block .views-field-created span {
       color: #9d9d9c;
       font-size: 16px; }
+  html body #search-block-form .form-control.form-text {
+    background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 1% 50% transparent;
+    background-size: contain; }
+  html body #search-block-form .btn.btn-primary {
+    color: #1d71d8;
+    background: white;
+    border: 1px solid silver;
+    border-left: none; }
 
 /*# sourceMappingURL=b3.css.map */

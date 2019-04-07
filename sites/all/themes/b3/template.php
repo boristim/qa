@@ -25,14 +25,30 @@ function b3_menu_link(array &$variables) {
 }*/
 
 function b3_links__locale_block(&$vars) {
-  foreach($vars['links'] as $language => $langInfo) {
+  foreach ($vars['links'] as $language => $langInfo) {
     $abbr = $langInfo['language']->language;
     $name = $langInfo['language']->name;
-    $short_name = mb_substr($langInfo['language']->name,0,3);
-    $vars['links'][$language]['title'] = $short_name ;
+    $short_name = mb_substr($langInfo['language']->name, 0, 3);
+    $vars['links'][$language]['title'] = $short_name;
 //    $vars['links'][$language]['title'] = '<abbr title="' . $name . '">' . $short_name . '</abbr>';
     $vars['links'][$language]['html'] = TRUE;
   }
   $content = theme_links($vars);
   return $content;
+}
+
+function b3_form_alter(array &$form, array &$form_state = array(), $form_id = NULL) {
+  if (isset($form_id)) {
+    switch ($form_id) {
+      case 'search_form':
+//      $form['basic']['keys']['#attributes']['placeholder'] = t('Search by questions');
+        break;
+      case 'search_block_form':
+        $form['search_block_form']['#attributes']['placeholder'] = t('Search by issue');
+        unset($form['search_block_form']['#theme_wrappers']);
+//        dpm($form);
+        break;
+      default:
+    }
+  }
 }
