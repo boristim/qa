@@ -315,6 +315,15 @@ html {
         margin: 1rem .5rem 1rem 1.5rem;
         border:3px solid white;
         padding: .5rem;
+        position: relative;
+        &:before{
+          display: block;
+          content: " ";
+          background: url(/sites/default/files/theme-img/quote-left.png) no-repeat center center $bg;
+          z-index: 1;
+          top:-10px;
+          left:10px;
+        }
       }
     }
     #search-block-form {

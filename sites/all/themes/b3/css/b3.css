@@ -179,7 +179,15 @@ html body {
       font-weight: bold;
       margin: 1rem .5rem 1rem 1.5rem;
       border: 3px solid white;
-      padding: .5rem; }
+      padding: .5rem;
+      position: relative; }
+      html body .question-row .question-so:before {
+        display: block;
+        content: " ";
+        background: url(/sites/default/files/theme-img/quote-left.png) no-repeat center center #1d71d8;
+        z-index: 1;
+        top: -10px;
+        left: 10px; }
   html body #search-block-form .form-control.form-text {
     background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
     background-size: 7%;
