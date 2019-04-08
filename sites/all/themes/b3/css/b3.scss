@@ -415,19 +415,39 @@ html {
         }
 
         .answers-to-question {
+          background: transparent;
+          border: none;
+
+          .views-row-first {
+            .views-field-field-rate {
+              .answer-row {
+                border: $red 3px solid;
+              }
+            }
+          }
+
           .views-field-field-rate {
+
             .answer-row {
+
               background: white;
               margin: 10px 0;
-              border-radius: 5px;
-              padding: 20px;
+              border-radius: 10px;
 
-              .row {
+
+              table {
+                & > tr {
+                  td {
+                    padding: 20px;
+                    min-height: 100px;
+                    vertical-align: top;
+                  }
+                }
+
                 .user-picture {
                   width: 100px;
                   padding-right: 0;
                   min-height: 100px;
-
                   img {
                     width: 100px;
                     display: block;
@@ -437,16 +457,11 @@ html {
                 }
 
                 .user-info {
-                  min-height: 100px;
-                  height: 100%;
-
                   table {
                     min-height: 100px;
                     height: 100%;
-
                     td {
                       height: 50%;
-
                       &.user-name-td {
                         vertical-align: bottom;
                         font-size: 20px;
@@ -467,12 +482,12 @@ html {
                   font-size: 14px;
                   font-family: OpenSans, sans-serif;
                   color: black;
-                  width: 51.66666667%;
+                  width:60%;
+                  text-align: left;
                 }
 
                 .answer-media {
                   text-align: right;
-
                   a {
                     display: inline-block;
                     float: right;
@@ -480,13 +495,19 @@ html {
                 }
 
                 .answer-rate {
+                  span {
+                    display: block;
+                    text-align: center;
+                  }
+                  vertical-align: middle;
+                  text-align: center;
                   min-height: 100px;
                   color: $red;
                   text-align: center;
                   font-size: 20px;
                   font-weight: bold;
-                  width: 3rem;
-                  padding: .5rem 0 0 0;
+                  width: 20px;
+                  //padding: .5rem 0 0 0;
                 }
               }
             }
@@ -528,14 +549,19 @@ html {
       color: white;
       margin-top: 0;
       padding-top: 15px;
+
       .region-footer {
         position: relative;
+
         a {
           color: white;
         }
+
         text-align: justify-all;
+
         #block-block-5 {
           display: inline-block;
+
           .logo-bottom-svg {
             text-align: center;
             display: block;
@@ -550,6 +576,7 @@ html {
 
         #block-views-categories-block-1 {
           display: inline-block;
+
           .block-title {
             display: none;
           }
@@ -558,6 +585,7 @@ html {
             tr {
               td {
                 padding: 10px 0 0 50px;
+                white-space: nowrap;
 
                 a {
                   font-size: 18px;
@@ -577,14 +605,14 @@ html {
 
         #block-block-6 {
           //display: inline-block;
-          float:right;
+          float: right;
           padding-top: 10px;
+
           a {
             font-size: 18px;
             line-height: 30px;
             font-family: HelveticaBold, sans-serif;
             text-transform: uppercase;
-
             display: block;
             text-align: center;
             text-decoration: none;
@@ -598,7 +626,36 @@ html {
               background: white;
               padding: 4px 6px;
               border-radius: 4px;
+              margin-top: 5px;
             }
+          }
+        }
+
+        #block-block-7 {
+          & > div {
+            display: inline-block;
+            font-size: 14px;
+            font-family: OpenSans, sans-serif;
+          }
+
+          .liru {
+            width: 260px
+          }
+
+          .yaru {
+            width: 235px
+          }
+
+          .copyleft {
+            width: 215px
+          }
+
+          .site-phone {
+            width: 210px
+          }
+
+          .site-mail {
+
           }
         }
       }

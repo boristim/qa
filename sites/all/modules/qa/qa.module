@@ -52,6 +52,9 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         $element['#access'] = user_access('edit any question content');
       }
     }
+    $form['body'][LANGUAGE_NONE][0]['value']['#attributes']['placeholder'] = t('Give your answer');
+    $form['body'][LANGUAGE_NONE][0]['value']['#attributes']['required'] = 'required';
+
   }
   if (!user_access('edit any question content')) {
     $js = <<<JS
@@ -218,7 +221,8 @@ function qa_variable_info($options) {
     'title' => t('Site phone'),
     'type' => 'string',
     'default' => '8(347)255-92-78',
-    'group' => 'site_information'
+    'group' => 'site_information',
+    'access' => user_access('access content')
   ];
   return $variable;
 }

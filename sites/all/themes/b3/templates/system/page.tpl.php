@@ -151,7 +151,7 @@
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
-    <section class="col-sm-8">
+    <section class="col-sm-8 col-xs-12">
       <!--    <section--><?php //print $content_column_class; ?><!-- > -->
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
@@ -180,14 +180,28 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-2 hidden-xs" role="complementary">
+      <aside class="col-sm-2 col-xs-12" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 
   </div>
 </div>
-
+<?php
+if ('question' == arg(0)) {
+  ?>
+  <div class="container">
+    <?php
+    $title = drupal_get_title();
+    module_load_include('inc', 'node', 'node.pages');
+    $form = node_add('answer');
+    print drupal_render($form);
+    drupal_set_title($title);
+    ?>
+  </div>
+  <?php
+}
+?>
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer container-fluid">
     <div class="<?php print $container_class; ?>">

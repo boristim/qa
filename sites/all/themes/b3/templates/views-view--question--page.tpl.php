@@ -75,11 +75,6 @@
     <?php print $more; ?>
   <?php endif; ?>
   <div class="view-footer">
-    <?php
-     module_load_include('inc', 'node', 'node.pages');
-     $form = node_add('answer');
-     print drupal_render($form);
-    ?>
   </div>
   <?php if ($footer): ?>
     <div class="view-footer">
