@@ -483,7 +483,8 @@ html {
                 }
 
                 .user-info {
-                  width: 15%;
+                  width: 150px;
+                  //width: 15%;
                   padding: 20px 0;
 
                   table {
@@ -714,6 +715,18 @@ html {
         padding: 20px 220px 0 20px;
         position: relative;
 
+        &:after {
+          position: absolute;
+          right: 215px;
+          top: -40px;
+          z-index: 900;
+          display: block;
+          content: "";
+          background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
+          background-size: cover;
+          width: 112px;
+        }
+
         #edit-body {
           .grippie,
           label {
@@ -779,6 +792,8 @@ html {
                   label {
                     width: 100%;
                     cursor: pointer;
+                    overflow: hidden;
+                    white-space: nowrap;
                     overflow: hidden;
                   }
 

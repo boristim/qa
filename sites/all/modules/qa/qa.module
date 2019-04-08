@@ -65,24 +65,26 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
       $(document).on('change', '#edit-field-qa-picture-und-0-upload', function (t) {
         $('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
         return false;
-      })      
-      $(document).on('click', '#submit_answer_button', function (e) {        
+      })
+      $(document).on('click', '#submit_answer_button', function (e) {
         $('#edit-submit--2').trigger('click');
         return false;
       })
-      
+
       $(document).on('click', '#add_media_button', function (e) {
         console.log(e);
-        if(e.target.id == 'img_add_media_button'){
-          $(this).find('ul').toggle('normal');          
-        } 
-        if(e.target.id == 'label-edit-field-qa-picture-und-0-upload'){
+        if (e.target.id == 'img_add_media_button') {
+          $(this).find('ul').toggle('normal');
+        }
+        if (e.target.id == 'label-edit-field-qa-picture-und-0-upload') {
           $('#edit-field-qa-picture-und-0-upload').trigger('click');
         }
-        if(e.target.id == 'label-edit-field-video-link-und-0-value'){
-          var video = window.prompt('Ссылка на youtube'); 
-          $('#edit-field-video-link-und-0-value').val(video);
-          $('#label-edit-field-video-link-und-0-value').text(video);
+        if (e.target.id == 'label-edit-field-video-link-und-0-value') {
+          var video = window.prompt('Вставьте ссылку на youtube.com или на youtu.be', '');
+          if ((!!video) && (video.length > 1)) {
+            $('#edit-field-video-link-und-0-value').val(video);
+            $('#label-edit-field-video-link-und-0-value').text(video);
+          }
         }
         return false;
       })
@@ -126,16 +128,15 @@ HTML;
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {
   if (!user_access('create answer content')) {
-    drupal_set_message(t('A confirmation email has been sent to you.'));
+//    drupal_set_message(t('A confirmation email has been sent to you.'));
   }
 
 }
 
 function _qa_form_answer_node_form_submit($form, &$form_state) {
 
-  if (!user_access('create answer content')) {
+  if (!user_access('edit any answer content')) {
     drupal_set_message(t('Your answer will be published after moderation'));
-    drupal_set_message(t('A confirmation email has been sent to you.'));
   }
   $_GET['destination'] = '/question/' . arg(1);
 }
@@ -146,8 +147,33 @@ function _qa_form_answer_node_form_submit($form, &$form_state) {
 function qa_node_submit($node, $form, &$form_state) {
   switch ($node->type) {
     case 'answer':
+      // https://youtu.be/a3HW-2SwHNo
+      // https://www.youtube.com/watch?v=a3HW-2SwHNo&t=3s
+      dpm($form_state);
+      dpm($node);
+      $video = '';
+      if (isset($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value']) &&
+        mb_strlen($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'])
+      ) {
+        $video = $form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'];
+      }
+      if ($video) {
+        if (mb_strpos($video, 'youtu.be/')) {
+          $video = explode('.be/', $video);
+          $video = array_key_exists(1, $video) ? $video[1] : '';
+        } elseif (mb_strpos($video, 'youtube.com')) {
+          $video = parse_url($video, PHP_URL_QUERY);
+          parse_str($video, $video);
+          $video = array_key_exists('v', $video) ? $video['v'] : '';
+        }
+      }
+      if ($video) {
+        $node->field_video_link[LANGUAGE_NONE][0]['value'] = $video;
+      } else {
+        unset($node->field_video_link);
+      }
       $node->title = mb_substr($node->body[LANGUAGE_NONE][0]['value'], 0, 255);
-      $node->status = user_access('create question content') ? 1 : 0;
+      $node->status = user_access('edit any question content') ? 1 : 0;
       if ((!isset($node->nid)) && (arg(0) == 'question')) {
         $node->field_question_ref[LANGUAGE_NONE][0]['target_id'] = arg(1);
       }
@@ -214,8 +240,8 @@ CSS;
 
 function _qa_form_question_node_form_validate($form, &$form_state) {
   if (!user_access('create question content')) {
-    drupal_set_message(t('For question you must be authorised'));
-    drupal_goto('user/login');
+//    drupal_set_message(t('For question you must be authorised'));
+//    drupal_goto('user/login');
   }
 }
 

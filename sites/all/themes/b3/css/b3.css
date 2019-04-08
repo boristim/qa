@@ -292,7 +292,7 @@ html body {
               max-width: 100%;
               height: auto; }
           html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info {
-            width: 15%;
+            width: 150px;
             padding: 20px 0; }
             html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table {
               min-height: 100px;
@@ -424,6 +424,16 @@ html body {
     border-radius: 20px 20px 0 0;
     padding: 20px 220px 0 20px;
     position: relative; }
+    html body #answer_form_container #answer-node-form:after {
+      position: absolute;
+      right: 215px;
+      top: -40px;
+      z-index: 900;
+      display: block;
+      content: "";
+      background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
+      background-size: cover;
+      width: 112px; }
     html body #answer_form_container #answer-node-form #edit-body .grippie,
     html body #answer_form_container #answer-node-form #edit-body label {
       display: none; }
@@ -470,6 +480,8 @@ html body {
             html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li label {
               width: 100%;
               cursor: pointer;
+              overflow: hidden;
+              white-space: nowrap;
               overflow: hidden; }
             html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
               background: #e30613; }
