@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Helvetica;
   src: url("../font/HelveticaRegular.eot");
@@ -251,62 +252,87 @@ html body {
     html body.page-question .answers-list .answers-to-question {
       background: transparent;
       border: none; }
-      html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row {
-        border: #e30613 3px solid; }
+      html body.page-question .answers-list .answers-to-question .views-row-first {
+        position: relative; }
+        html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row {
+          border: #e30613 3px solid; }
+          html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
+            border-left: 3px solid #e30613; }
+          html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row:after {
+            display: block;
+            content: "Лучший ответ";
+            font-family: PFDinTextCondPro, sans-serif;
+            font-size: 21px;
+            color: white;
+            background: #e30613;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            top: -30px;
+            right: 65px;
+            z-index: 1000;
+            padding: 0 10px; }
       html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row {
         background: white;
         margin: 10px 0;
         border-radius: 10px; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table > tr td {
-          padding: 20px;
-          min-height: 100px;
-          vertical-align: top; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture {
-          width: 100px;
-          padding-right: 0;
-          min-height: 100px; }
-          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture img {
-            width: 100px;
-            display: block;
-            max-width: 100%;
-            height: auto; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table {
-          min-height: 100px;
-          height: 100%; }
-          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td {
-            height: 50%; }
-            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-name-td {
-              vertical-align: bottom;
-              font-size: 20px;
-              font-family: HelveticaBold, sans-serif;
-              color: black; }
-            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-email-td {
-              vertical-align: top;
-              font-size: 12px;
-              color: #9d9d9c; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-body {
-          font-size: 14px;
-          font-family: OpenSans, sans-serif;
-          color: black;
-          width: 60%;
-          text-align: left; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media {
-          text-align: right; }
-          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media a {
-            display: inline-block;
-            float: right; }
-        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate {
-          vertical-align: middle;
-          text-align: center;
-          min-height: 100px;
-          color: #e30613;
-          text-align: center;
-          font-size: 20px;
-          font-weight: bold;
-          width: 20px; }
-          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate span {
-            display: block;
-            text-align: center; }
+        html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table {
+          width: 100%; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
+            padding: 20px;
+            min-height: 100px;
+            vertical-align: top; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture {
+            width: 120px;
+            min-height: 100px;
+            padding: 20px 10px; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture img {
+              width: 100px;
+              display: block;
+              max-width: 100%;
+              height: auto; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info {
+            width: 15%;
+            padding: 20px 0; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table {
+              min-height: 100px;
+              height: 100%; }
+              html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td {
+                height: 50%;
+                padding: 0;
+                width: 100%;
+                overflow: hidden; }
+                html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-name-td {
+                  vertical-align: bottom;
+                  font-size: 20px;
+                  font-family: HelveticaBold, sans-serif;
+                  color: black; }
+                html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-email-td {
+                  vertical-align: top;
+                  font-size: 12px;
+                  color: #9d9d9c; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-body {
+            font-size: 14px;
+            font-family: OpenSans, sans-serif;
+            color: black;
+            text-align: left;
+            padding-left: 20px; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media {
+            text-align: right; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media a {
+              display: inline-block;
+              float: right; }
+          html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate {
+            vertical-align: middle;
+            text-align: center;
+            min-height: 100px;
+            color: #e30613;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 50px; }
+            html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate span {
+              display: block;
+              text-align: center; }
   html body #search-block-form .form-control.form-text {
     background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
     background-size: 7%;
