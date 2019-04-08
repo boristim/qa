@@ -734,22 +734,53 @@ html {
 
         #answer_controls {
           position: absolute;
-          top:20px;
-          right:10px;
+          top: 20px;
+          right: 10px;
           width: 205px;
           z-index: 1000;
+
           #add_media_popup {
             display: none;
           }
+
           a {
+            position: relative;
             padding: 0 10px;
             text-decoration: none;
             display: inline-block;
-            &:hover{
+
+            &:hover {
               text-decoration: none;
             }
+
             img {
               width: 44px;
+            }
+
+            &#add_media_button {
+              ul {
+                position: absolute;
+                top: -105px;
+                left: 0;
+                width: 215px;
+                text-align: center;
+                cursor: pointer;
+                list-style: none;
+                z-index: 1100;
+                background: #c6c6c6;
+                margin: 0;
+                padding: 0;
+
+                li {
+                  color: white;
+                  margin: 0;
+                  padding: 5px;
+
+                  &:hover {
+                    background: $red;
+                  }
+                }
+              }
             }
           }
         }

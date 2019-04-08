@@ -443,6 +443,7 @@ html body {
       html body #answer_form_container #answer-node-form #answer_controls #add_media_popup {
         display: none; }
       html body #answer_form_container #answer-node-form #answer_controls a {
+        position: relative;
         padding: 0 10px;
         text-decoration: none;
         display: inline-block; }
@@ -450,5 +451,23 @@ html body {
           text-decoration: none; }
         html body #answer_form_container #answer-node-form #answer_controls a img {
           width: 44px; }
+        html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul {
+          position: absolute;
+          top: -105px;
+          left: 0;
+          width: 215px;
+          text-align: center;
+          cursor: pointer;
+          list-style: none;
+          z-index: 1100;
+          background: #c6c6c6;
+          margin: 0;
+          padding: 0; }
+          html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li {
+            color: white;
+            margin: 0;
+            padding: 5px; }
+            html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
+              background: #e30613; }
 
 /*# sourceMappingURL=b3.css.map */

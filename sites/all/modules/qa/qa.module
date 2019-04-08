@@ -43,6 +43,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
     $form['field_rate']['#access'] = user_access('edit any answer content');
     if (!user_access('edit any answer content')) {
       $form['field_video_link']['#attributes']['class'][] = 'element-invisible';
+      $form['field_qa_picture']['#attributes']['class'][] = 'element-invisible';
     }
     $form['#submit'][] = '_qa_form_answer_node_form_submit';
     $form['#validate'][] = '_qa_form_answer_node_form_validate';
@@ -65,12 +66,22 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         $('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
         return false;
       })      
-      $(document).on('click', '#submit_answer_button', function (e) {
-        console.log(e);
-        $('#answer-node-form').submit();
+      $(document).on('click', '#submit_answer_button', function (e) {        
+        $('#edit-submit--2').trigger('click');
         return false;
       })
-
+      
+      $(document).on('click', '#add_media_button', function (e) {
+        console.log(e);
+        if(e.target.id == 'img_add_media_button'){
+          $(this).find('ul').toggle('normal');          
+        } 
+        if(e.target.id == 'label-edit-field-qa-picture-und-0-upload'){
+          $('#edit-field-qa-picture-und-0-upload').trigger('click');
+          $(this).find('ul').hide('normal');
+        }
+        return false;
+      })
     }
   };
 })(jQuery);
@@ -85,14 +96,14 @@ JS;
   overflow:hidden
 }
 CSS;
-    $insert_image_title = t('Insert image');
-    $insert_video_title = t('Insert video');
+    $insert_image_title = t('Photo');
+    $insert_video_title = t('Video');
     $html = <<<HTML
 <div id="answer_controls">
-  <a href="#" id="add_media_button"><img src="/sites/default/files/theme-img/add-media.svg" alt="add media">
+  <a href="#" id="add_media_button"><img id="img_add_media_button" src="/sites/default/files/theme-img/add-media.svg" alt="add media">
     <ul id="add_media_popup">
-    <li><label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">$insert_image_title</label></li>
-    <li><label class="btn btn-primary">$insert_video_title</label></li>
+    <li><label id="label-edit-field-qa-picture-und-0-upload" for="edit-field-qa-picture-und-0-upload" class="">$insert_image_title</label></li>
+    <li><label class="">$insert_video_title</label></li>
   </ul>
   </a>
   <a href="#" id="add_smile_button"><img src="/sites/default/files/theme-img/add-smile.svg" alt="add smile"></a>
@@ -103,10 +114,10 @@ HTML;
     $form['upload_button'] = ['#markup' => $html, '#weight' => -3.5];
     $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
-//    $form['actions']['submit']['#attrributes']['css'][] = 'element-invisible';
+    $form['actions']['submit']['#attrributes']['class'][] = 'element-invisible';
   }
 
-//  dpm($form);
+  dpm($form);
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {
