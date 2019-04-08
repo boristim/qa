@@ -467,6 +467,10 @@ html body {
             color: white;
             margin: 0;
             padding: 5px; }
+            html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li label {
+              width: 100%;
+              cursor: pointer;
+              overflow: hidden; }
             html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
               background: #e30613; }
 

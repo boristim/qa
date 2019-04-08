@@ -78,7 +78,11 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         } 
         if(e.target.id == 'label-edit-field-qa-picture-und-0-upload'){
           $('#edit-field-qa-picture-und-0-upload').trigger('click');
-          $(this).find('ul').hide('normal');
+        }
+        if(e.target.id == 'label-edit-field-video-link-und-0-value'){
+          var video = window.prompt('Ссылка на youtube'); 
+          $('#edit-field-video-link-und-0-value').val(video);
+          $('#label-edit-field-video-link-und-0-value').text(video);
         }
         return false;
       })
@@ -103,7 +107,7 @@ CSS;
   <a href="#" id="add_media_button"><img id="img_add_media_button" src="/sites/default/files/theme-img/add-media.svg" alt="add media">
     <ul id="add_media_popup">
     <li><label id="label-edit-field-qa-picture-und-0-upload" for="edit-field-qa-picture-und-0-upload" class="">$insert_image_title</label></li>
-    <li><label class="">$insert_video_title</label></li>
+    <li><label id="label-edit-field-video-link-und-0-value" class="">$insert_video_title</label></li>
   </ul>
   </a>
   <a href="#" id="add_smile_button"><img src="/sites/default/files/theme-img/add-smile.svg" alt="add smile"></a>
@@ -117,7 +121,7 @@ HTML;
     $form['actions']['submit']['#attrributes']['class'][] = 'element-invisible';
   }
 
-  dpm($form);
+//  dpm($form);
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {

@@ -776,6 +776,12 @@ html {
                   margin: 0;
                   padding: 5px;
 
+                  label {
+                    width: 100%;
+                    cursor: pointer;
+                    overflow: hidden;
+                  }
+
                   &:hover {
                     background: $red;
                   }
