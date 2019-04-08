@@ -63,8 +63,13 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
     jQuery('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
     return false;
   })
+  jQurey(document).on('click','#submit_answer_button',function(){
+    jQuery('#answer-node-form').submit();
+    return false;
+  })
 JS;
     $css = <<<CSS
+#edit-actions--2,
 #edit-field-qa-picture-und-0-ajax-wrapper{
   opacity:0;
   height:1px;
@@ -72,10 +77,26 @@ JS;
   overflow:hidden
 }
 CSS;
-    $form['upload_button'] = ['#markup' => '<label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">' . t('Insert image') . '</label>', '#weight' => -3.5];
+    $insert_image_title = t('Insert image');
+    $insert_video_title = t('Insert video');
+    $html = <<<HTML
+<div id="answer_controls">
+  <ul id="add_media_popup">
+    <li><label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">$insert_image_title</label></li>
+    <li><label class="btn btn-primary">$insert_video_title</label></li>
+  </ul>
+  <a href="#" id="add_media_button"><img src="/sites/default/files/theme-img/add-media.svg" alt="add media"></a>
+  <a href="#" id="add_smile_button"><img src="/sites/default/files/theme-img/add-smile.svg" alt="add smile"></a>
+  <a href="#" id="submit_answer_button"><img src="/sites/default/files/theme-img/answer-submit.svg" alt="answer submit"></a>
+</div>
+HTML;
+
+    $form['upload_button'] = ['#markup' => $html, '#weight' => -3.5];
     $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
+//    $form['actions']['submit']['#attrributes']['css'][] = 'element-invisible';
   }
+
 //  dpm($form);
 }
 

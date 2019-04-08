@@ -190,18 +190,25 @@
 <?php
 if ('question' == arg(0)) {
   ?>
-  <div class="container">
-    <?php
-    $title = drupal_get_title();
-    module_load_include('inc', 'node', 'node.pages');
-    $form = node_add('answer');
-    print drupal_render($form);
-    drupal_set_title($title);
-    ?>
+  <div class="container" id="answer_form_container">
+    <div class="row">
+      <div class="col-sm-2 hidden-xs"></div>
+      <div class="col-sm-8 col-xs-12">
+        <?php
+        $title = drupal_get_title();
+        module_load_include('inc', 'node', 'node.pages');
+        $form = node_add('answer');
+        print drupal_render($form);
+        drupal_set_title($title);
+        ?>
+      </div>
+      <div class="col-sm-2 hidden-xs"></div>
+    </div>
   </div>
   <?php
 }
 ?>
+
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer container-fluid">
     <div class="<?php print $container_class; ?>">

@@ -424,10 +424,10 @@ html {
 
             .views-field-field-rate {
               .answer-row {
-                border: $red 3px solid;
+                border: $red 5px solid;
 
                 .answer-rate {
-                  border-left: 3px solid $red;
+                  border-left: 5px solid $red;
                 }
 
                 &:after {
@@ -451,7 +451,7 @@ html {
           .views-field-field-rate {
 
             .answer-row {
-
+              border: white 5px solid;
               background: white;
               margin: 10px 0;
               border-radius: 10px;
@@ -531,6 +531,8 @@ html {
                 }
 
                 .answer-rate {
+                  border-left: 5px solid white;
+
                   span {
                     display: block;
                     text-align: center;
@@ -540,11 +542,9 @@ html {
                   text-align: center;
                   min-height: 100px;
                   color: $red;
-                  text-align: center;
                   font-size: 20px;
                   font-weight: bold;
                   width: 50px;
-                  //padding: .5rem 0 0 0;
                 }
               }
             }
@@ -578,6 +578,12 @@ html {
           border: 1px solid silver;
           border-left: none;
         }
+      }
+    }
+
+    .region-content {
+      &.well {
+        background: transparent;
       }
     }
 
@@ -693,6 +699,57 @@ html {
 
           .site-mail {
 
+          }
+        }
+      }
+
+      border-top: none;
+    }
+
+    #answer_form_container {
+      #answer-node-form {
+        width: 100%;
+        background: $bg;
+        border-radius: 20px 20px 0 0;
+        padding: 20px 200px 0 20px;
+        position: relative;
+
+        #edit-body {
+          .grippie,
+          label {
+            display: none;
+          }
+
+          textarea {
+            border-radius: 10px;
+            height: 50px;
+            padding: 1rem;
+            font-size: 20px;
+
+            &::placeholder {
+              color: #878787;
+            }
+          }
+        }
+
+        #answer_controls {
+          position: absolute;
+          top:20px;
+          right:20px;
+          width: 250px;
+          z-index: 1000;
+          #add_media_popup {
+            display: none;
+          }
+          a {
+            text-decoration: none;
+            display: inline-block;
+            &:hover{
+              text-decoration: none;
+            }
+            img {
+              width: 44px;
+            }
           }
         }
       }
