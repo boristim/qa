@@ -422,7 +422,7 @@ html body {
     width: 100%;
     background: #1d71d8;
     border-radius: 20px 20px 0 0;
-    padding: 20px 200px 0 20px;
+    padding: 20px 220px 0 20px;
     position: relative; }
     html body #answer_form_container #answer-node-form #edit-body .grippie,
     html body #answer_form_container #answer-node-form #edit-body label {
@@ -437,12 +437,13 @@ html body {
     html body #answer_form_container #answer-node-form #answer_controls {
       position: absolute;
       top: 20px;
-      right: 20px;
-      width: 250px;
+      right: 10px;
+      width: 205px;
       z-index: 1000; }
       html body #answer_form_container #answer-node-form #answer_controls #add_media_popup {
         display: none; }
       html body #answer_form_container #answer-node-form #answer_controls a {
+        padding: 0 10px;
         text-decoration: none;
         display: inline-block; }
         html body #answer_form_container #answer-node-form #answer_controls a:hover {

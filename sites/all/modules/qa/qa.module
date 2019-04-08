@@ -58,15 +58,23 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
   }
   if (!user_access('edit any question content')) {
     $js = <<<JS
+(function ($) {
+  Drupal.behaviors.qa_module = {
+    attach: function (context, settings) {
+      $(document).on('change', '#edit-field-qa-picture-und-0-upload', function (t) {
+        $('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
+        return false;
+      })      
+      $(document).on('click', '#submit_answer_button', function (e) {
+        console.log(e);
+        $('#answer-node-form').submit();
+        return false;
+      })
+
+    }
+  };
+})(jQuery);
     
-  jQuery(document).on('change','#edit-field-qa-picture-und-0-upload',function(t){    
-    jQuery('label[for=edit-field-qa-picture-und-0-upload]').text(t.currentTarget.files[0].name);
-    return false;
-  })
-  jQurey(document).on('click','#submit_answer_button',function(){
-    jQuery('#answer-node-form').submit();
-    return false;
-  })
 JS;
     $css = <<<CSS
 #edit-actions--2,
@@ -81,11 +89,12 @@ CSS;
     $insert_video_title = t('Insert video');
     $html = <<<HTML
 <div id="answer_controls">
-  <ul id="add_media_popup">
+  <a href="#" id="add_media_button"><img src="/sites/default/files/theme-img/add-media.svg" alt="add media">
+    <ul id="add_media_popup">
     <li><label for="edit-field-qa-picture-und-0-upload" class="btn btn-primary">$insert_image_title</label></li>
     <li><label class="btn btn-primary">$insert_video_title</label></li>
   </ul>
-  <a href="#" id="add_media_button"><img src="/sites/default/files/theme-img/add-media.svg" alt="add media"></a>
+  </a>
   <a href="#" id="add_smile_button"><img src="/sites/default/files/theme-img/add-smile.svg" alt="add smile"></a>
   <a href="#" id="submit_answer_button"><img src="/sites/default/files/theme-img/answer-submit.svg" alt="answer submit"></a>
 </div>

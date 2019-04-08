@@ -192,8 +192,8 @@ if ('question' == arg(0)) {
   ?>
   <div class="container" id="answer_form_container">
     <div class="row">
-      <div class="col-sm-2 hidden-xs"></div>
-      <div class="col-sm-8 col-xs-12">
+<!--      <div class="col-sm-2 hidden-xs"></div>-->
+      <div class="col-sm-12">
         <?php
         $title = drupal_get_title();
         module_load_include('inc', 'node', 'node.pages');
@@ -202,7 +202,7 @@ if ('question' == arg(0)) {
         drupal_set_title($title);
         ?>
       </div>
-      <div class="col-sm-2 hidden-xs"></div>
+<!--      <div class="col-sm-2 hidden-xs"></div>-->
     </div>
   </div>
   <?php

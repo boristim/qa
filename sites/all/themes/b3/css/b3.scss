@@ -711,7 +711,7 @@ html {
         width: 100%;
         background: $bg;
         border-radius: 20px 20px 0 0;
-        padding: 20px 200px 0 20px;
+        padding: 20px 220px 0 20px;
         position: relative;
 
         #edit-body {
@@ -735,13 +735,14 @@ html {
         #answer_controls {
           position: absolute;
           top:20px;
-          right:20px;
-          width: 250px;
+          right:10px;
+          width: 205px;
           z-index: 1000;
           #add_media_popup {
             display: none;
           }
           a {
+            padding: 0 10px;
             text-decoration: none;
             display: inline-block;
             &:hover{
