@@ -353,7 +353,8 @@ html body {
     border: 1px solid silver;
     border-left: none; }
   html body .region-content.well {
-    background: transparent; }
+    background: transparent;
+    border: none; }
   html body .footer {
     background: #1d71d8;
     color: white;
@@ -428,14 +429,15 @@ html body {
     position: relative; }
     html body #answer_form_container #answer-node-form:after {
       position: absolute;
-      right: 215px;
-      top: -40px;
-      z-index: 9000;
+      right: 115px;
+      top: -50px;
+      z-index: -1;
       display: block;
       content: "";
-      background: url(/sites/default/files/theme-img/cat.png) no-repeat center center green;
+      background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
       background-size: contain;
-      width: 112px; }
+      width: 112px;
+      height: 136px; }
     html body #answer_form_container #answer-node-form #edit-body .grippie,
     html body #answer_form_container #answer-node-form #edit-body label {
       display: none; }
@@ -465,8 +467,8 @@ html body {
           width: 44px; }
         html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul {
           position: absolute;
-          top: -105px;
-          left: 0;
+          top: -119px;
+          left: -80px;
           width: 215px;
           text-align: center;
           cursor: pointer;

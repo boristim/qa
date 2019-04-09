@@ -149,8 +149,8 @@ function qa_node_submit($node, $form, &$form_state) {
     case 'answer':
       // https://youtu.be/a3HW-2SwHNo
       // https://www.youtube.com/watch?v=a3HW-2SwHNo&t=3s
-      dpm($form_state);
-      dpm($node);
+//      dpm($form_state);
+//      dpm($node);
       $video = '';
       if (isset($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value']) &&
         mb_strlen($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'])
@@ -158,11 +158,12 @@ function qa_node_submit($node, $form, &$form_state) {
         $video = $form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'];
       }
       if ($video) {
-        if (mb_strpos($video, 'youtu.be/')) {
+        if (mb_strpos($video, 'outu.be/') > 0) {
           $video = explode('.be/', $video);
           $video = array_key_exists(1, $video) ? $video[1] : '';
-        } elseif (mb_strpos($video, 'youtube.com')) {
-          $video = parse_url($video, PHP_URL_QUERY);
+        } elseif ((mb_strpos($video, 'outube.com') > 0)
+          && ($video = parse_url($video, PHP_URL_QUERY))
+        ) {
           parse_str($video, $video);
           $video = array_key_exists('v', $video) ? $video['v'] : '';
         }

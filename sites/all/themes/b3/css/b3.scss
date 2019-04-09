@@ -587,6 +587,7 @@ html {
     .region-content {
       &.well {
         background: transparent;
+        border: none;
       }
     }
 
@@ -719,14 +720,15 @@ html {
 
         &:after {
           position: absolute;
-          right: 215px;
-          top: -40px;
-          z-index: 9000;
+          right: 115px;
+          top: -50px;
+          z-index: -1;
           display: block;
           content: "";
-          background: url(/sites/default/files/theme-img/cat.png) no-repeat center center green;
+          background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
           background-size: contain;
           width: 112px;
+          height: 136px;
         }
 
         #edit-body {
@@ -775,8 +777,8 @@ html {
             &#add_media_button {
               ul {
                 position: absolute;
-                top: -105px;
-                left: 0;
+                top: -119px;
+                left: -80px;
                 width: 215px;
                 text-align: center;
                 cursor: pointer;
