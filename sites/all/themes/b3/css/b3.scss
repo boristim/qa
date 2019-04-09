@@ -39,7 +39,9 @@ html {
     background: #EDEDED;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
-
+    .container-fluid{
+      max-width: 1920px;
+    }
     h3 {
       font-size: 18px;
     }
@@ -722,8 +724,8 @@ html {
           z-index: 900;
           display: block;
           content: "";
-          background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
-          background-size: cover;
+          background: url(/sites/default/files/theme-img/cat.png) no-repeat center center transparent;
+          background-size: contain;
           width: 112px;
         }
 
