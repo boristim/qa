@@ -39,9 +39,11 @@ html {
     background: #EDEDED;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
-    .container-fluid{
+
+    .container-fluid {
       max-width: 1920px;
     }
+
     h3 {
       font-size: 18px;
     }
@@ -403,6 +405,48 @@ html {
           .question-post {
             white-space: nowrap;
           }
+
+          .social-buttons-share {
+            background: white;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+            .ya-share2__list {
+              text-align: center;
+              .ya-share2__icon {
+                width: 33px;
+                height: 33px;
+                margin: 0;
+                padding: 0;
+                background-size: contain;
+              }
+
+              .ya-share2__item {
+                margin: 5px;
+                display: inline-block;
+              }
+
+              .ya-share2__item_service_vkontakte .ya-share2__icon {
+                background: url(/sites/default/files/theme-img/social/vk-blue.svg) no-repeat center center white;
+              }
+
+              .ya-share2__item_service_facebook .ya-share2__icon {
+                background: url(/sites/default/files/theme-img/social/fb-blue.svg) no-repeat center center white;
+              }
+
+              .ya-share2__item_service_twitter .ya-share2__icon {
+                background: url(/sites/default/files/theme-img/social/tw-blue.svg) no-repeat center center white;
+              }
+
+              .ya-share2__item_service_reddit .ya-share2__icon {
+                background: url(/sites/default/files/theme-img/social/rd-blue.svg) no-repeat center center white;
+              }
+
+              .ya-share2__item_service_lj .ya-share2__icon {
+                background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white;
+              }
+            }
+          }
         }
       }
 
@@ -676,15 +720,18 @@ html {
               margin-top: 5px;
             }
           }
-          .social-buttons{
+
+          .social-buttons {
             padding: 7px 0 0 0;
             text-align: justify;
-            a{
+
+            a {
               display: inline;
               padding: 0;
               margin: 0 4px 0 0;
-              img{
-                width:25px;
+
+              img {
+                width: 25px;
               }
             }
           }

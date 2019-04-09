@@ -243,6 +243,32 @@ html body {
         padding: 0 0 0 20px; }
       html body.page-question .question-row .question-info .question-post {
         white-space: nowrap; }
+      html body.page-question .question-row .question-info .social-buttons-share {
+        background: white;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 20px; }
+        html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list {
+          text-align: center; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__icon {
+            width: 33px;
+            height: 33px;
+            margin: 0;
+            padding: 0;
+            background-size: contain; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item {
+            margin: 5px;
+            display: inline-block; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon {
+            background: url(/sites/default/files/theme-img/social/vk-blue.svg) no-repeat center center white; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon {
+            background: url(/sites/default/files/theme-img/social/fb-blue.svg) no-repeat center center white; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon {
+            background: url(/sites/default/files/theme-img/social/tw-blue.svg) no-repeat center center white; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon {
+            background: url(/sites/default/files/theme-img/social/rd-blue.svg) no-repeat center center white; }
+          html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
+            background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white; }
   html body.page-question .answers-list {
     margin-top: 20px; }
     html body.page-question .answers-list .answers-title {
