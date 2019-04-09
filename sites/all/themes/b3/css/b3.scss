@@ -676,6 +676,18 @@ html {
               margin-top: 5px;
             }
           }
+          .social-buttons{
+            padding: 7px 0 0 0;
+            text-align: justify;
+            a{
+              display: inline;
+              padding: 0;
+              margin: 0 4px 0 0;
+              img{
+                width:25px;
+              }
+            }
+          }
         }
 
         #block-block-7 {
