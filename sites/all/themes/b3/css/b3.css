@@ -430,10 +430,10 @@ html body {
       position: absolute;
       right: 215px;
       top: -40px;
-      z-index: 900;
+      z-index: 9000;
       display: block;
       content: "";
-      background: url(/sites/default/files/theme-img/cat.png) no-repeat center center transparent;
+      background: url(/sites/default/files/theme-img/cat.png) no-repeat center center green;
       background-size: contain;
       width: 112px; }
     html body #answer_form_container #answer-node-form #edit-body .grippie,
