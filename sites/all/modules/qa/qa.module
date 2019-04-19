@@ -288,23 +288,3 @@ function qa_variable_info($options) {
   return $variable;
 }
 
-/**
- * Implements hook_menu().
- */
-function qa_menu() {
-  $js = "  <!-- GoTalk invintation code -->
-  <script language=\"javascript\" src=\"//www.gotalk.ru/invite?action=invitejs&account_id=2685\"></script>
-  <a href=\"#\" OnClick=\"javascript:DtalkOpenChat ();return false;\" style=\"position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;\">
-    <script language=\"javascript\">
-      var gotalk_img = (dtalk_online_operators > 0) ? \"//www.gotalk.ru//i/invite_ranchor_2.gif\" : \"//www.gotalk.ru//i/invite_offline_ranchor_2.png\";
-      document.write (
-        '<img src=\"' + gotalk_img + '\" alt=\"GoTalk support chat\" border=\"0\"/>'
-      );
-    </script>
-  </a>
-  <!-- End of GoTalk invintation code -->
-";
-  drupal_add_js($js, ['type' => 'inline', 'scope' => 'footer']);
-  $items = [];
-  return $items;
-}
