@@ -41,7 +41,9 @@ html {
     font-size: 18px;
 
     .container-fluid {
-      max-width: 1920px;
+      &.main-container {
+        max-width: 1920px;
+      }
     }
 
     h3 {

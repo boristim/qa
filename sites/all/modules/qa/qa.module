@@ -224,16 +224,8 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
     $form['field_username'][LANGUAGE_NONE][0]['value']['#default_value'] =
     $form['field_e_mail'][LANGUAGE_NONE][0]['value']['#default_value'] = '';
   }
-  /*
-  $css = <<<CSS
-.form-item-field-username-und-0-value label,
-.form-item-field-e-mail-und-0-value label,
-.form-item-field-question-und-0-value label {
-  display: none
-}
-CSS;
-  $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
-  */
+  $form['actions']['submit']['#value'] = t('Send');
+//  dpm($form);
 }
 
 function _qa_form_question_node_form_validate($form, &$form_state) {
@@ -294,4 +286,27 @@ function qa_variable_info($options) {
     'access' => user_access('access content')
   ];
   return $variable;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function qa_menu() {
+  $js = <<<JS
+  <!-- GoTalk invintation code -->
+  <script language="javascript" src="//www.gotalk.ru/invite?action=invitejs&account_id=2685"></script>
+  <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" style="position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;">
+    <script language="javascript">
+      var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
+      document.write (
+        '<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>'
+      );
+    </script>
+  </a>
+  <!-- End of GoTalk invintation code -->
+
+JS;
+  drupal_add_js($js, ['type' => 'inline', 'scope' => 'footer']);
+  $items = [];
+  return $items;
 }
