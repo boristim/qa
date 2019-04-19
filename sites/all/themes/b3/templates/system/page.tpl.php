@@ -216,3 +216,4 @@ if ('question' == arg(0)) {
     </div>
   </footer>
 <?php endif; ?>
+<!-- /page -->
