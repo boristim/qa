@@ -43,6 +43,10 @@ html {
     .container-fluid {
       &.main-container {
         max-width: 1920px;
+        #right_banner {
+          top:60px;
+          right:0;
+        }
       }
     }
 
@@ -893,7 +897,7 @@ html {
     }
 
     .pos-sta {
-      position: static ''
+      position: static;
     }
   }
 }

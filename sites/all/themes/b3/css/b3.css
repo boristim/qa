@@ -25,6 +25,9 @@ html body {
   font-size: 18px; }
   html body .container-fluid.main-container {
     max-width: 1920px; }
+    html body .container-fluid.main-container #right_banner {
+      top: 60px;
+      right: 0; }
   html body h3 {
     font-size: 18px; }
   html body #navbar {
@@ -536,6 +539,6 @@ html body {
   html body .pos-rel {
     position: relative; }
   html body .pos-sta {
-    position: static ""; }
+    position: static; }
 
 /*# sourceMappingURL=b3.css.map */

@@ -10,22 +10,22 @@
  * Available variables:
  *
  * General utility variables:
- * @var $base_path: The base URL path of the Drupal installation. At the very
+ * @var $base_path : The base URL path of the Drupal installation. At the very
  *   least, this will always default to /.
- * @var $directory: The directory the template is located in, e.g. modules/system
+ * @var $directory : The directory the template is located in, e.g. modules/system
  *   or themes/bartik.
- * @var $is_front: TRUE if the current page is the front page.
- * @var $logged_in: TRUE if the user is registered and signed in.
- * @var $is_admin: TRUE if the user has permission to access administration pages.
+ * @var $is_front : TRUE if the current page is the front page.
+ * @var $logged_in : TRUE if the user is registered and signed in.
+ * @var $is_admin : TRUE if the user has permission to access administration pages.
  *
  * Site identity:
- * @var $front_page: The URL of the front page. Use this instead of $base_path,
+ * @var $front_page : The URL of the front page. Use this instead of $base_path,
  *   when linking to the front page. This includes the language domain or
  *   prefix.
- * @var $logo: The path to the logo image, as defined in theme configuration.
- * @var $site_name: The name of the site, empty when display has been disabled
+ * @var $logo : The path to the logo image, as defined in theme configuration.
+ * @var $site_name : The name of the site, empty when display has been disabled
  *   in theme settings.
- * @var $site_slogan: The slogan of the site, empty when display has been disabled
+ * @var $site_slogan : The slogan of the site, empty when display has been disabled
  *   in theme settings.
  *
  * Navigation:
@@ -33,24 +33,24 @@
  *   site, if they have been configured.
  * @var $secondary_menu (array): An array containing the Secondary menu links for
  *   the site, if they have been configured.
- * @var $breadcrumb: The breadcrumb trail for the current page.
+ * @var $breadcrumb : The breadcrumb trail for the current page.
  *
  * Page content (in order of occurrence in the default page.tpl.php):
  * @var $title_prefix (array): An array containing additional output populated by
  *   modules, intended to be displayed in front of the main title tag that
  *   appears in the template.
- * @var $title: The page title, for use in the actual HTML content.
+ * @var $title : The page title, for use in the actual HTML content.
  * @var $title_suffix (array): An array containing additional output populated by
  *   modules, intended to be displayed after the main title tag that appears in
  *   the template.
- * @var $messages: HTML for status and error messages. Should be displayed
+ * @var $messages : HTML for status and error messages. Should be displayed
  *   prominently.
  * @var $tabs (array): Tabs linking to any sub-pages beneath the current page
  *   (e.g., the view and edit tabs when displaying a node).
  * @var $action_links (array): Actions local to the page, such as 'Add menu' on the
  *   menu administration interface.
- * @var $feed_icons: A string of all feed icons for the current page.
- * @var $node: The node object, if there is an automatically-loaded node
+ * @var $feed_icons : A string of all feed icons for the current page.
+ * @var $node : The node object, if there is an automatically-loaded node
  *   associated with the page, and the node ID is the second argument
  *   in the page's path (e.g. node/12345 and node/12345/revisions, but not
  *   comment/reply/12345).
@@ -175,8 +175,8 @@
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-2 col-xs-12" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
+      <aside class="col-sm-2 col-xs-12 pos-fix" id="right_banner" role="complementary">
+          <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 
