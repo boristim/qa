@@ -70,10 +70,13 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         $('#edit-submit--2').trigger('click');
         return false;
       })
-      $(document).on('click', '#add_smile_button', function (e) {
-        console.log(e);
+      $(document).on('click', '#add_smile_button', function (e) {        
         if (e.target.id == 'img_add_smile_button') {
           $(this).find('ul').toggle('normal');
+        }
+        if(e.target.id == ""){          
+          t = $('#edit-body-und-0-value').val() + ' ' + e.target.innerText;
+          $('#edit-body-und-0-value').val(t);          
         }
         return false;
       });
@@ -193,7 +196,13 @@ function qa_node_submit($node, $form, &$form_state) {
       } else {
         $node->field_video_link[LANGUAGE_NONE][0]['value'] = '';
       }
-      $node->title = mb_substr($node->body[LANGUAGE_NONE][0]['value'], 0, 255);
+      $title = iconv('utf-8', 'windows-1251//IGNORE', $node->body[LANGUAGE_NONE][0]['value']);
+      $title = iconv('windows-1251', 'utf-8//IGNORE', $title);
+      if (!mb_strlen($title)) {
+        $title = "Answer " . time();
+      }
+      $node->title = mb_substr($title, 0, 60);
+
       $node->status = user_access('edit any question content') ? 1 : 0;
       if ((!isset($node->nid)) && (arg(0) == 'question')) {
         $node->field_question_ref[LANGUAGE_NONE][0]['target_id'] = arg(1);

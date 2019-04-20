@@ -745,8 +745,8 @@ html body #answer_form_container #answer-node-form #answer_controls a img {
 }
 html body #answer_form_container #answer-node-form #answer_controls a#add_smile_button ul {
   position: absolute;
-  top: -119px;
-  left: -80px;
+  top: -223px;
+  left: -90px;
   width: 215px;
   text-align: center;
   cursor: pointer;
@@ -755,6 +755,7 @@ html body #answer_form_container #answer-node-form #answer_controls a#add_smile_
   background: #1d71d8;
   margin: 0;
   padding: 0;
+  border-radius: 10px 10px 0 0;
 }
 html body #answer_form_container #answer-node-form #answer_controls a#add_smile_button ul li {
   color: white;

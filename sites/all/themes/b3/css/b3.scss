@@ -971,8 +971,8 @@ html {
             &#add_smile_button {
               ul {
                 position: absolute;
-                top: -119px;
-                left: -80px;
+                top: -223px;
+                left: -90px;
                 width: 215px;
                 text-align: center;
                 cursor: pointer;
@@ -981,7 +981,7 @@ html {
                 background: $bg;
                 margin: 0;
                 padding: 0;
-
+                border-radius: 10px 10px 0 0;
                 li {
                   color: white;
                   margin: 0;
