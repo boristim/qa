@@ -188,7 +188,7 @@
   </div>
 
   <?php
-  if ('question' == arg(0)) {
+  if ('question' == arg(0) && (!$is_admin)) {
     ?>
     <div class="container" id="answer_form_container">
       <div class="row">
