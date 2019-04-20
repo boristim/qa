@@ -56,10 +56,13 @@ html body #navbar #block-menu-menu-top-menu {
 html body #navbar #block-menu-menu-top-menu .menu.nav > li {
   list-style: none;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
   text-transform: uppercase;
+}
+html body #navbar #block-menu-menu-top-menu .menu.nav > li a .caret {
+  display: none;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a:hover {
   background: #1f3d82;

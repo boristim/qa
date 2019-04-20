@@ -5,6 +5,11 @@
         alert('This page is under construction');
         return false;
       })
+      $('#block-menu-menu-top-menu .dropdown-toggle').on('mouseover', function () {
+        $(this).trigger('click');
+      }).on('mouseout', function () {
+        $(this).trigger('click');
+      })
       $(window).on('scroll', function () {
         if ($('#answer_form_container').length) {
           var main = $('.main-container');
