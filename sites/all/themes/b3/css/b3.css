@@ -24,10 +24,12 @@ html body {
   font-family: Helvetica, sans-serif;
   font-size: 18px; }
   html body .container-fluid.main-container {
-    max-width: 1920px; }
-    html body .container-fluid.main-container #right_banner {
-      top: 60px;
-      right: 0; }
+    max-width: 1920px;
+    padding-bottom: 90px; }
+    html body .container-fluid.main-container #sidebar_second {
+      top: 90px;
+      right: 0;
+      z-index: -100; }
   html body h3 {
     font-size: 18px; }
   html body #navbar {
@@ -272,14 +274,14 @@ html body {
             background: url(/sites/default/files/theme-img/social/rd-blue.svg) no-repeat center center white; }
           html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
             background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white; }
+  html body.page-question .answers-title {
+    color: #1d71d8;
+    font-weight: bold;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-family: HelveticaBold, sans-serif; }
   html body.page-question .answers-list {
     margin-top: 20px; }
-    html body.page-question .answers-list .answers-title {
-      color: #1d71d8;
-      font-weight: bold;
-      font-size: 34px;
-      text-transform: uppercase;
-      font-family: HelveticaBold, sans-serif; }
     html body.page-question .answers-list .answers-to-question {
       background: transparent;
       border: none; }

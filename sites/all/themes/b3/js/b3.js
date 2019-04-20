@@ -1,6 +1,10 @@
 (function ($) {
   Drupal.behaviors.b3 = {
     attach: function (context, settings) {
+      $('#block-locale-language .en a').click(function () {
+        alert('This page is under construction');
+        return false;
+      })
       $(window).on('scroll', function () {
         if ($('#answer_form_container').length) {
           var main = $('.main-container');

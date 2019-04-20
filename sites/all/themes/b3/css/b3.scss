@@ -43,9 +43,12 @@ html {
     .container-fluid {
       &.main-container {
         max-width: 1920px;
-        #right_banner {
-          top:60px;
-          right:0;
+        padding-bottom: 90px;
+
+        #sidebar_second {
+          top: 90px;
+          right: 0;
+          z-index: -100;
         }
       }
     }
@@ -458,16 +461,16 @@ html {
         }
       }
 
+      .answers-title {
+        color: $bg;
+        font-weight: bold;
+        font-size: 34px;
+        text-transform: uppercase;
+        font-family: HelveticaBold, sans-serif;
+      }
+
       .answers-list {
         margin-top: 20px;
-
-        .answers-title {
-          color: $bg;
-          font-weight: bold;
-          font-size: 34px;
-          text-transform: uppercase;
-          font-family: HelveticaBold, sans-serif;
-        }
 
         .answers-to-question {
           background: transparent;
