@@ -60,6 +60,7 @@ html body #navbar #block-menu-menu-top-menu .menu.nav > li {
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
   text-transform: uppercase;
+  padding: 10px 5px;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a .caret {
   display: none;
@@ -809,6 +810,9 @@ html body .pos-rel {
 }
 html body .pos-sta {
   position: static;
+}
+html body .dropdown-menu {
+  top: 99%;
 }
 
 /*# sourceMappingURL=b3.css.map */

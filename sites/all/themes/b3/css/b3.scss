@@ -84,6 +84,7 @@ html {
 
               a {
                 text-transform: uppercase;
+                padding: 10px 5px;
 
                 .caret {
                   display: none;
@@ -1053,6 +1054,11 @@ html {
 
     .pos-sta {
       position: static;
+    }
+
+    .dropdown-menu {
+      top: 99%;
+      //bottom: 0;
     }
   }
 }
