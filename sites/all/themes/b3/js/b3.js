@@ -36,7 +36,8 @@
 
         var menuItems = menu.children('li');
         var firstMenuItem = menuItems.eq(0);
-        var moreMenu = $('<li class="more"><a href="#">Еще <i>&dArr;</i></li>');
+        // var moreMenu = $('<li class="more"><a href="#">Еще <i class="fa fa-angle-down" aria-hidden="true"></i></li>');
+        var moreMenu = $('<li class="more"><a href="#">Еще <i style="font-style: normal">&dArr;</i></li>');
         var moreMenuShowed = false;
 
 
@@ -90,8 +91,11 @@
         menuUpdate();
       }
 
-      $(document).ready(function(){
-        bindMenu();
+      $(document).ready(function () {
+        setInterval(function () {
+          bindMenu();
+        }, 100)
+
       })
     }
   };

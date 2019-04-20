@@ -55,13 +55,21 @@ html body #navbar .menu.nav.navbar-nav {
 html body #navbar #navigation-wrapper {
   height: 65.7px;
 }
+html body #navbar #navigation-wrapper #block-menu-menu-top-menu {
+  overflow: hidden;
+}
 html body #navbar #navigation-wrapper #block-menu-menu-top-menu .menu .more ~ li {
+  display: none;
   visibility: hidden;
   height: 1px;
   overflow: hidden;
   z-index: -999px;
 }
+html body #navbar #navigation-wrapper.extended #block-menu-menu-top-menu {
+  overflow: visible;
+}
 html body #navbar #navigation-wrapper.extended #block-menu-menu-top-menu .menu .more ~ li {
+  display: inline-block;
   visibility: visible;
   height: auto;
   overflow: visible;
@@ -70,13 +78,17 @@ html body #navbar #navigation-wrapper.extended #block-menu-menu-top-menu .menu .
 html body #navbar #block-menu-menu-top-menu {
   display: table-cell;
   width: 100%;
-  padding-right: 55px;
+  padding-right: 52px;
+  height: 65px;
+}
+html body #navbar #block-menu-menu-top-menu .menu {
+  background: #1d71d8;
+  height: auto;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li {
   list-style: none;
   display: inline-block;
   padding: 10px;
-  background: #1d71d8;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
   text-transform: uppercase;
@@ -85,8 +97,14 @@ html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a .caret {
   display: none;
 }
+html body #navbar #block-menu-menu-top-menu .menu.nav > li a:focus {
+  background: #1d71d8;
+}
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a:hover {
   background: #1f3d82;
+}
+html body #navbar #block-menu-menu-top-menu .menu.nav > li:focus {
+  background: #1d71d8;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li:hover {
   background: #1f3d82;
@@ -112,6 +130,7 @@ html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdo
 html body #navbar #block-block-2 {
   display: table-cell;
   white-space: nowrap;
+  padding: 12px 0;
 }
 html body #navbar #block-block-2 .logo-top-svg {
   text-decoration: none;
