@@ -413,8 +413,10 @@ html {
             border-radius: 10px;
             padding: 5px;
             margin-top: 20px;
+
             .ya-share2__list {
               text-align: center;
+
               .ya-share2__icon {
                 width: 33px;
                 height: 33px;
@@ -772,11 +774,11 @@ html {
     }
 
     #answer_form_container {
-      position: fixed;
-      bottom:0;
-      right:50%;
+      bottom: 0;
+      right: 50%;
       width: 900px;
       margin-right: -450px;
+
       #answer-node-form {
         width: 100%;
         background: $bg;
@@ -876,6 +878,22 @@ html {
           }
         }
       }
+    }
+
+    .pos-fix {
+      position: fixed;
+    }
+
+    .pos-abs {
+      position: absolute;
+    }
+
+    .pos-rel {
+      position: relative;
+    }
+
+    .pos-sta {
+      position: static ''
     }
   }
 }

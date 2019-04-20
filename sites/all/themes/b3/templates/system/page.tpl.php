@@ -120,7 +120,7 @@
   </div>
 </header>
 
-<div class="main-container container-fluid">
+<div class="main-container container-fluid pos-rel">
   <!--<div class="main-container --><?php //print $container_class; ?><!-- ">-->
 
   <header role="banner" id="page-header">
@@ -185,7 +185,7 @@
   <?php
   if ('question' == arg(0) && (!$is_admin)) {
     ?>
-    <div class="container" id="answer_form_container">
+    <div class="container pos-fix" id="answer_form_container">
       <div class="row">
         <div class="col-sm-12">
           <?php

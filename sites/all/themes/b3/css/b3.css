@@ -457,7 +457,6 @@ html body {
       html body .footer .region-footer #block-block-7 .site-phone {
         width: 210px; }
   html body #answer_form_container {
-    position: fixed;
     bottom: 0;
     right: 50%;
     width: 900px;
@@ -530,5 +529,13 @@ html body {
                 overflow: hidden; }
               html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
                 background: #e30613; }
+  html body .pos-fix {
+    position: fixed; }
+  html body .pos-abs {
+    position: absolute; }
+  html body .pos-rel {
+    position: relative; }
+  html body .pos-sta {
+    position: static ""; }
 
 /*# sourceMappingURL=b3.css.map */
