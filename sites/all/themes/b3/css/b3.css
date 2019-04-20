@@ -752,7 +752,7 @@ html body #answer_form_container #answer-node-form #answer_controls a#add_smile_
   cursor: pointer;
   list-style: none;
   z-index: 1100;
-  background: #c6c6c6;
+  background: #1d71d8;
   margin: 0;
   padding: 0;
 }
@@ -761,6 +761,10 @@ html body #answer_form_container #answer-node-form #answer_controls a#add_smile_
   margin: 0;
   padding: 5px;
   font-size: 20px;
+  display: inline;
+}
+html body #answer_form_container #answer-node-form #answer_controls a#add_smile_button ul li:hover {
+  color: #e30613;
 }
 html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul {
   position: absolute;

@@ -967,8 +967,9 @@ html {
             img {
               width: 44px;
             }
-            &#add_smile_button{
-              ul{
+
+            &#add_smile_button {
+              ul {
                 position: absolute;
                 top: -119px;
                 left: -80px;
@@ -977,17 +978,24 @@ html {
                 cursor: pointer;
                 list-style: none;
                 z-index: 1100;
-                background: #c6c6c6;
+                background: $bg;
                 margin: 0;
                 padding: 0;
-                li{
+
+                li {
                   color: white;
                   margin: 0;
                   padding: 5px;
                   font-size: 20px;
+                  display: inline;
+
+                  &:hover {
+                    color: $red;
+                  }
                 }
               }
             }
+
             &#add_media_button {
               ul {
                 position: absolute;
@@ -1014,6 +1022,7 @@ html {
                     white-space: nowrap;
                     overflow: hidden;
                   }
+
                   &:hover {
                     background: $red;
                   }

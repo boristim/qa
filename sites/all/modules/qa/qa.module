@@ -75,6 +75,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         if (e.target.id == 'img_add_smile_button') {
           $(this).find('ul').toggle('normal');
         }
+        return false;
       });
       $(document).on('click', '#add_media_button', function (e) {
         if (e.target.id == 'img_add_media_button') {
