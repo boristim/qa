@@ -58,6 +58,9 @@ html {
     }
 
     #navbar {
+      display: table;
+      width: 100%;
+
       .block-title {
         display: none;
       }
@@ -72,15 +75,45 @@ html {
         }
       }
 
+      #navigation-wrapper {
+        #block-menu-menu-top-menu {
+          .menu {
+            .more ~ li {
+              visibility: hidden;
+              height: 1px;
+              overflow: hidden;
+              z-index: -999px;
+            }
+          }
+        }
+
+        &.extended {
+          #block-menu-menu-top-menu {
+            .menu {
+              .more ~ li {
+                visibility: visible;
+                height: auto;
+                overflow: visible;
+                z-index: auto;
+              }
+            }
+          }
+        }
+
+      }
+
       #block-menu-menu-top-menu {
-        display: inline-block;
+        display: table-cell;
+        height: 60px;
+        width: 100%;
+        padding-right: 50px;
 
         .menu {
           &.nav {
             & > li {
               list-style: none;
               display: inline-block;
-              padding: 10px 0;
+              padding: 10px;
 
               a {
                 text-transform: uppercase;
@@ -128,7 +161,7 @@ html {
       }
 
       #block-block-2 {
-        display: inline-block;
+        display: table-cell;
         white-space: nowrap;
 
         .logo-top-svg {
@@ -147,37 +180,45 @@ html {
       background: $bg;
 
       #block-locale-language {
-        display: inline-block;
+        display: table-cell;
+        width: 60px;
 
-        li {
-          list-style: none;
-          display: inline-block;
-          padding: 3px 6px;
-          border-radius: 5px;
-          background: transparent;
+        ul {
+          margin: 15px 0 0 0;
+          padding: 0;
+          white-space: nowrap;
 
-          a {
-            text-transform: uppercase;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-
-          &.active {
-            background: white;
+          li {
+            list-style: none;
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 5px;
+            background: transparent;
 
             a {
-              color: $bg;
+              text-transform: uppercase;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+
+            &.active {
+              background: white;
+
+              a {
+                color: $bg;
+              }
             }
           }
         }
       }
 
       #block-block-4 {
-        display: inline-block;
+        display: table-cell;
         position: relative;
+        margin-right: -60px;
 
         #login_button.login-icon {
           display: inline-block;

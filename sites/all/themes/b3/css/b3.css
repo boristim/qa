@@ -41,6 +41,8 @@ html body h3 {
   font-size: 18px;
 }
 html body #navbar {
+  display: table;
+  width: 100%;
   margin-bottom: 0;
   background: #1d71d8;
 }
@@ -50,13 +52,28 @@ html body #navbar .block-title {
 html body #navbar .menu.nav.navbar-nav {
   display: none;
 }
+html body #navbar #navigation-wrapper #block-menu-menu-top-menu .menu .more ~ li {
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999px;
+}
+html body #navbar #navigation-wrapper.extended #block-menu-menu-top-menu .menu .more ~ li {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  z-index: auto;
+}
 html body #navbar #block-menu-menu-top-menu {
-  display: inline-block;
+  display: table-cell;
+  height: 60px;
+  width: 100%;
+  padding-right: 50px;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li {
   list-style: none;
   display: inline-block;
-  padding: 10px 0;
+  padding: 10px;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
   text-transform: uppercase;
@@ -90,7 +107,7 @@ html body #navbar #block-menu-menu-top-menu .menu.nav > li.expanded.open .dropdo
   background: #e30613;
 }
 html body #navbar #block-block-2 {
-  display: inline-block;
+  display: table-cell;
   white-space: nowrap;
 }
 html body #navbar #block-block-2 .logo-top-svg {
@@ -103,31 +120,38 @@ html body #navbar #block-block-2 .logo-top-svg img {
   height: 41.4px;
 }
 html body #navbar #block-locale-language {
-  display: inline-block;
+  display: table-cell;
+  width: 60px;
 }
-html body #navbar #block-locale-language li {
+html body #navbar #block-locale-language ul {
+  margin: 15px 0 0 0;
+  padding: 0;
+  white-space: nowrap;
+}
+html body #navbar #block-locale-language ul li {
   list-style: none;
   display: inline-block;
   padding: 3px 6px;
   border-radius: 5px;
   background: transparent;
 }
-html body #navbar #block-locale-language li a {
+html body #navbar #block-locale-language ul li a {
   text-transform: uppercase;
   text-decoration: none;
 }
-html body #navbar #block-locale-language li a:hover {
+html body #navbar #block-locale-language ul li a:hover {
   text-decoration: none;
 }
-html body #navbar #block-locale-language li.active {
+html body #navbar #block-locale-language ul li.active {
   background: white;
 }
-html body #navbar #block-locale-language li.active a {
+html body #navbar #block-locale-language ul li.active a {
   color: #1d71d8;
 }
 html body #navbar #block-block-4 {
-  display: inline-block;
+  display: table-cell;
   position: relative;
+  margin-right: -60px;
 }
 html body #navbar #block-block-4 #login_button.login-icon {
   display: inline-block;
