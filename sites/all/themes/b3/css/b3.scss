@@ -76,6 +76,7 @@ html {
       }
 
       #navigation-wrapper {
+        height: 65.7px;
         #block-menu-menu-top-menu {
           .menu {
             .more ~ li {
@@ -104,9 +105,9 @@ html {
 
       #block-menu-menu-top-menu {
         display: table-cell;
-        height: 60px;
+        //height: 60px;
         width: 100%;
-        padding-right: 50px;
+        padding-right: 55px;
 
         .menu {
           &.nav {
@@ -114,7 +115,7 @@ html {
               list-style: none;
               display: inline-block;
               padding: 10px;
-
+              background: $bg;
               a {
                 text-transform: uppercase;
                 padding: 10px 5px;

@@ -52,6 +52,9 @@ html body #navbar .block-title {
 html body #navbar .menu.nav.navbar-nav {
   display: none;
 }
+html body #navbar #navigation-wrapper {
+  height: 65.7px;
+}
 html body #navbar #navigation-wrapper #block-menu-menu-top-menu .menu .more ~ li {
   visibility: hidden;
   height: 1px;
@@ -66,14 +69,14 @@ html body #navbar #navigation-wrapper.extended #block-menu-menu-top-menu .menu .
 }
 html body #navbar #block-menu-menu-top-menu {
   display: table-cell;
-  height: 60px;
   width: 100%;
-  padding-right: 50px;
+  padding-right: 55px;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li {
   list-style: none;
   display: inline-block;
   padding: 10px;
+  background: #1d71d8;
 }
 html body #navbar #block-menu-menu-top-menu .menu.nav > li a {
   text-transform: uppercase;

@@ -36,7 +36,7 @@
 
         var menuItems = menu.children('li');
         var firstMenuItem = menuItems.eq(0);
-        var moreMenu = $('<li class="more"><a href="#">Еще <i class="fa fa-angle-down" aria-hidden="true"></i></li>');
+        var moreMenu = $('<li class="more"><a href="#">Еще <i>&dArr;</i></li>');
         var moreMenuShowed = false;
 
 
@@ -65,10 +65,12 @@
               moreMenu.find('a').click(function () {
                 if (navigation.hasClass('extended')) {
                   navigation.removeClass('extended');
-                  $(this).find('i').addClass('fa-angle-down').removeClass('fa-angle-up');
+                  $(this).find('i').html('&dArr;')
+                  // $(this).find('i').addClass('fa-angle-down').removeClass('fa-angle-up');
                 } else {
                   navigation.addClass('extended');
-                  $(this).find('i').addClass('fa-angle-up').removeClass('fa-angle-down');
+                  $(this).find('i').html('&uArr;')
+                  // $(this).find('i').addClass('fa-angle-up').removeClass('fa-angle-down');
                 }
                 return false;
               });
