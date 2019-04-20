@@ -456,73 +456,79 @@ html body {
         width: 215px; }
       html body .footer .region-footer #block-block-7 .site-phone {
         width: 210px; }
-  html body #answer_form_container #answer-node-form {
-    width: 100%;
-    background: #1d71d8;
-    border-radius: 20px 20px 0 0;
-    padding: 20px 220px 0 20px;
-    position: relative; }
-    html body #answer_form_container #answer-node-form:after {
-      position: absolute;
-      right: 115px;
-      top: -50px;
-      z-index: -1;
-      display: block;
-      content: "";
-      background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
-      background-size: contain;
-      width: 112px;
-      height: 136px; }
-    html body #answer_form_container #answer-node-form #edit-body .grippie,
-    html body #answer_form_container #answer-node-form #edit-body label {
-      display: none; }
-    html body #answer_form_container #answer-node-form #edit-body textarea {
-      border-radius: 10px;
-      height: 50px;
-      padding: 1rem;
-      font-size: 20px; }
-      html body #answer_form_container #answer-node-form #edit-body textarea::placeholder {
-        color: #878787; }
-    html body #answer_form_container #answer-node-form #answer_controls {
-      position: absolute;
-      top: 20px;
-      right: 10px;
-      width: 205px;
-      z-index: 1000; }
-      html body #answer_form_container #answer-node-form #answer_controls #add_media_popup {
+  html body #answer_form_container {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    width: 900px;
+    margin-right: -450px; }
+    html body #answer_form_container #answer-node-form {
+      width: 100%;
+      background: #1d71d8;
+      border-radius: 20px 20px 0 0;
+      padding: 20px 220px 0 20px;
+      position: relative; }
+      html body #answer_form_container #answer-node-form:after {
+        position: absolute;
+        right: 115px;
+        top: -50px;
+        z-index: -1;
+        display: block;
+        content: "";
+        background: url(/sites/default/files/theme-img/cat.svg) no-repeat center center transparent;
+        background-size: contain;
+        width: 112px;
+        height: 136px; }
+      html body #answer_form_container #answer-node-form #edit-body .grippie,
+      html body #answer_form_container #answer-node-form #edit-body label {
         display: none; }
-      html body #answer_form_container #answer-node-form #answer_controls a {
-        position: relative;
-        padding: 0 10px;
-        text-decoration: none;
-        display: inline-block; }
-        html body #answer_form_container #answer-node-form #answer_controls a:hover {
-          text-decoration: none; }
-        html body #answer_form_container #answer-node-form #answer_controls a img {
-          width: 44px; }
-        html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul {
-          position: absolute;
-          top: -119px;
-          left: -80px;
-          width: 215px;
-          text-align: center;
-          cursor: pointer;
-          list-style: none;
-          z-index: 1100;
-          background: #c6c6c6;
-          margin: 0;
-          padding: 0; }
-          html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li {
-            color: white;
+      html body #answer_form_container #answer-node-form #edit-body textarea {
+        border-radius: 10px;
+        height: 50px;
+        padding: 1rem;
+        font-size: 20px; }
+        html body #answer_form_container #answer-node-form #edit-body textarea::placeholder {
+          color: #878787; }
+      html body #answer_form_container #answer-node-form #answer_controls {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 205px;
+        z-index: 1000; }
+        html body #answer_form_container #answer-node-form #answer_controls #add_media_popup {
+          display: none; }
+        html body #answer_form_container #answer-node-form #answer_controls a {
+          position: relative;
+          padding: 0 10px;
+          text-decoration: none;
+          display: inline-block; }
+          html body #answer_form_container #answer-node-form #answer_controls a:hover {
+            text-decoration: none; }
+          html body #answer_form_container #answer-node-form #answer_controls a img {
+            width: 44px; }
+          html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul {
+            position: absolute;
+            top: -119px;
+            left: -80px;
+            width: 215px;
+            text-align: center;
+            cursor: pointer;
+            list-style: none;
+            z-index: 1100;
+            background: #c6c6c6;
             margin: 0;
-            padding: 5px; }
-            html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li label {
-              width: 100%;
-              cursor: pointer;
-              overflow: hidden;
-              white-space: nowrap;
-              overflow: hidden; }
-            html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
-              background: #e30613; }
+            padding: 0; }
+            html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li {
+              color: white;
+              margin: 0;
+              padding: 5px; }
+              html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li label {
+                width: 100%;
+                cursor: pointer;
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: hidden; }
+              html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
+                background: #e30613; }
 
 /*# sourceMappingURL=b3.css.map */

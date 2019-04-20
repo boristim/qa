@@ -772,6 +772,11 @@ html {
     }
 
     #answer_form_container {
+      position: fixed;
+      bottom:0;
+      right:50%;
+      width: 900px;
+      margin-right: -450px;
       #answer-node-form {
         width: 100%;
         background: $bg;
