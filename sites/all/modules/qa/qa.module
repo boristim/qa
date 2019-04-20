@@ -70,9 +70,13 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         $('#edit-submit--2').trigger('click');
         return false;
       })
-
-      $(document).on('click', '#add_media_button', function (e) {
+      $(document).on('click', '#add_smile_button', function (e) {
         console.log(e);
+        if (e.target.id == 'img_add_smile_button') {
+          $(this).find('ul').toggle('normal');
+        }
+      });
+      $(document).on('click', '#add_media_button', function (e) {
         if (e.target.id == 'img_add_media_button') {
           $(this).find('ul').toggle('normal');
         }
@@ -104,17 +108,35 @@ JS;
 CSS;
     $insert_image_title = t('Photo');
     $insert_video_title = t('Video');
+    $emojies = [
+      '😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇',
+      '🙂', '🙃', '😉', '😌', '😍', '😘', '😗', '😙', '😚', '😋',
+      '😛', '😝', '😜', '🤓', '😎', '😏', '😒', '😞', '😔', '😟',
+      '😕', '🙁', '😣', '😖', '😫',
+    ];
+    $emolist = '';
+    foreach ($emojies as $npp => $emo) {
+      $emolist .= "<li>$emo</li>";
+    }
     $html = <<<HTML
 <div id="answer_controls">
-  <a href="#" id="add_media_button"><img id="img_add_media_button" src="/sites/default/files/theme-img/add-media.svg" alt="add media">
+  <a href="#" id="add_media_button">
+    <img id="img_add_media_button" src="/sites/default/files/theme-img/add-media.svg" alt="add media">
     <ul id="add_media_popup">
-    <li><label id="label-edit-field-qa-picture-und-0-upload" for="edit-field-qa-picture-und-0-upload" class="">$insert_image_title</label></li>
-    <li><label id="label-edit-field-video-link-und-0-value" class="">$insert_video_title</label></li>
-  </ul>
+      <li><label id="label-edit-field-qa-picture-und-0-upload" for="edit-field-qa-picture-und-0-upload" class="">$insert_image_title</label></li>
+      <li><label id="label-edit-field-video-link-und-0-value" class="">$insert_video_title</label></li>
+    </ul>
   </a>
-  <a href="#" id="add_smile_button"><img src="/sites/default/files/theme-img/add-smile.svg" alt="add smile"></a>
+  <a href="#" id="add_smile_button">
+    <img id="img_add_smile_button" src="/sites/default/files/theme-img/add-smile.svg" alt="add smile">
+    <ul id="add_smile_popup">
+$emolist
+    </ul>
+  </a>
   <a href="#" id="submit_answer_button"><img src="/sites/default/files/theme-img/answer-submit.svg" alt="answer submit"></a>
 </div>
+
+
 HTML;
 
     $form['upload_button'] = ['#markup' => $html, '#weight' => -3.5];
@@ -317,4 +339,13 @@ function qa_variable_info($options) {
  */
 function qa_form_video_lefft_node_form_alter(&$form, &$form_state, $form_id) {
   $form['title']['#default_value'] = 'Some video ' . time();
+}
+
+
+function _qa_emoji_list() {
+  $imgs = [
+
+  ];
+
+
 }

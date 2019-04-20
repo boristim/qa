@@ -334,12 +334,10 @@ html {
               left: 50%;
               width: 70px;
               height: 70px;
-              background: #1291c9 url(/sites/default/files/theme-img/play2.png) 21px center no-repeat;
+              background: transparent url(/sites/default/files/theme-img/play2.png) 21px center no-repeat;
               background-size: auto;
               background-size: 50%;
               content: '';
-              border: 3px solid #fff;
-              border-radius: 50%;
               margin: -35px 0 0 -45px;
               transition: transform 0.15s linear;
             }
@@ -517,6 +515,70 @@ html {
         }
       }
 
+      .views-field-field-seo-rating {
+        .h2 {
+          color: $bg;
+          font-size: 44px;
+        }
+
+        .seo-img-rate {
+          position: relative;
+          text-align: center;
+
+          .seo-rate {
+            padding-top: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 108px;
+            height: 108px;
+            color: white;
+            font-size: 36px;
+            background: #c6c6c6;
+
+            .of-teen {
+              font-size: 14px;
+              color: #575756;
+            }
+
+            .seo-rate-name {
+              display: block;
+              color: $red;
+              font-size: 14.5px;
+              font-family: HelveticaBold, Helvetica, Arial, sans-serif;
+              text-align: center;
+              margin: 0 auto;
+              text-transform: uppercase;
+            }
+          }
+
+          .seo-picture {
+            position: absolute;
+            top: 30px;
+            right: 10%;
+            width: 178px;
+            height: 178px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+              max-width: 178px;
+              min-height: 178px;
+            }
+          }
+        }
+
+        .seo-mottom-text {
+          &:first-letter {
+            font-size: 44px;
+            color: black;
+          }
+        }
+      }
+
       .answers-title {
         color: $bg;
         font-weight: bold;
@@ -553,7 +615,7 @@ html {
                   border-radius: 10px 10px 0 0;
                   position: absolute;
                   top: -30px;
-                  right: 65px;
+                  right: 69px;
                   z-index: 1000;
                   padding: 0 10px;
                 }
@@ -887,6 +949,7 @@ html {
           width: 205px;
           z-index: 1000;
 
+          #add_smile_popup,
           #add_media_popup {
             display: none;
           }
@@ -904,7 +967,27 @@ html {
             img {
               width: 44px;
             }
-
+            &#add_smile_button{
+              ul{
+                position: absolute;
+                top: -119px;
+                left: -80px;
+                width: 215px;
+                text-align: center;
+                cursor: pointer;
+                list-style: none;
+                z-index: 1100;
+                background: #c6c6c6;
+                margin: 0;
+                padding: 0;
+                li{
+                  color: white;
+                  margin: 0;
+                  padding: 5px;
+                  font-size: 20px;
+                }
+              }
+            }
             &#add_media_button {
               ul {
                 position: absolute;
@@ -931,7 +1014,6 @@ html {
                     white-space: nowrap;
                     overflow: hidden;
                   }
-
                   &:hover {
                     background: $red;
                   }
