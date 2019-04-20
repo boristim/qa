@@ -298,6 +298,32 @@ html {
       }
     }
 
+    #block-views-video-lefft-block {
+      .block-title {
+        display: none;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+          margin: 10px 0;
+
+          h3 {
+            color: $bg;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          .views-field-title{
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
     #block-views-articles-block {
       .block-title {
         color: $bg;

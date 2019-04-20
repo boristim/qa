@@ -180,6 +180,30 @@ function qa_node_submit($node, $form, &$form_state) {
       $node->title = mb_substr($node->field_question[LANGUAGE_NONE][0]['value'], 0, 255);
       $node->status = user_access('edit any question content') ? 1 : 0;
       break;
+    case 'video_lefft':
+      $video = '';
+      if (isset($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value']) &&
+        mb_strlen($form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'])
+      ) {
+        $video = $form_state['values']['field_video_link'][LANGUAGE_NONE][0]['value'];
+      }
+      if ($video) {
+        if (mb_strpos($video, 'outu.be/') > 0) {
+          $video = explode('.be/', $video);
+          $video = array_key_exists(1, $video) ? $video[1] : '';
+        } elseif ((mb_strpos($video, 'outube.com') > 0)
+          && ($video = parse_url($video, PHP_URL_QUERY))
+        ) {
+          parse_str($video, $video);
+          $video = array_key_exists('v', $video) ? $video['v'] : '';
+        }
+      }
+      if ($video) {
+        $node->field_video_link[LANGUAGE_NONE][0]['value'] = $video;
+      } else {
+        $node->field_video_link[LANGUAGE_NONE][0]['value'] = '';
+      }
+      break;
     default:
   }
 }
@@ -288,3 +312,9 @@ function qa_variable_info($options) {
   return $variable;
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function qa_form_video_lefft_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['title']['#default_value'] = 'Some video ' . time();
+}

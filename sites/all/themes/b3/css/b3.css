@@ -167,6 +167,21 @@ html body {
       width: 600px; }
       html body #colorbox #cboxLoadedContent .main-container.container > .row .col-sm-6 {
         width: 100%; }
+  html body #block-views-video-lefft-block .block-title {
+    display: none; }
+  html body #block-views-video-lefft-block ul {
+    margin: 0;
+    padding: 0; }
+    html body #block-views-video-lefft-block ul li {
+      list-style: none;
+      margin: 10px 0; }
+      html body #block-views-video-lefft-block ul li h3 {
+        color: #1d71d8;
+        font-size: 18px;
+        line-height: 22px; }
+      html body #block-views-video-lefft-block ul li .views-field-title {
+        font-size: 18px;
+        line-height: 22px; }
   html body #block-views-articles-block .block-title {
     color: #1d71d8;
     font-size: 24px; }
