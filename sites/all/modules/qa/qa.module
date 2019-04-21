@@ -247,6 +247,10 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
   global $user;
   $form['title']['#access'] = false;
   $form['title']['#default_value'] = QA_DEFAULT_TITLE;
+
+  $form['field_seo_pictire']['#access'] =
+  $form['field_seo_rating']['#access'] =
+  $form['field_seo_bottom']['#access'] =
   $form['field_question_details']['#access'] =
   $form['field_categories']['#access'] =
   $form['field_rate']['#access'] =
@@ -266,6 +270,7 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
   $form['field_e_mail'][LANGUAGE_NONE][0]['value']['#attributes'][' type'] = 'email';
   $form['field_question'][LANGUAGE_NONE][0]['value']['#attributes']['placeholder'] = t('Your question');
   $form['field_question'][LANGUAGE_NONE][0]['value']['#attributes']['required'] = 'required';
+
   $form['field_qa_picture'][LANGUAGE_NONE][0]['#title_display'] =
   $form['field_username'][LANGUAGE_NONE][0]['value']['#title_display'] =
   $form['field_e_mail'][LANGUAGE_NONE][0]['value']['#title_display'] =

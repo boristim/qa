@@ -204,9 +204,54 @@
 </div>
 <?php if (!empty($page['footer'])): ?>
   <footer class="footer container-fluid">
-    <div class="<?php print $container_class; ?>">
+    <div class="<?php print $container_class; ?> rrr">
       <?php print render($page['footer']); ?>
+      <?php
+
+      $allow = true;
+      foreach (['user', 'node/add', 'register'] as $url) {
+        if (mb_strpos($_SERVER["REQUEST_URI"], $url) == 1) {
+          $allow = false;
+        }
+      }
+      if ($allow) {
+        ?>
+        <div class="footer-counters">
+          <div class="liru"><!--LiveInternet counter-->
+            <script type="text/javascript">
+              document.write("<a href='//www.liveinternet.ru/click' " +
+                "target=_blank><img src='//counter.yadro.ru/hit?t12.11;r" +
+                escape(document.referrer) + ((typeof (screen) == "undefined") ? "" :
+                  ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                  screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                ";h" + escape(document.title.substring(0, 150)) + ";" + Math.random() +
+                "' alt='' title='LiveInternet: показано число просмотров за 24" +
+                " часа, посетителей за 24 часа и за сегодня' " +
+                "border='0' width='88' height='31'><\/a>")
+            </script><!--/LiveInternet--></div>
+          <div class="yaru">&nbsp;</div>
+          <div class="copyleft"><a href="/node/104"><?php print t('Copyright'); ?></a></div>
+          <div class="site-phone"><a href="tel:<?php print variable_get('site_phone'); ?>"><?php print variable_get('site_phone'); ?></a></div>
+          <div class="site-mail"><a href="mailto:<?php print variable_get('site_mail'); ?>"><?php print variable_get('site_mail'); ?></a></div>
+
+          <!-- GoTalk invintation code -->
+          <script language="javascript" src="//www.gotalk.ru/invite?action=invitejs&account_id=2685"></script>
+          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" style="position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;">
+            <script language="javascript">
+              var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
+              document.write(
+                '<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>'
+              );
+            </script>
+          </a>
+          <!-- End of GoTalk invintation code -->
+
+        </div>
+        <?php
+      }
+      ?>
     </div>
   </footer>
 <?php endif; ?>
-<!-- /page -->
+<a href="#" id="gtchenger"><img src="/sites/default/files/theme-img/online-query.svg" alt="gotalk"></a>
+<a href="#" id="adv-sale"><img src="/sites/default/files/theme-img/adv-sale.svg" alt="advert sales"></a>

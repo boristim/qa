@@ -12,7 +12,7 @@
  * - $view: The view object
  * - $field: The field handler object that can process the input
  * - $row: The raw SQL result that can be used
- * - $output: The processed output that will normally be used.
+ * @var $output : The processed output that will normally be used.
  *
  * When fetching output from the $row, this construct should be used:
  * $data = $row->{$field->field_alias}
@@ -21,7 +21,14 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
-//dpm($_SERVER);
+
+if ((arg(0) == 'question') && (is_numeric(arg(1)))
+  && ($q_question = node_load(arg(1)))
+  && ($q_question->type == 'question')) {
+  $q_question->field_view_count[LANGUAGE_NONE][0]['value'] =
+    isset($q_question->field_view_count[LANGUAGE_NONE][0]['value']) ? $q_question->field_view_count[LANGUAGE_NONE][0]['value'] + 1 : 1;
+  node_save($q_question);
+}
 $url = mb_strtolower(explode('/', $_SERVER['HTTP_X_PROTOCOL'])[0]) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 <div class="row question-row">

@@ -92,9 +92,9 @@
       }
 
       $(document).ready(function () {
-        setInterval(function () {
+        setTimeout(function () {
           bindMenu();
-        }, 100)
+        }, 200)
 
       })
     }
