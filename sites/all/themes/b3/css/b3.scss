@@ -46,9 +46,13 @@ html {
         padding-bottom: 90px;
 
         #sidebar_second {
-          top: 90px;
-          right: 0;
-          //z-index: -100;
+          #block-block-1 {
+            position: fixed;
+            //position: absolute;
+            //top: 200px;
+            //right: 15px;
+            //z-index: -1;
+          }
         }
       }
     }
@@ -58,7 +62,6 @@ html {
     }
 
     #navbar {
-      display: table;
       width: 100%;
 
       .block-title {
@@ -77,6 +80,7 @@ html {
 
       #navigation-wrapper {
         height: 65.7px;
+        display: table;
 
         #block-menu-menu-top-menu {
           //overflow: hidden;
@@ -1144,6 +1148,7 @@ html {
 
     &.page-main {
       .page-header {
+        margin-top: 30px;
         text-align: center;
         font-family: HelveticaBold, sans-serif;
         color: $bg;
@@ -1152,10 +1157,13 @@ html {
 
       .view-id-main {
         .views-row {
+          margin: 0;
+          padding-left: 20px;
+          //border:1px solid $bg;
           .views-field-field-question {
-            padding: 30px 0 0 0;
+            padding: 50px 0 5px 0;
             font-weight: bold;
-
+            font-size: 20px;
           }
 
           .views-field-created {
@@ -1163,11 +1171,7 @@ html {
             background: $bg;
             color: white;
             font-size: 13px;
-            margin-left: 20%;
-
-            label {
-              padding: 0 2em 0 0;
-            }
+            white-space: nowrap;
           }
 
           .main-answers {
@@ -1199,7 +1203,7 @@ html {
     }
 
     #adv-sale {
-      top:275px;
+      top: 275px;
       border-radius: 0 0 0 15px;
     }
   }

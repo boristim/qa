@@ -25,14 +25,13 @@ function b3_menu_link(array &$variables) {
 }*/
 
 function b3_links__locale_block(&$vars) {
+
   foreach ($vars['links'] as $language => $langInfo) {
-    $abbr = $langInfo['language']->language;
-    $name = $langInfo['language']->name;
     $short_name = mb_substr($langInfo['language']->name, 0, 3);
     $vars['links'][$language]['title'] = $short_name;
-//    $vars['links'][$language]['title'] = '<abbr title="' . $name . '">' . $short_name . '</abbr>';
     $vars['links'][$language]['html'] = TRUE;
   }
+  $vars['links']['en']['href'] = 'node/124';
   $content = theme_links($vars);
   return $content;
 }

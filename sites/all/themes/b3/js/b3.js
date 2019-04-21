@@ -1,30 +1,36 @@
 (function ($) {
   Drupal.behaviors.b3 = {
     attach: function (context, settings) {
-      $('#block-locale-language .en a').click(function () {
-        alert('This page is under construction');
-        return false;
-      })
+
       $('#block-menu-menu-top-menu .expanded.dropdown').on('mouseover', function () {
         $(this).addClass('open')
       }).on('mouseout', function () {
         $(this).removeClass('open')
-      })
+      });
       $(window).on('scroll', function () {
+        var main = $('.main-container');
         if ($('#answer_form_container').length) {
-          var main = $('.main-container');
           var answer = $('#answer_form_container');
           bm = main.height() + main.offset().top;
           if (answer.height() + answer.offset().top > bm) {
-            answer.removeClass('pos-fix')
-            answer.addClass('pos-abs')
+            answer.removeClass('pos-fix').addClass('pos-abs')
           }
           if ($(window).scrollTop() + $(window).height() < bm) {
-            answer.removeClass('pos-abs');
-            answer.addClass('pos-fix');
+            answer.removeClass('pos-abs').addClass('pos-fix');
           }
         }
-      })
+        if($('#block-block-1').length){
+          var bnr = $('#block-block-1');
+          bm = main.height() + main.offset().top;
+          if(bnr.height()+bnr.offset().top > bm){
+            bnr.css({positon:'absolute'});
+          }
+          else{
+            bnr.css({positon:'fixed'});
+          }
+
+        }
+      });
 
       function bindMenu() {
         var navigation = $('#navigation-wrapper');
