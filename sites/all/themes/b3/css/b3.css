@@ -805,6 +805,15 @@ html body #answer_form_container #answer-node-form #answer_controls a:hover {
 html body #answer_form_container #answer-node-form #answer_controls a img {
   width: 44px;
 }
+html body #answer_form_container #answer-node-form #answer_controls a#submit_answer_button .hover {
+  display: none;
+}
+html body #answer_form_container #answer-node-form #answer_controls a#submit_answer_button:hover .normal {
+  display: none;
+}
+html body #answer_form_container #answer-node-form #answer_controls a#submit_answer_button:hover .hover {
+  display: initial;
+}
 html body #answer_form_container #answer-node-form #answer_controls a#add_smile_button ul {
   position: absolute;
   top: -223px;
@@ -944,6 +953,9 @@ html body #gtchanger:hover span {
 html body #adv-sale {
   top: 275px;
   border-radius: 0 0 0 15px;
+}
+html body .margin-right-20 {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=b3.css.map */

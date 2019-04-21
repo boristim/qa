@@ -1058,7 +1058,19 @@ html {
             img {
               width: 44px;
             }
-
+            &#submit_answer_button{
+              .hover{
+                display: none;
+              }
+              &:hover{
+                .normal{
+                  display: none;
+                }
+                .hover{
+                  display: initial;
+                }
+              }
+            }
             &#add_smile_button {
               ul {
                 position: absolute;
@@ -1233,6 +1245,9 @@ html {
     #adv-sale {
       top: 275px;
       border-radius: 0 0 0 15px;
+    }
+    .margin-right-20{
+      margin-right:20px;
     }
   }
 }

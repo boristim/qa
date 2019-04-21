@@ -137,7 +137,10 @@ CSS;
 $emolist
     </ul>
   </a>
-  <a href="#" id="submit_answer_button"><img src="/sites/default/files/theme-img/answer-submit.svg" alt="answer submit"></a>
+  <a href="#" id="submit_answer_button">
+  <img class="normal" src="/sites/default/files/theme-img/answer-submit.svg" alt="answer submit">
+  <img class="hover" src="/sites/default/files/theme-img/answer-submit-hover.png" alt="answer submit">
+  </a>
 </div>
 
 
