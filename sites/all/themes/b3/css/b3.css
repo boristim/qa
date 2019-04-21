@@ -32,9 +32,6 @@ html body .container-fluid.main-container {
   max-width: 1920px;
   padding-bottom: 90px;
 }
-html body .container-fluid.main-container #sidebar_second #block-block-1 {
-  position: fixed;
-}
 html body h3 {
   font-size: 18px;
 }

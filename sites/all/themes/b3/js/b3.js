@@ -23,12 +23,11 @@
           var bnr = $('#block-block-1');
           bm = main.height() + main.offset().top;
           if(bnr.height()+bnr.offset().top > bm){
-            bnr.css({positon:'absolute'});
+            bnr.removeClass('pos-fix').addClass('pos-abs')
           }
           else{
-            bnr.css({positon:'fixed'});
+            bnr.removeClass('pos-abs').addClass('pos-fix');
           }
-
         }
       });
 
