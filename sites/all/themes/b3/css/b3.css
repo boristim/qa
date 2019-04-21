@@ -916,6 +916,31 @@ html body #gtchanger img {
   width: 25px;
   height: 25px;
 }
+html body #adv-sale span,
+html body #gtchanger span {
+  display: block;
+  position: absolute;
+  right: 100%;
+  width: 0;
+  height: 27px;
+  line-height: 27px;
+  background: #dadada;
+  color: #e30613;
+  overflow: hidden;
+  font-size: 21px;
+  font-family: PFDinTextCondPro, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  top: 8px;
+  padding: 0;
+  transition: width 0.3s, opacity 0.3s;
+}
+html body #adv-sale:hover span,
+html body #gtchanger:hover span {
+  width: 180px;
+  opacity: 1;
+}
 html body #adv-sale {
   top: 275px;
   border-radius: 0 0 0 15px;
