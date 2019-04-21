@@ -48,11 +48,11 @@ html {
 
         #sidebar_second {
           #block-block-1 {
-            position: fixed;
+            //position: fixed;
             //position: absolute;
             //top: 200px;
             //right: 15px;
-            z-index: -1;
+            //z-index: -1;
           }
         }
       }
@@ -1056,21 +1056,26 @@ html {
             }
 
             img {
-              width: 44px;
+              height: 44px;
+              //width: 44px;
             }
-            &#submit_answer_button{
-              .hover{
+
+            &#submit_answer_button {
+              .hover {
                 display: none;
               }
-              &:hover{
-                .normal{
+
+              &:hover {
+                .normal {
                   display: none;
                 }
-                .hover{
+
+                .hover {
                   display: initial;
                 }
               }
             }
+
             &#add_smile_button {
               ul {
                 position: absolute;
@@ -1246,8 +1251,21 @@ html {
       top: 275px;
       border-radius: 0 0 0 15px;
     }
-    .margin-right-20{
-      margin-right:20px;
+
+    .margin-right-20 {
+      margin-right: 20px;
+    }
+
+
+    #question-node-form {
+      #edit-submit {
+        background: $bg;
+        font-family: PFDinTextCondPro, sans-serif;
+        font-size: 24px;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 5px;
+      }
     }
   }
 }

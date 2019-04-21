@@ -1,12 +1,25 @@
 (function ($) {
   Drupal.behaviors.b3 = {
     attach: function (context, settings) {
+      var bnr = $('#block-block-1');
+      $(document).ready(function () {
+        bindMenu();
 
+        if ($('#sidebar_second').height() < $('.main-container').height()) {
+          $('#sidebar_second').height($('.main-container').height());
+        }
+        bnr.data('start-fix', bnr.offset().top);
+        bnr.data('start-width', bnr.width());
+      })
       $('#block-menu-menu-top-menu .expanded.dropdown').on('mouseover', function () {
         $(this).addClass('open')
       }).on('mouseout', function () {
         $(this).removeClass('open')
       });
+      $(window).on('resize', function () {
+        bnr.css({width: 'auto'});
+        bnr.data('start-width', bnr.width());
+      })
       $(window).on('scroll', function () {
         var main = $('.main-container');
         if ($('#answer_form_container').length) {
@@ -19,17 +32,16 @@
             answer.removeClass('pos-abs').addClass('pos-fix');
           }
         }
-        // if ($('#block-block-1').length) {
-        //   var bnr = $('#block-block-1');
-        //   bm = main.height() + main.offset().top;
-        //
-        //   if (bnr.height() + bnr.offset().top > bm) {
-        //     bnr.removeClass('pos-fix').addClass('pos-abs');
-        //   }
-        //   if ($(window).scrollTop() + $(window).height() < bm) {
-        //     bnr.removeClass('pos-abs').addClass('pos-fix');
-        //   }
-        // }
+        if ($('#block-block-1').length) {
+          if ($(window).scrollTop() > bnr.offset().top - 30) {
+            bnr.css({top: '30px'})
+            bnr.addClass('pos-fix');
+            bnr.width(bnr.data('start-width'));
+          }
+          if ($(window).scrollTop() < bnr.data('start-fix')) {
+            bnr.removeClass('pos-fix');
+          }
+        }
       });
 
       function bindMenu() {
@@ -98,15 +110,6 @@
         menuUpdate();
       }
 
-      $(document).ready(function () {
-        bindMenu();
-        if($('#sidebar_second').height() < $('.main-container').height()){
-          $('#sidebar_second').height($('.main-container').height());
-        }
-        // setTimeout(function () {
-        //   bindMenu();
-        // }, 200)
-      })
     }
   };
 })(jQuery);
