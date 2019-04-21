@@ -29,7 +29,8 @@ if ((arg(0) == 'question') && (is_numeric(arg(1)))
     isset($q_question->field_view_count[LANGUAGE_NONE][0]['value']) ? $q_question->field_view_count[LANGUAGE_NONE][0]['value'] + 1 : 1;
   node_save($q_question);
 }
-$url = mb_strtolower(explode('/', $_SERVER['HTTP_X_PROTOCOL'])[0]) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+//$url = mb_strtolower(explode('/', $_SERVER['HTTP_X_PROTOCOL'])[0]) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 <div class="row question-row">
   <?php print $output; ?>

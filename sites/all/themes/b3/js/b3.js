@@ -19,9 +19,7 @@
           }
           bnr.data('start-fix', bnr.offset().top);
           bnr.data('start-width', bnr.width());
-
         }
-
       })
       $('#block-menu-menu-top-menu .expanded.dropdown').on('mouseover', function () {
         $(this).addClass('open')

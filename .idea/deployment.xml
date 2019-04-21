@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="akvashit.beget.tech" uploadOnCheckin="43a0972f-99b6-4d69-b99a-3f6032f8187e">
+  <component name="PublishConfigData" serverName="akvashit.beget.tech" persistUploadOnCheckin="false">
     <serverData>
       <paths name="akvashit.beget.tech">
         <serverdata>
@@ -17,6 +17,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="boris-tim.myjino.ru" />
   </component>
 </project>

@@ -953,6 +953,9 @@ html body #adv-sale {
 html body .margin-right-20 {
   margin-right: 20px;
 }
+html body #question-node-form .captcha.panel.panel-default.form-wrapper {
+  display: none;
+}
 html body #question-node-form #edit-submit {
   background: #1d71d8;
   font-family: PFDinTextCondPro, sans-serif;
