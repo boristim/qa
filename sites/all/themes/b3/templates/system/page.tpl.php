@@ -241,9 +241,7 @@
           <a href="/node/123" id="adv-sale"><img src="/sites/default/files/theme-img/adv-sale.svg" alt="advert sales"></a>
           <script language="javascript">
             var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
-            document.write(
-              '<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>'
-            );
+            // document.write('<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>');
           </script>
           </a>
           <!-- End of GoTalk invintation code -->
