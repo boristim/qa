@@ -839,7 +839,7 @@ html {
       color: white;
       margin-top: 0;
       padding-top: 15px;
-
+      z-index: 1;
       .region-footer {
         display: table;
         position: relative;
@@ -1256,18 +1256,37 @@ html {
       margin-right: 20px;
     }
 
-
-    #question-node-form {
-      .captcha.panel.panel-default.form-wrapper{
+    #colorbox {
+      .captcha.panel.panel-default.form-wrapper {
         display: none;
       }
-      #edit-submit {
+
+      button[type=submit] {
         background: $bg;
         font-family: PFDinTextCondPro, sans-serif;
         font-size: 24px;
         color: white;
         padding: 5px 12px;
         border-radius: 5px;
+        float: right;
+      }
+
+      form {
+        padding: 20px;
+        textarea,
+        input[type=password],
+        input[type=email],
+        input[type=text] {
+          font-size: 20px;
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+
+      }
+
+      #cboxTitle {
+        display: none !important;
       }
     }
   }

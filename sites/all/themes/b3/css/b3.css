@@ -628,6 +628,7 @@ html body .footer {
   color: white;
   margin-top: 0;
   padding-top: 15px;
+  z-index: 1;
   border-top: none;
 }
 html body .footer .region-footer {
@@ -953,16 +954,31 @@ html body #adv-sale {
 html body .margin-right-20 {
   margin-right: 20px;
 }
-html body #question-node-form .captcha.panel.panel-default.form-wrapper {
+html body #colorbox .captcha.panel.panel-default.form-wrapper {
   display: none;
 }
-html body #question-node-form #edit-submit {
+html body #colorbox button[type=submit] {
   background: #1d71d8;
   font-family: PFDinTextCondPro, sans-serif;
   font-size: 24px;
   color: white;
   padding: 5px 12px;
   border-radius: 5px;
+  float: right;
+}
+html body #colorbox form {
+  padding: 20px;
+}
+html body #colorbox form textarea,
+html body #colorbox form input[type=password],
+html body #colorbox form input[type=email],
+html body #colorbox form input[type=text] {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+html body #colorbox #cboxTitle {
+  display: none !important;
 }
 
 /*# sourceMappingURL=b3.css.map */

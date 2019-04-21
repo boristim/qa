@@ -151,7 +151,8 @@
         height: 38px;
         color: #313131;
         padding: 0 140px 0 15px;
-        display: table-cell !important;
+        display: table-cell;
+        /*display: table-cell !important;*/
         vertical-align: middle;
         float: none !important;
       }
