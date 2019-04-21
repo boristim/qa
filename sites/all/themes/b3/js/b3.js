@@ -3,13 +3,25 @@
     attach: function (context, settings) {
       var bnr = $('#block-block-1');
       $(document).ready(function () {
-        bindMenu();
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+          setTimeout(function () {
+            bindMenu();
+            if ($('#sidebar_second').height() < $('.main-container').height()) {
+              $('#sidebar_second').height($('.main-container').height());
+            }
+            bnr.data('start-fix', bnr.offset().top);
+            bnr.data('start-width', bnr.width());
+          }, 200);
+        } else {
+          bindMenu();
+          if ($('#sidebar_second').height() < $('.main-container').height()) {
+            $('#sidebar_second').height($('.main-container').height());
+          }
+          bnr.data('start-fix', bnr.offset().top);
+          bnr.data('start-width', bnr.width());
 
-        if ($('#sidebar_second').height() < $('.main-container').height()) {
-          $('#sidebar_second').height($('.main-container').height());
         }
-        bnr.data('start-fix', bnr.offset().top);
-        bnr.data('start-width', bnr.width());
+
       })
       $('#block-menu-menu-top-menu .expanded.dropdown').on('mouseover', function () {
         $(this).addClass('open')

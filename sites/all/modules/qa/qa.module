@@ -250,7 +250,8 @@ function qa_form_question_node_form_alter(&$form, &$form_state, $form_id) {
   global $user;
   $form['title']['#access'] = false;
   $form['title']['#default_value'] = QA_DEFAULT_TITLE;
-
+//  dpm($form);
+  $form['field_qa_picture'] =
   $form['field_seo_pictire']['#access'] =
   $form['field_seo_rating']['#access'] =
   $form['field_seo_bottom']['#access'] =
