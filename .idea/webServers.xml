@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ab3d33b7-cf6b-44af-8329-6f8358a92e3d" name="akvashit.beget.tech" url="http://filtrvody.com">
+        <fileTransfer host="akvashit.beget.tech" port="21" rootFolder="/filtrvody.com/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
