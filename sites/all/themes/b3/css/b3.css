@@ -895,5 +895,27 @@ html body.page-main .view-id-main .views-row .views-field-created label {
 html body.page-main .view-id-main .views-row .main-answers .view-answers {
   display: inline-block;
 }
+html body #adv-sale,
+html body #gtchanger {
+  position: fixed;
+  top: 233px;
+  right: 0;
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 15px 0 0 0;
+  background: #e30613;
+  line-height: 42px;
+  text-align: center;
+}
+html body #adv-sale img,
+html body #gtchanger img {
+  width: 25px;
+  height: 25px;
+}
+html body #adv-sale {
+  top: 275px;
+  border-radius: 0 0 0 15px;
+}
 
 /*# sourceMappingURL=b3.css.map */

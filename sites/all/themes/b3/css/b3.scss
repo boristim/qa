@@ -1164,6 +1164,7 @@ html {
             color: white;
             font-size: 13px;
             margin-left: 20%;
+
             label {
               padding: 0 2em 0 0;
             }
@@ -1176,6 +1177,30 @@ html {
           }
         }
       }
+    }
+
+    #adv-sale,
+    #gtchanger {
+      position: fixed;
+      top: 233px;
+      right: 0;
+      display: block;
+      width: 42px;
+      height: 42px;
+      border-radius: 15px 0 0 0;
+      background: $red;
+      line-height: 42px;
+      text-align: center;
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    #adv-sale {
+      top:275px;
+      border-radius: 0 0 0 15px;
     }
   }
 }

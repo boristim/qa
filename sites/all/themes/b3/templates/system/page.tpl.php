@@ -236,13 +236,15 @@
 
           <!-- GoTalk invintation code -->
           <script language="javascript" src="//www.gotalk.ru/invite?action=invitejs&account_id=2685"></script>
-          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" style="position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;">
-            <script language="javascript">
-              var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
-              document.write(
-                '<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>'
-              );
-            </script>
+          <!--          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" style="position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;">-->
+          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" id="gtchanger"><img src="/sites/default/files/theme-img/online-query.svg" alt="gotalk"></a>
+          <a href="/node/123" id="adv-sale"><img src="/sites/default/files/theme-img/adv-sale.svg" alt="advert sales"></a>
+          <script language="javascript">
+            var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
+            document.write(
+              '<img src="' + gotalk_img + '" alt="GoTalk support chat" border="0"/>'
+            );
+          </script>
           </a>
           <!-- End of GoTalk invintation code -->
 
@@ -252,6 +254,5 @@
       ?>
     </div>
   </footer>
+
 <?php endif; ?>
-<a href="#" id="gtchenger"><img src="/sites/default/files/theme-img/online-query.svg" alt="gotalk"></a>
-<a href="#" id="adv-sale"><img src="/sites/default/files/theme-img/adv-sale.svg" alt="advert sales"></a>
