@@ -45,17 +45,18 @@
           }
         }
         if ($('#block-block-1').length) {
-          console.log(bnr.data('end-fix'), bnr.offset().top + bnr.height())
+          // console.log(bnr.data('end-fix'), bnr.offset().top + bnr.height())
           if (bnr.data('end-fix') < bnr.offset().top + bnr.height()) {
-            // bnr.css({'z-index': '-1'});
+            bnr.css({'z-index': '-1'});
           } else {
-            if ($(window).scrollTop() > bnr.offset().top - 30) {
-              // bnr.css({'z-index': '0'});
-              bnr.css({top: '30px'});
-              bnr.addClass('pos-fix');
-              bnr.width(bnr.data('start-width'));
-            }
+            bnr.css({'z-index': '0'});
           }
+          if ($(window).scrollTop() > bnr.offset().top - 30) {
+            bnr.css({top: '30px'});
+            bnr.addClass('pos-fix');
+            bnr.width(bnr.data('start-width'));
+          }
+
           if ($(window).scrollTop() < bnr.data('start-fix')) {
             bnr.removeClass('pos-fix');
           }
