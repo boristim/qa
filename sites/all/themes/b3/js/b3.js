@@ -2,25 +2,23 @@
   Drupal.behaviors.b3 = {
     attach: function (context, settings) {
       var bnr = $('#block-block-1');
+      var renderInit = function () {
+        bindMenu();
+        if ($('#sidebar_second').height() < $('.main-container').height()) {
+          $('#sidebar_second').height($('.main-container').height());
+        }
+        bnr.data('start-fix', bnr.offset().top);
+        bnr.data('start-width', bnr.width());
+        bnr.data('end-fix', $('#sidebar_second').height() + $('#sidebar_second').offset().top);
+      };
+
       $(document).ready(function () {
         if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
           setTimeout(function () {
-            bindMenu();
-            if ($('#sidebar_second').height() < $('.main-container').height()) {
-              $('#sidebar_second').height($('.main-container').height());
-            }
-            bnr.data('start-fix', bnr.offset().top);
-            bnr.data('start-width', bnr.width());
-            bnr.data('end-fix', $('#sidebar_second').height() + $('#sidebar_second').offset().top);
+            renderInit();
           }, 200);
         } else {
-          bindMenu();
-          if ($('#sidebar_second').height() < $('.main-container').height()) {
-            $('#sidebar_second').height($('.main-container').height());
-          }
-          bnr.data('start-fix', bnr.offset().top);
-          bnr.data('start-width', bnr.width());
-          bnr.data('end-fix', $('#sidebar_second').height() + $('#sidebar_second').offset().top);
+          renderInit();
         }
       })
       $('#block-menu-menu-top-menu .expanded.dropdown').on('mouseover', function () {

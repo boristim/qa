@@ -600,6 +600,7 @@ html body.page-question .answers-list .answers-to-question .views-field-field-ra
   display: block;
   text-align: center;
 }
+html body #search-block-form--2 .form-control.form-text,
 html body #search-block-form .form-control.form-text {
   background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
   background-size: 7%;
@@ -608,11 +609,13 @@ html body #search-block-form .form-control.form-text {
   color: #1d71d8;
   border-radius: 0;
 }
+html body #search-block-form--2 .form-control.form-text::placeholder,
 html body #search-block-form .form-control.form-text::placeholder {
   color: #1d71d8;
   font-size: 90%;
   text-transform: lowercase;
 }
+html body #search-block-form--2 .btn.btn-primary,
 html body #search-block-form .btn.btn-primary {
   color: #1d71d8;
   background: white;
@@ -976,6 +979,95 @@ html body #colorbox form input[type=text] {
   font-size: 20px;
   padding: 20px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  html body .navbar-toggle {
+    float: left;
+    margin-right: 0;
+  }
+  html body header#navbar .navbar-header {
+    text-align: center;
+  }
+  html body header#navbar .navbar-header .login-header,
+html body header#navbar .navbar-header .logo-top-svg {
+    height: 32px;
+    padding: 0;
+    margin: 8px 0;
+    display: inline-block;
+    text-decoration: none;
+  }
+  html body header#navbar .navbar-header .login-header img,
+html body header#navbar .navbar-header .logo-top-svg img {
+    height: 32px;
+  }
+  html body header#navbar .navbar-header .login-header {
+    float: right;
+    position: relative;
+  }
+  html body header#navbar .navbar-header .login-header .dropdown-menu {
+    background: #dadada;
+    left: auto;
+    right: 0;
+  }
+  html body header#navbar .navbar-header .login-header .dropdown-menu a:hover, html body header#navbar .navbar-header .login-header .dropdown-menu a:focus {
+    background: #e30613;
+  }
+  html body header#navbar #navbar-collapse #block-block-4,
+html body header#navbar #navbar-collapse #block-locale-language,
+html body header#navbar #navbar-collapse #block-block-2 {
+    display: none;
+  }
+  html body .main-container.container-fluid {
+    padding: 0;
+  }
+  html body .main-container .row > section.col-xs-12 {
+    padding: 0;
+  }
+  html body .footer .region-footer #block-views-categories-block-1,
+html body .footer .region-footer #block-block-6,
+html body .footer .region-footer #block-block-5 {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+  }
+  html body .footer .region-footer #block-views-categories-block-1 table {
+    display: block;
+  }
+  html body .footer .region-footer #block-views-categories-block-1 table tbody {
+    display: block;
+  }
+  html body .footer .region-footer #block-views-categories-block-1 table tbody tr {
+    display: block;
+  }
+  html body .footer .region-footer #block-views-categories-block-1 table tbody tr td {
+    display: block;
+  }
+  html body .footer .region-footer #block-block-6 .social-buttons {
+    text-align: center;
+    margin: 20px 0;
+  }
+  html body .footer .footer-counters {
+    display: block;
+  }
+  html body .footer .footer-counters > div {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  html body #search-block-form--2 .form-control.form-text {
+    padding-left: 35px;
+  }
+  html body #search-block-form--2 .form-group {
+    margin-bottom: 0;
+  }
+  html body.page-search-node #search-block-form--2 {
+    display: none;
+  }
+  html body.page-question .question-row .question-so {
+    font-size: 42px;
+    margin: 25px;
+  }
 }
 
 /*# sourceMappingURL=b3.css.map */

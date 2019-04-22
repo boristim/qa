@@ -799,6 +799,7 @@ html {
       }
     }
 
+    #search-block-form--2,
     #search-block-form {
       .form-control {
         &.form-text {
@@ -840,6 +841,7 @@ html {
       margin-top: 0;
       padding-top: 15px;
       z-index: 1;
+
       .region-footer {
         display: table;
         position: relative;
@@ -1273,6 +1275,7 @@ html {
 
       form {
         padding: 20px;
+
         textarea,
         input[type=password],
         input[type=email],
@@ -1282,18 +1285,149 @@ html {
           border-radius: 10px;
         }
       }
+    }
+  }
+}
 
-      #cboxTitle {
-        //display: none !important;
+@media screen and (max-width: 768px) {
+  html {
+    body {
+      .navbar-toggle {
+        float: left;
+        margin-right: 0;
+      }
+
+      header {
+        &#navbar {
+          .navbar-header {
+            text-align: center;
+
+            .login-header,
+            .logo-top-svg {
+              height: 32px;
+              padding: 0;
+              margin: 8px 0;
+              display: inline-block;
+              text-decoration: none;
+
+              img {
+                height: 32px
+              }
+            }
+
+            .login-header {
+              float: right;
+              position: relative;
+
+              .dropdown-menu {
+                background: $siver;
+                left: auto;
+                right: 0;
+
+                a {
+                  &:hover,
+                  &:focus {
+                    background: $red;
+                  }
+                }
+              }
+            }
+          }
+
+          #navbar-collapse {
+            #block-block-4,
+            #block-locale-language,
+            #block-block-2 {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .main-container {
+
+        &.container-fluid {
+          padding: 0;
+        }
+
+        .row {
+          & > section {
+            &.col-xs-12 {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .footer {
+        .region-footer {
+          #block-views-categories-block-1,
+          #block-block-6,
+          #block-block-5 {
+            width: 100%;
+            display: block;
+            margin-top: 30px;
+          }
+
+          #block-views-categories-block-1 {
+            table {
+              display: block;
+
+              tbody {
+                display: block;
+
+                tr {
+                  display: block;
+
+                  td {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+          #block-block-6 {
+            .social-buttons {
+              text-align: center;
+              margin: 20px 0;
+            }
+          }
+        }
+
+        .footer-counters {
+          display: block;
+
+          & > div {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+      #search-block-form--2{
+        .form-control.form-text{
+          padding-left: 35px;
+        }
+        .form-group{
+          margin-bottom: 0;
+        }
+      }
+      &.page-search-node{
+        #search-block-form--2{
+          display:none;
+        }
+      }
+      &.page-question{
+        .question-row {
+          .question-so {
+            font-size: 42px;
+            margin:25px
+          }
+        }
       }
     }
   }
 }
 
-@media screen and (min-width:768px) {
-  html{
-    body{
 
-    }
-  }
-}

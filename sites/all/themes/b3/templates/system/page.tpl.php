@@ -95,11 +95,6 @@ if (!$show_only_content) {
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
     <div class="<?php print $container_class; ?>">
       <div class="navbar-header">
-        <?php if ($logo): ?>
-          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
-          </a>
-        <?php endif; ?>
 
         <?php if (!empty($site_name)): ?>
           <a class="name navbar-brand" href="<?php print $front_page; ?>"
@@ -114,8 +109,28 @@ if (!$show_only_content) {
             <span class="icon-bar"></span>
           </button>
         <?php endif; ?>
-      </div>
 
+        <a href='/' class='logo-top-svg visible-xs'>
+          <img src="/sites/default/files/theme-img/logo-book.svg" alt="">
+          <img src="/sites/default/files/theme-img/logo-text.svg" alt="">
+        </a>
+        <div class="visible-xs login-header">
+          <?php if ($GLOBALS['user']->uid) { ?>
+            <a href="/user" id="login_button" class="login-icon dropdown-toggle" data-toggle="dropdown"><img src="/sites/default/files/theme-img/homo.svg" alt="login"></a>
+            <ul class="dropdown-menu">
+              <li><a href="/user/<?php print $GLOBALS['user']->uid; ?>/edit"><?php print t('Cabinet'); ?></a></li>
+              <li><a href="/user/logout"><?php print t('Logout'); ?></a></li>
+            </ul>
+
+          <?php } else { ?>
+            <a href="/user" id="login_button" class="login-icon dropdown-toggle" data-toggle="dropdown"><img src="/sites/default/files/theme-img/homo.svg" alt="login"></a>
+            <ul class="dropdown-menu">
+              <li><a href="/user/login?width=360&height=190" class="colorbox-node"><?php print t('Login'); ?></a></li>
+              <li><a href="/user/register?width=300&height=140" class="colorbox-node"><?php print t('Register'); ?></a></li>
+            </ul>
+          <?php } ?>
+        </div>
+      </div>
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
         <div class="navbar-collapse collapse" id="navbar-collapse">
           <nav role="navigation" id="navigation-wrapper">
@@ -145,79 +160,86 @@ if (!$show_only_content) {
 
       <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
-
-    <div class="row">
-      <?php if (!empty($breadcrumb)) : ?>
-        <section id="breadcrumb" class="col-sm-12 hidden-xs">
-          <div class="col-sm-9 col-sm-offset-2">
-            <?php print $breadcrumb; ?>
-          </div>
-        </section>
+    <div class="visible-xs col-xs-12">
       <?php
-      endif;
+      $search_form = drupal_get_form('search_block_form');
+      print drupal_render($search_form);
       ?>
-      <?php if (!empty($page['sidebar_first'])): ?>
-        <aside class="col-sm-2 hidden-xs" role="complementary">
-          <?php print render($page['sidebar_first']); ?>
-        </aside>  <!-- /#sidebar-first -->
-      <?php endif; ?>
-      <section class="col-sm-8 col-xs-12">
-        <!--    <section--><?php //print $content_column_class;
-        ?><!-- > -->
-        <?php if (!empty($page['highlighted'])): ?>
-          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-        <?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if (!empty($title)): ?>
-          <?php if (arg(0) != 'question'): ?>
-            <h1 class="page-header"><?php print $title; ?></h1>
-          <?php
-          endif;
-          ?>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php if (!empty($tabs)): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
-        <?php if (!empty($page['help'])): ?>
-          <?php print render($page['help']); ?>
-        <?php endif; ?>
-        <?php if (!empty($action_links)): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
-
-      </section>
-
-      <?php if (!empty($page['sidebar_second'])): ?>
-        <aside class="col-sm-2 col-xs-12" id="sidebar_second" role="complementary">
-          <?php print render($page['sidebar_second']); ?>
-        </aside>  <!-- /#sidebar-second -->
-      <?php endif; ?>
-
     </div>
-
+  </div>
+  <div class="row">
+    <?php if (!empty($breadcrumb)) : ?>
+      <section id="breadcrumb" class="col-sm-12 hidden-xs">
+        <div class="col-sm-9 col-sm-offset-2">
+          <?php print $breadcrumb; ?>
+        </div>
+      </section>
     <?php
-    if ('question' == arg(0) && (!$is_admin)) {
-      ?>
-      <div class="container pos-fix" id="answer_form_container">
-        <div class="row">
-          <div class="col-sm-12">
-            <?php
-            $title = drupal_get_title();
-            module_load_include('inc', 'node', 'node.pages');
-            $form = node_add('answer');
-            print drupal_render($form);
-            drupal_set_title($title);
-            ?>
-          </div>
+    endif;
+    ?>
+    <?php if (!empty($page['sidebar_first'])): ?>
+      <aside class="col-sm-2 hidden-xs" role="complementary">
+        <?php print render($page['sidebar_first']); ?>
+      </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
+
+    <section class="col-sm-8 col-xs-12">
+      <!--    <section--><?php //print $content_column_class;
+      ?><!-- > -->
+      <?php if (!empty($page['highlighted'])): ?>
+        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+      <?php endif; ?>
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if (!empty($title)): ?>
+        <?php if (arg(0) != 'question'): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php
+        endif;
+        ?>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      <?php if (!empty($tabs)): ?>
+        <?php print render($tabs); ?>
+      <?php endif; ?>
+      <?php if (!empty($page['help'])): ?>
+        <?php print render($page['help']); ?>
+      <?php endif; ?>
+      <?php if (!empty($action_links)): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+
+    </section>
+
+    <?php if (!empty($page['sidebar_second'])): ?>
+      <aside class="col-sm-2 hidden-xs" id="sidebar_second" role="complementary">
+        <?php print render($page['sidebar_second']); ?>
+      </aside>  <!-- /#sidebar-second -->
+    <?php endif; ?>
+
+  </div>
+
+  <?php
+  if ('question' == arg(0) && (!$is_admin)) {
+    ?>
+    <div class="container pos-fix" id="answer_form_container">
+      <div class="row">
+        <div class="col-sm-12">
+          <?php
+          $title = drupal_get_title();
+          module_load_include('inc', 'node', 'node.pages');
+          $form = node_add('answer');
+          print drupal_render($form);
+          drupal_set_title($title);
+          ?>
         </div>
       </div>
-      <?php
-    }
-    ?>
+    </div>
+    <?php
+  }
+  ?>
   </div>
   <?php if (!empty($page['footer'])): ?>
     <footer class="footer container-fluid">

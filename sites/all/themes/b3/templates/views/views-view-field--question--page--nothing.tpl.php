@@ -40,3 +40,4 @@ $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['RE
          data-services="vkontakte,facebook,twitter,reddit,lj"></div>
   </div>
 </div>
+</div>
