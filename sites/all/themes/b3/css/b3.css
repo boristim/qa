@@ -377,36 +377,43 @@ html body.page-question .question-row .question-so:after {
   position: absolute;
   color: white;
 }
+html body.page-question .question-row .question-info-xs,
 html body.page-question .question-row .question-info {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: OpenSans, sans-serif;
   font-size: 17px;
 }
+html body.page-question .question-row .question-info-xs .question-views,
 html body.page-question .question-row .question-info .question-views {
   display: inline-block;
   background: url(/sites/default/files/theme-img/views.svg) no-repeat center left transparent;
-  background-size: 40%;
+  background-size: 24px;
   padding: 0 20px 0 25px;
 }
+html body.page-question .question-row .question-info-xs .question-answers,
 html body.page-question .question-row .question-info .question-answers {
   display: inline-block;
   background: url(/sites/default/files/theme-img/answers.svg) no-repeat center left transparent;
-  background-size: 60%;
-  padding: 0 0 0 20px;
+  background-size: 20px;
+  padding: 0 0 0 25px;
 }
+html body.page-question .question-row .question-info-xs .question-post,
 html body.page-question .question-row .question-info .question-post {
   white-space: nowrap;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share,
 html body.page-question .question-row .question-info .social-buttons-share {
   background: white;
   border-radius: 10px;
   padding: 5px;
   margin-top: 20px;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list {
   text-align: center;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__icon {
   width: 33px;
   height: 33px;
@@ -414,22 +421,28 @@ html body.page-question .question-row .question-info .social-buttons-share .ya-s
   padding: 0;
   background-size: contain;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item {
   margin: 5px;
   display: inline-block;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/vk-blue.svg) no-repeat center center white;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/fb-blue.svg) no-repeat center center white;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/tw-blue.svg) no-repeat center center white;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/rd-blue.svg) no-repeat center center white;
 }
+html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon,
 html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white;
 }
@@ -603,7 +616,7 @@ html body.page-question .answers-list .answers-to-question .views-field-field-ra
 html body #search-block-form--2 .form-control.form-text,
 html body #search-block-form .form-control.form-text {
   background: url(/sites/default/files/theme-img/search-icon.svg) no-repeat 7px 50% transparent;
-  background-size: 7%;
+  background-size: 20px;
   padding-left: 30px;
   border: 1px solid #1d71d8;
   color: #1d71d8;
@@ -919,6 +932,7 @@ html body #gtchanger {
   background: #e30613;
   line-height: 42px;
   text-align: center;
+  z-index: 1001;
 }
 html body #adv-sale img,
 html body #gtchanger img {
@@ -994,7 +1008,7 @@ html body header#navbar .navbar-header .logo-top-svg {
     height: 32px;
     padding: 0;
     margin: 8px 0;
-    display: inline-block;
+    display: inline-block !important;
     text-decoration: none;
   }
   html body header#navbar .navbar-header .login-header img,
@@ -1066,7 +1080,46 @@ html body .footer .region-footer #block-block-5 {
   }
   html body.page-question .question-row .question-so {
     font-size: 42px;
-    margin: 25px;
+  }
+  html body.page-question .question-row .question-info-xs {
+    text-align: right;
+    fint-size: 10 pz;
+    margin: 15px 0 -20px 0;
+  }
+  html body.page-question .question-row .question-info-xs > div {
+    font-size: 12px;
+  }
+  html body.page-question .question-row .question-info-xs .question-answers {
+    padding-right: 25px;
+    padding-left: 11px;
+    background-size: 10px;
+  }
+  html body.page-question .question-row .question-info-xs .question-views {
+    padding-left: 12px;
+    background-size: 11px;
+  }
+  html body.page-question .question-row .question-info-xs .question-username {
+    padding-right: 20px;
+    display: inline-block;
+  }
+  html body.page-question .question-row .question-info {
+    margin-top: -20px;
+  }
+  html body.page-question .question-row .question-info .question-post {
+    font-size: 12px;
+    padding-left: 20px;
+  }
+  html body.page-question .question-row .question-info .ya-share2__list {
+    display: block;
+    text-align: justify;
+  }
+  html body.page-question .question-row .question-info .ya-share2__list li {
+    width: 17%;
+  }
+  html body.page-question .views-field-field-question-details .field-content {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 10px;
   }
 }
 

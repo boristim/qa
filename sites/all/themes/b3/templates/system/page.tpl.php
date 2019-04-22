@@ -158,7 +158,7 @@ if (!$show_only_content) {
         <p class="lead"><?php print $site_slogan; ?></p>
       <?php endif; ?>
 
-      <?php print render($page['header']); ?>
+
     </header> <!-- /#page-header -->
     <div class="visible-xs col-xs-12">
       <?php
@@ -166,7 +166,7 @@ if (!$show_only_content) {
       print drupal_render($search_form);
       ?>
     </div>
-  </div>
+
   <div class="row">
     <?php if (!empty($breadcrumb)) : ?>
       <section id="breadcrumb" class="col-sm-12 hidden-xs">
@@ -190,6 +190,7 @@ if (!$show_only_content) {
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
       <a id="main-content"></a>
+      <?php print render($page['header']); ?>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
         <?php if (arg(0) != 'question'): ?>
