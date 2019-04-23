@@ -30,7 +30,6 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
   if (user_access('administer permissions')) {
     return;
   }
-
   $files = (isset($form_state['build_info']['files'])) ? $form_state['build_info']['files'] : array();
   $files[] = drupal_get_path('module', 'node') . '/node.pages.inc';
   $form_state['build_info']['files'] = $files;
@@ -62,7 +61,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
 
   }
 
-    $js = <<<JS
+  $js = <<<JS
 (function ($) {
   Drupal.behaviors.qa_module = {
     attach: function (context, settings) {
@@ -105,7 +104,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
 })(jQuery);
     
 JS;
-    $css = <<<CSS
+  $css = <<<CSS
 #edit-actions--3,
 #edit-field-qa-picture-und-0-ajax-wrapper{
   opacity:0;
@@ -114,19 +113,19 @@ JS;
   overflow:hidden
 }
 CSS;
-    $insert_image_title = t('Photo');
-    $insert_video_title = t('Video');
-    $emojies = [
-      '😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇',
-      '🙂', '🙃', '😉', '😌', '😍', '😘', '😗', '😙', '😚', '😋',
-      '😛', '😝', '😜', '🤓', '😎', '😏', '😒', '😞', '😔', '😟',
-      '😕', '🙁', '😣', '😖', '😫',
-    ];
-    $emolist = '';
-    foreach ($emojies as $npp => $emo) {
-      $emolist .= "<li>$emo</li>";
-    }
-    $html = <<<HTML
+  $insert_image_title = t('Photo');
+  $insert_video_title = t('Video');
+  $emojies = [
+    '😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇',
+    '🙂', '🙃', '😉', '😌', '😍', '😘', '😗', '😙', '😚', '😋',
+    '😛', '😝', '😜', '🤓', '😎', '😏', '😒', '😞', '😔', '😟',
+    '😕', '🙁', '😣', '😖', '😫',
+  ];
+  $emolist = '';
+  foreach ($emojies as $npp => $emo) {
+    $emolist .= "<li>$emo</li>";
+  }
+  $html = <<<HTML
 <div id="answer_controls">
   <a href="#" id="add_media_button">
     <img id="img_add_media_button" src="/sites/default/files/theme-img/add-media.svg" alt="add media">
@@ -150,13 +149,10 @@ $emolist
 
 HTML;
 
-    $form['upload_button'] = ['#markup' => $html, '#weight' => -3.5];
-    $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
-    $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
-    $form['actions']['submit']['#attrributes']['class'][] = 'element-invisible';
-
-
-//  dpm($form);
+  $form['upload_button'] = ['#markup' => $html, '#weight' => -3.5];
+  $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
+  $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
+  $form['actions']['submit']['#attrributes']['class'][] = 'element-invisible';
 }
 
 function _qa_form_answer_node_form_validate($form, &$form_state) {
@@ -171,7 +167,7 @@ function _qa_form_answer_node_form_submit($form, &$form_state) {
   if (!user_access('edit any answer content')) {
     drupal_set_message(t('Your answer will be published after moderation'));
   }
-  $_GET['destination'] = '/question/' . arg(1);
+  $_GET['destination'] = drupal_get_path_alias('node/' . arg(1));
 }
 
 /**
@@ -211,7 +207,8 @@ function qa_node_submit($node, $form, &$form_state) {
       $node->title = mb_substr($title, 0, 60);
 
       $node->status = user_access('edit any question content') ? 1 : 0;
-      if ((!isset($node->nid)) && (arg(0) == 'question')) {
+      if ((!isset($node->nid)) && (arg(0) == 'node')) {
+//      if ((!isset($node->nid)) && (arg(0) == 'question')) {
         $node->field_question_ref[LANGUAGE_NONE][0]['target_id'] = arg(1);
       }
       break;

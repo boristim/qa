@@ -592,6 +592,7 @@ html {
       }
 
       .views-field-field-seo-rating {
+        min-height: 300px;
         .h2 {
           color: $bg;
           font-size: 44px;
@@ -1617,7 +1618,7 @@ html {
           .field-content {
             font-size: 15px;
             line-height: 18px;
-            padding: 10px;
+            padding: 15px 10px 0 10px;
           }
         }
 
@@ -1625,6 +1626,9 @@ html {
           .answers-to-question {
             .views-field-field-rate {
               .answer-row {
+                &:after{
+                  right:10px;
+                }
                 table {
                   tr {
                     td {
@@ -1765,7 +1769,7 @@ html {
           }
         }
       }
-
+// html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row::afte
       &.page-main {
         .view-id-main {
           .views-row {

@@ -451,6 +451,9 @@ html body.node-type-question .question-row .question-info-xs .social-buttons-sha
 html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white;
 }
+html body.node-type-question .views-field-field-seo-rating {
+  min-height: 300px;
+}
 html body.node-type-question .views-field-field-seo-rating .h2 {
   color: #1d71d8;
   font-size: 44px;
@@ -1225,7 +1228,10 @@ html body header#navbar #navbar-collapse #block-block-2 {
   html body.node-type-question .views-field-field-question-details .field-content {
     font-size: 15px;
     line-height: 18px;
-    padding: 10px;
+    padding: 15px 10px 0 10px;
+  }
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row:after {
+    right: 10px;
   }
   html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
     min-height: 1px;

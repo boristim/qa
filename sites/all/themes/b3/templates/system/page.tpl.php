@@ -230,7 +230,7 @@ if (!$show_only_content) {
     </div>
 
     <?php
-    if ('question' == arg(0) && (!$is_admin)) {
+    if (isset($node) && ($node->type == 'question') && (!$is_admin)) {
       ?>
       <div class="container pos-fix" id="answer_form_container">
         <div class="row">
