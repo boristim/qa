@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @font-face {
+  font-display: swap;
   font-family: Helvetica;
   src: url("../font/HelveticaRegular.eot");
   src: url("../font/HelveticaRegular.eot?iefix") format("eot"), url("../font/HelveticaRegular.woff") format("woff"), url("../font/HelveticaRegular.ttf") format("truetype");
@@ -7,6 +8,7 @@
   font-style: normal;
 }
 @font-face {
+  font-display: swap;
   font-family: HelveticaBold;
   src: url("../font/HelveticaBold.eot");
   src: url("../font/HelveticaBold.eot?iefix") format("eot"), url("../font/HelveticaBold.woff") format("woff"), url("../font/HelveticaBold.ttf") format("truetype");
@@ -14,14 +16,15 @@
   font-style: normal;
 }
 @font-face {
+  font-display: swap;
   font-family: PFDinTextCondPro;
   src: url("../font/pfdintextcondpro-regular.ttf");
   font-style: normal;
 }
 @font-face {
+  font-display: swap;
   font-family: OpenSans;
   src: url("../font/OpenSans-Regular.ttf");
-  font-style: normal;
 }
 html body {
   background: #EDEDED;
@@ -292,7 +295,6 @@ html body #block-views-video-lefft-block ul li a:before {
   width: 70px;
   height: 70px;
   background: transparent url(/sites/default/files/theme-img/play2.png) 21px center no-repeat;
-  background-size: auto;
   background-size: 50%;
   content: "";
   margin: -35px 0 0 -45px;
@@ -358,7 +360,6 @@ html body.page-question .question-row .question-so:before {
   top: -2.2rem;
   left: 2rem;
   position: absolute;
-  color: white;
   border: 6px solid #1d71d8;
 }
 html body.page-question .question-row .question-so:after {
@@ -875,7 +876,6 @@ html body #answer_form_container #answer-node-form #answer_controls a#add_media_
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
-  overflow: hidden;
 }
 html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
   background: #e30613;
@@ -1132,6 +1132,8 @@ html body header#navbar #navbar-collapse #block-block-2 {
     margin-bottom: 20px;
   }
   html body .search-form-xs #search-block-form--2 {
+    width: auto;
+    margin-right: 30px;
     padding: 20px 10px;
     margin-bottom: -19px;
   }
@@ -1140,6 +1142,30 @@ html body header#navbar #navbar-collapse #block-block-2 {
   }
   html body .search-form-xs #search-block-form--2 .form-group {
     margin-bottom: 0;
+  }
+  html body .search-form-xs .language-switcher-locale-url {
+    float: right;
+    margin: -38px 5px 0 0;
+    padding: 0;
+  }
+  html body .search-form-xs .language-switcher-locale-url li {
+    list-style: none;
+    margin: 0;
+    line-height: 12px;
+  }
+  html body .search-form-xs .language-switcher-locale-url li a {
+    line-height: 20px;
+    font-size: 9px;
+    background: #1d71d8;
+    color: white;
+    border-radius: 4px;
+    padding: 3px;
+    text-transform: uppercase;
+    border: 1px solid #1d71d8;
+  }
+  html body .search-form-xs .language-switcher-locale-url li a.active {
+    color: #1d71d8;
+    background: white;
   }
   html body.page-search-node #search-block-form--2 {
     display: none;
@@ -1166,7 +1192,6 @@ html body header#navbar #navbar-collapse #block-block-2 {
   }
   html body.page-question .question-row .question-info-xs {
     text-align: right;
-    fint-size: 10 pz;
     margin: 15px 0 -20px 0;
   }
   html body.page-question .question-row .question-info-xs > div {

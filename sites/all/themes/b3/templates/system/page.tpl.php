@@ -192,6 +192,10 @@ if (!$show_only_content) {
           $search_form = drupal_get_form('search_block_form');
           print drupal_render($search_form);
           ?>
+          <ul class="language-switcher-locale-url">
+            <li class="ru first active"><a href="/ru/question/2" class="language-link active language-link active" xml:lang="ru">Rus</a></li>
+            <li class="en last"><a href="/en/node/124" class="language-link language-link" xml:lang="en">Eng</a></li>
+          </ul>
         </div>
 
         <?php print render($title_prefix); ?>

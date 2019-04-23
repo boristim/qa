@@ -1,8 +1,9 @@
 @charset "utf-8";
 $bg: #1d71d8;
 $red: #e30613;
-$siver: #dadada;
+$silver: #dadada;
 @font-face {
+  font-display: swap;
   font-family: Helvetica;
   src: url("../font/HelveticaRegular.eot");
   src: url("../font/HelveticaRegular.eot?iefix") format('eot'),
@@ -13,6 +14,7 @@ $siver: #dadada;
 }
 
 @font-face {
+  font-display: swap;
   font-family: HelveticaBold;
   src: url("../font/HelveticaBold.eot");
   src: url("../font/HelveticaBold.eot?iefix") format('eot'),
@@ -23,15 +25,16 @@ $siver: #dadada;
 }
 
 @font-face {
+  font-display: swap;
   font-family: PFDinTextCondPro;
   src: url("../font/pfdintextcondpro-regular.ttf");
   font-style: normal;
 }
 
 @font-face {
+  font-display: swap;
   font-family: OpenSans;
   src: url("../font/OpenSans-Regular.ttf");
-  font-style: normal;
 }
 
 html {
@@ -405,7 +408,6 @@ html {
               width: 70px;
               height: 70px;
               background: transparent url(/sites/default/files/theme-img/play2.png) 21px center no-repeat;
-              background-size: auto;
               background-size: 50%;
               content: '';
               margin: -35px 0 0 -45px;
@@ -492,7 +494,6 @@ html {
             top: -2.2rem;
             left: 2rem;
             position: absolute;
-            color: white;
             border: 6px solid $bg;
           }
 
@@ -998,6 +999,7 @@ html {
       width: 900px;
       margin-right: -450px;
       z-index: 1000;
+
       #answer-node-form {
         width: 100%;
         background: $bg;
@@ -1132,7 +1134,6 @@ html {
                     cursor: pointer;
                     overflow: hidden;
                     white-space: nowrap;
-                    overflow: hidden;
                   }
 
                   &:hover {
@@ -1230,7 +1231,7 @@ html {
         width: 0;
         height: 27px;
         line-height: 27px;
-        background: $siver;
+        background: $silver;
         color: $red;
         overflow: hidden;
         font-size: 21px;
@@ -1322,7 +1323,7 @@ html {
               position: relative;
 
               .dropdown-menu {
-                background: $siver;
+                background: $silver;
                 left: auto;
                 right: 0;
 
@@ -1479,10 +1480,15 @@ html {
         }
         */
       }
+
       .search-form-xs {
         float: none;
         margin-bottom: 20px;
+
+
         #search-block-form--2 {
+          width: auto;
+          margin-right: 30px;
           padding: 20px 10px;
           margin-bottom: -19px;
 
@@ -1492,6 +1498,34 @@ html {
 
           .form-group {
             margin-bottom: 0;
+          }
+        }
+
+        .language-switcher-locale-url {
+          float: right;
+          margin: -38px 5px 0 0;
+          padding: 0;
+
+          li {
+            list-style: none;
+            margin: 0;
+            line-height: 12px;
+
+            a {
+              line-height: 20px;
+              font-size: 9px;
+              background: $bg;
+              color: white;
+              border-radius: 4px;
+              padding: 3px;
+              text-transform: uppercase;
+              border: 1px solid $bg;
+
+              &.active {
+                color: $bg;
+                background: white;
+              }
+            }
           }
         }
       }
@@ -1504,31 +1538,34 @@ html {
 
       &.page-question {
         .question-row {
-          .read-also{
+          .read-also {
             position: relative;
             //margin-top: -20px;
-            a{
+            a {
               padding: 3px 7px;
               position: absolute;
-              top:-30px;
-              right:20px;
+              top: -30px;
+              right: 20px;
               display: inline-block;
               border-radius: 5px 5px 0 0;
               background: $bg;
-              color:white;
+              color: white;
               text-decoration: none;
+
               &:focus,
-              &:hover{
+              &:hover {
                 background: $red;
               }
             }
           }
+
           .question-so {
             font-size: 42px;
           }
+
           .question-info-xs {
             text-align: right;
-            fint-size: 10 pz;
+            //font-size: 10 px;
             margin: 15px 0 -20px 0;
 
             & > div {
@@ -1668,9 +1705,10 @@ html {
             }
 
             #answer-node-form {
-              &:after{
-                right:20px;
+              &:after {
+                right: 20px;
               }
+
               & > div {
                 width: 100%;
                 min-width: 200px;
@@ -1703,24 +1741,28 @@ html {
             }
           }
         }
-        .views-field-field-seo-rating{
-          .question-query-xs{
-            width:250px;
-            margin:20px auto;
+
+        .views-field-field-seo-rating {
+          .question-query-xs {
+            width: 250px;
+            margin: 20px auto;
           }
-          .seo-img-rate{
+
+          .seo-img-rate {
             margin: 20px 0;
             min-height: 200px;
-            .seo-rate{
-              left:50%;
+
+            .seo-rate {
+              left: 50%;
               margin-left: -100px;
             }
           }
         }
       }
-      &.page-main{
-        .view-id-main{
-          .views-row{
+
+      &.page-main {
+        .view-id-main {
+          .views-row {
             padding-left: 0;
           }
         }
