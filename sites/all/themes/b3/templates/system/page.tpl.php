@@ -274,7 +274,7 @@ if (!$show_only_content) {
           <!-- GoTalk invintation code -->
           <script language="javascript" src="//www.gotalk.ru/invite?action=invitejs&account_id=2685"></script>
           <!--          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" style="position:fixed;_position:absolute;top:35%;right:0px;z-index:9999999;">-->
-          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" id="gtchanger"><img src="/sites/default/files/theme-img/online-query.svg" alt="gotalk"><span>ПОМОШЬ</span></a>
+          <a href="#" OnClick="javascript:DtalkOpenChat ();return false;" id="gtchanger"><img src="/sites/default/files/theme-img/online-query.svg" alt="gotalk"><span>ПОМОЩЬ</span></a>
           <a href="<?php print drupal_get_path_alias('/node/123'); ?>" id="adv-sale"><img src="/sites/default/files/theme-img/adv-sale.svg" alt="advert sales"><span>РЕКЛАМА НА САЙТЕ</span></a>
           <script language="javascript">
             var gotalk_img = (dtalk_online_operators > 0) ? "//www.gotalk.ru//i/invite_ranchor_2.gif" : "//www.gotalk.ru//i/invite_offline_ranchor_2.png";
