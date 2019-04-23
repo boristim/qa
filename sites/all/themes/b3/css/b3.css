@@ -1038,41 +1038,105 @@ html body header#navbar #navbar-collapse #block-block-2 {
   html body .main-container .row > section.col-xs-12 {
     padding: 0;
   }
-  html body .footer .region-footer #block-views-categories-block-1,
-html body .footer .region-footer #block-block-6,
-html body .footer .region-footer #block-block-5 {
-    width: 100%;
-    display: block;
-    margin-top: 30px;
+  html body .footer {
+    /*
+    .region-footer {
+
+      #block-views-categories-block-1,
+      #block-block-6,
+      #block-block-5 {
+        width: 100%;
+        display: block;
+        margin-top: 30px;
+      }
+
+      #block-views-categories-block-1 {
+        table {
+          display: block;
+
+          tbody {
+            display: block;
+
+            tr {
+              display: block;
+
+              td {
+                font-size: ;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      #block-block-6 {
+        .social-buttons {
+          text-align: center;
+          margin: 20px 0;
+        }
+      }
+    }
+
+    .footer-counters {
+      display: block;
+
+      & > div {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    */
   }
-  html body .footer .region-footer #block-views-categories-block-1 table {
-    display: block;
+  html body .footer .container {
+    padding: 0;
   }
-  html body .footer .region-footer #block-views-categories-block-1 table tbody {
-    display: block;
+  html body .footer .container .region-footer {
+    font-size: 5px;
+    line-height: 8px;
   }
-  html body .footer .region-footer #block-views-categories-block-1 table tbody tr {
-    display: block;
+  html body .footer .container .region-footer #block-block-5 .logo-bottom-svg img {
+    height: 14px;
   }
-  html body .footer .region-footer #block-views-categories-block-1 table tbody tr td {
-    display: block;
+  html body .footer .container .region-footer #block-views-categories-block-1 .views-view-grid tr td {
+    padding: 3px 0 0 3px;
   }
-  html body .footer .region-footer #block-block-6 .social-buttons {
-    text-align: center;
-    margin: 20px 0;
+  html body .footer .container .region-footer #block-views-categories-block-1 .views-view-grid tr td .field-content a {
+    font-size: 5px;
+    line-height: 8px;
+  }
+  html body .footer .container .region-footer #block-block-6 a {
+    font-size: 5px;
+    line-height: 8px;
+  }
+  html body .footer .container .region-footer #block-block-6 .social-buttons a {
+    margin: 0;
+  }
+  html body .footer .container .region-footer #block-block-6 .social-buttons a img {
+    width: 10px;
   }
   html body .footer .footer-counters {
-    display: block;
+    display: table-row;
   }
   html body .footer .footer-counters > div {
-    display: block;
-    width: 100%;
-    text-align: center;
+    display: table-cell;
+    width: 19%;
   }
-  html body #search-block-form--2 .form-control.form-text {
+  html body .footer .footer-counters > div a {
+    font-size: 5px;
+    line-height: 8px;
+  }
+  html body .search-form-xs {
+    float: none;
+  }
+  html body .search-form-xs #search-block-form--2 {
+    padding: 20px 10px;
+    margin-bottom: -19px;
+  }
+  html body .search-form-xs #search-block-form--2 .form-control.form-text {
     padding-left: 35px;
   }
-  html body #search-block-form--2 .form-group {
+  html body .search-form-xs #search-block-form--2 .form-group {
     margin-bottom: 0;
   }
   html body.page-search-node #search-block-form--2 {
@@ -1120,6 +1184,86 @@ html body .footer .region-footer #block-block-5 {
     font-size: 15px;
     line-height: 18px;
     padding: 10px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
+    min-height: 1px;
+    padding: 10px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-picture {
+    width: 100px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table {
+    height: 100px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-name-td {
+    vertical-align: bottom;
+    height: 50%;
+    min-height: 50px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-email-td {
+    vertical-align: top;
+    height: 50%;
+    min-height: 50px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-body {
+    width: 100%;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media {
+    text-align: center;
+    vertical-align: middle;
+    height: 63px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media > a {
+    padding: 0;
+    float: none;
+    margin: 5px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate {
+    text-align: right;
+  }
+  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate span {
+    display: inline;
+    font-size: 11px;
+  }
+  html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
+    border-left: none;
+  }
+  html body.page-question #answer_form_container {
+    right: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+  html body.page-question #answer_form_container .row .col-sm-12 {
+    padding: 0;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div {
+    width: 100%;
+    min-width: 200px;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div #edit-actions--3 {
+    display: none;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls {
+    width: 110px;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls a {
+    padding: 0 3px;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls a img {
+    height: 28px;
+  }
+  html body.page-question #answer_form_container .row #answer-node-form > div #edit-body textarea {
+    font-size: 11px;
+    padding: 0.5em;
+    height: 28px;
+  }
+  html body.page-question .views-field-field-seo-rating .seo-img-rate {
+    margin: 20px 0;
+    min-height: 200px;
+  }
+  html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
+    left: 50%;
+    margin-left: -100px;
   }
 }
 

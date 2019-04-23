@@ -1362,7 +1362,77 @@ html {
       }
 
       .footer {
+        .container {
+
+          padding: 0;
+
+          .region-footer {
+            font-size: 5px;
+            line-height: 8px;
+
+            #block-block-5 {
+              .logo-bottom-svg {
+
+                img {
+                  height: 14px;
+                }
+              }
+            }
+
+            #block-views-categories-block-1 {
+              .views-view-grid {
+                tr {
+                  td {
+                    padding: 3px 0 0 3px;
+
+                    .field-content {
+
+                      a {
+                        font-size: 5px;
+                        line-height: 8px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            #block-block-6 {
+              a {
+                font-size: 5px;
+                line-height: 8px;
+              }
+
+              .social-buttons {
+                a {
+                  margin: 0;
+
+                  img {
+                    width: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .footer-counters {
+          display: table-row;
+
+          & > div {
+            display: table-cell;
+            width: 19%;
+
+            a {
+              font-size: 5px;
+              line-height: 8px;
+            }
+          }
+        }
+
+        /*
         .region-footer {
+
           #block-views-categories-block-1,
           #block-block-6,
           #block-block-5 {
@@ -1382,6 +1452,7 @@ html {
                   display: block;
 
                   td {
+                    font-size: ;
                     display: block;
                   }
                 }
@@ -1406,15 +1477,22 @@ html {
             text-align: center;
           }
         }
+        */
       }
+      .search-form-xs {
+        float: none;
 
-      #search-block-form--2 {
-        .form-control.form-text {
-          padding-left: 35px;
-        }
+        #search-block-form--2 {
+          padding: 20px 10px;
+          margin-bottom: -19px;
 
-        .form-group {
-          margin-bottom: 0;
+          .form-control.form-text {
+            padding-left: 35px;
+          }
+
+          .form-group {
+            margin-bottom: 0;
+          }
         }
       }
 
@@ -1467,22 +1545,157 @@ html {
             .ya-share2__list {
               display: block;
               text-align: justify;
-              li{
-                width:17%;
+
+              li {
+                width: 17%;
               }
             }
           }
         }
-        .views-field-field-question-details{
-          .field-content{
+
+        .views-field-field-question-details {
+          .field-content {
             font-size: 15px;
             line-height: 18px;
             padding: 10px;
           }
         }
+
+        .answers-list {
+          .answers-to-question {
+            .views-field-field-rate {
+              .answer-row {
+                table {
+                  tr {
+                    td {
+                      min-height: 1px;
+                      padding: 10px;
+                    }
+
+                    .user-info-row {
+                      .user-picture {
+                        width: 100px;
+                      }
+
+                      .user-info {
+                        //width: 70%;
+                        table {
+                          height: 100px;
+
+                          .user-name-td {
+                            vertical-align: bottom;
+                            height: 50%;
+                            min-height: 50px;
+                          }
+
+                          .user-email-td {
+                            vertical-align: top;
+                            height: 50%;
+                            min-height: 50px;
+                          }
+                        }
+                      }
+                    }
+
+                    .answer-body {
+                      width: 100%;
+                    }
+
+                    .answer-media {
+                      text-align: center;
+                      vertical-align: middle;
+                      height: 63px;
+
+                      & > a {
+                        padding: 0;
+                        float: none;
+                        margin: 5px;
+                      }
+                    }
+
+                    .answer-rate {
+                      text-align: right;
+
+                      span {
+                        display: inline;
+                        font-size: 11px;
+                      }
+                    }
+
+                  }
+                }
+              }
+            }
+
+            .views-row-first {
+              .views-field-field-rate {
+                .answer-row {
+                  .answer-rate {
+                    border-left: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        #answer_form_container {
+          right: auto;
+          width: 100%;
+          margin-left: 0;
+
+          .row {
+            .col-sm-12 {
+              padding: 0;
+            }
+
+            #answer-node-form {
+              & > div {
+                width: 100%;
+                min-width: 200px;
+
+                #edit-actions--3 {
+                  display: none;
+                }
+
+                #answer_controls {
+                  width: 110px;
+
+                  a {
+                    padding: 0 3px;
+
+                    img {
+                      height: 28px;
+                    }
+                  }
+
+                }
+
+                #edit-body {
+                  textarea {
+                    font-size: 11px;
+                    padding: 0.5em;
+                    height: 28px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .views-field-field-seo-rating{
+          .seo-img-rate{
+            margin: 20px 0;
+            min-height: 200px;
+            .seo-rate{
+              left:50%;
+              margin-left: -100px;
+            }
+          }
+        }
       }
     }
   }
+
 }
 
 

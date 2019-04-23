@@ -71,7 +71,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
         return false;
       })
       $(document).on('click', '#submit_answer_button', function (e) {
-        $('#edit-submit--2').trigger('click');
+        $('#edit-submit--3').trigger('click');
         return false;
       })
       $(document).on('click', '#add_smile_button', function (e) {        
@@ -106,7 +106,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
     
 JS;
     $css = <<<CSS
-#edit-actions--2,
+#edit-actions--3,
 #edit-field-qa-picture-und-0-ajax-wrapper{
   opacity:0;
   height:1px;
