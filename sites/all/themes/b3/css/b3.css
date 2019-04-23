@@ -223,6 +223,7 @@ html body .question-query a {
 }
 html body .question-query a:hover {
   text-decoration: none;
+  background: #e30613;
 }
 html body #breadcrumb {
   padding: 0;
@@ -325,18 +326,18 @@ html body #block-views-articles-block .views-field-created span {
   color: #9d9d9c;
   font-size: 16px;
 }
-html body.page-question .views-field-field-question-details .field-content {
+html body.node-type-question .views-field-field-question-details .field-content {
   padding-top: 1em;
 }
-html body.page-question .views-field-field-question-details .field-content:first-letter {
+html body.node-type-question .views-field-field-question-details .field-content:first-letter {
   font-size: 46px;
   font-weight: bold;
 }
-html body.page-question .question-row {
+html body.node-type-question .question-row {
   background: #1d71d8;
   color: white;
 }
-html body.page-question .question-row .question-so {
+html body.node-type-question .question-row .question-so {
   font-size: 48px;
   font-weight: bold;
   margin-top: 2rem;
@@ -346,7 +347,7 @@ html body.page-question .question-row .question-so {
   padding: 1rem 2rem;
   position: relative;
 }
-html body.page-question .question-row .question-so:before {
+html body.node-type-question .question-row .question-so:before {
   display: block;
   width: 3rem;
   height: 3rem;
@@ -362,7 +363,7 @@ html body.page-question .question-row .question-so:before {
   position: absolute;
   border: 6px solid #1d71d8;
 }
-html body.page-question .question-row .question-so:after {
+html body.node-type-question .question-row .question-so:after {
   border: 6px solid #1d71d8;
   display: block;
   content: " ";
@@ -378,84 +379,84 @@ html body.page-question .question-row .question-so:after {
   position: absolute;
   color: white;
 }
-html body.page-question .question-row .question-info-xs,
-html body.page-question .question-row .question-info {
+html body.node-type-question .question-row .question-info-xs,
+html body.node-type-question .question-row .question-info {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: OpenSans, sans-serif;
   font-size: 17px;
 }
-html body.page-question .question-row .question-info-xs .question-views,
-html body.page-question .question-row .question-info .question-views {
+html body.node-type-question .question-row .question-info-xs .question-views,
+html body.node-type-question .question-row .question-info .question-views {
   display: inline-block;
   background: url(/sites/default/files/theme-img/views.svg) no-repeat center left transparent;
   background-size: 24px;
   padding: 0 20px 0 25px;
 }
-html body.page-question .question-row .question-info-xs .question-answers,
-html body.page-question .question-row .question-info .question-answers {
+html body.node-type-question .question-row .question-info-xs .question-answers,
+html body.node-type-question .question-row .question-info .question-answers {
   display: inline-block;
   background: url(/sites/default/files/theme-img/answers.svg) no-repeat center left transparent;
   background-size: 20px;
   padding: 0 0 0 25px;
 }
-html body.page-question .question-row .question-info-xs .question-post,
-html body.page-question .question-row .question-info .question-post {
+html body.node-type-question .question-row .question-info-xs .question-post,
+html body.node-type-question .question-row .question-info .question-post {
   white-space: nowrap;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share,
-html body.page-question .question-row .question-info .social-buttons-share {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share,
+html body.node-type-question .question-row .question-info .social-buttons-share {
   background: white;
   border-radius: 10px;
   padding: 5px;
   margin-top: 20px;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list {
   text-align: center;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__icon {
   width: 33px;
   height: 33px;
   margin: 0;
   padding: 0;
   background-size: contain;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item {
   margin: 5px;
   display: inline-block;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_vkontakte .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/vk-blue.svg) no-repeat center center white;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_facebook .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/fb-blue.svg) no-repeat center center white;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_twitter .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/tw-blue.svg) no-repeat center center white;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_reddit .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/rd-blue.svg) no-repeat center center white;
 }
-html body.page-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon,
-html body.page-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
+html body.node-type-question .question-row .question-info-xs .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon,
+html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white;
 }
-html body.page-question .views-field-field-seo-rating .h2 {
+html body.node-type-question .views-field-field-seo-rating .h2 {
   color: #1d71d8;
   font-size: 44px;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate {
   position: relative;
   text-align: center;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
   padding-top: 20px;
   position: absolute;
   top: 0;
@@ -469,11 +470,11 @@ html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
   font-size: 36px;
   background: #c6c6c6;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate .of-teen {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-rate .of-teen {
   font-size: 14px;
   color: #575756;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate .seo-rate-name {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-rate .seo-rate-name {
   display: block;
   color: #e30613;
   font-size: 14.5px;
@@ -482,7 +483,7 @@ html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate .s
   margin: 0 auto;
   text-transform: uppercase;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-picture {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-picture {
   position: absolute;
   top: 30px;
   right: 10%;
@@ -491,38 +492,38 @@ html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-picture
   border-radius: 50%;
   overflow: hidden;
 }
-html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-picture img {
+html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-picture img {
   max-width: 178px;
   min-height: 178px;
 }
-html body.page-question .views-field-field-seo-rating .seo-mottom-text:first-letter {
+html body.node-type-question .views-field-field-seo-rating .seo-mottom-text:first-letter {
   font-size: 44px;
   color: black;
 }
-html body.page-question .answers-title {
+html body.node-type-question .answers-title {
   color: #1d71d8;
   font-weight: bold;
   font-size: 34px;
   text-transform: uppercase;
   font-family: HelveticaBold, sans-serif;
 }
-html body.page-question .answers-list {
+html body.node-type-question .answers-list {
   margin-top: 20px;
 }
-html body.page-question .answers-list .answers-to-question {
+html body.node-type-question .answers-list .answers-to-question {
   background: transparent;
   border: none;
 }
-html body.page-question .answers-list .answers-to-question .views-row-first {
+html body.node-type-question .answers-list .answers-to-question .views-row-first {
   position: relative;
 }
-html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row {
+html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row {
   border: #e30613 5px solid;
 }
-html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
+html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
   border-left: 5px solid #e30613;
 }
-html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row:after {
+html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row:after {
   display: block;
   content: "Лучший ответ";
   font-family: PFDinTextCondPro, sans-serif;
@@ -536,71 +537,71 @@ html body.page-question .answers-list .answers-to-question .views-row-first .vie
   z-index: 1000;
   padding: 0 10px;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row {
   border: white 5px solid;
   background: white;
   margin: 10px 0;
   border-radius: 10px;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table {
   width: 100%;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
   padding: 20px;
   min-height: 100px;
   vertical-align: top;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture {
   width: 120px;
   min-height: 100px;
   padding: 20px 10px;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture img {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-picture img {
   width: 100px;
   display: block;
   max-width: 100%;
   height: auto;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info {
   width: 150px;
   padding: 20px 0;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table {
   min-height: 100px;
   height: 100%;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td {
   height: 50%;
   padding: 0;
   width: 100%;
   overflow: hidden;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-name-td {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-name-td {
   vertical-align: bottom;
   font-size: 20px;
   font-family: HelveticaBold, sans-serif;
   color: black;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-email-td {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .user-info table td.user-email-td {
   vertical-align: top;
   font-size: 12px;
   color: #9d9d9c;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-body {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-body {
   font-size: 14px;
   font-family: OpenSans, sans-serif;
   color: black;
   text-align: left;
   padding-left: 20px;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media {
   text-align: right;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media a {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-media a {
   display: inline-block;
   float: right;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate {
   border-left: 5px solid white;
   vertical-align: middle;
   text-align: center;
@@ -610,7 +611,7 @@ html body.page-question .answers-list .answers-to-question .views-field-field-ra
   font-weight: bold;
   width: 50px;
 }
-html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate span {
+html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table .answer-rate span {
   display: block;
   text-align: center;
 }
@@ -1033,12 +1034,6 @@ html body header#navbar #navbar-collapse #block-locale-language,
 html body header#navbar #navbar-collapse #block-block-2 {
     display: none;
   }
-  html body .main-container.container-fluid {
-    padding: 0;
-  }
-  html body .main-container .row > section.col-xs-12 {
-    padding: 0;
-  }
   html body .footer {
     /*
     .region-footer {
@@ -1170,10 +1165,10 @@ html body header#navbar #navbar-collapse #block-block-2 {
   html body.page-search-node #search-block-form--2 {
     display: none;
   }
-  html body.page-question .question-row .read-also {
+  html body.node-type-question .question-row .read-also {
     position: relative;
   }
-  html body.page-question .question-row .read-also a {
+  html body.node-type-question .question-row .read-also a {
     padding: 3px 7px;
     position: absolute;
     top: -30px;
@@ -1184,135 +1179,137 @@ html body header#navbar #navbar-collapse #block-block-2 {
     color: white;
     text-decoration: none;
   }
-  html body.page-question .question-row .read-also a:focus, html body.page-question .question-row .read-also a:hover {
+  html body.node-type-question .question-row .read-also a:focus, html body.node-type-question .question-row .read-also a:hover {
     background: #e30613;
   }
-  html body.page-question .question-row .question-so {
+  html body.node-type-question .question-row .question-so {
     font-size: 42px;
   }
-  html body.page-question .question-row .question-info-xs {
+  html body.node-type-question .question-row .question-info-xs {
     text-align: right;
     margin: 15px 0 -20px 0;
   }
-  html body.page-question .question-row .question-info-xs > div {
+  html body.node-type-question .question-row .question-info-xs > div {
     font-size: 12px;
   }
-  html body.page-question .question-row .question-info-xs .question-answers {
+  html body.node-type-question .question-row .question-info-xs .question-answers {
     padding-right: 25px;
     padding-left: 11px;
     background-size: 10px;
   }
-  html body.page-question .question-row .question-info-xs .question-views {
+  html body.node-type-question .question-row .question-info-xs .question-views {
     padding-left: 12px;
     background-size: 11px;
   }
-  html body.page-question .question-row .question-info-xs .question-username {
+  html body.node-type-question .question-row .question-info-xs .question-username {
     padding-right: 20px;
     display: inline-block;
   }
-  html body.page-question .question-row .question-info {
+  html body.node-type-question .question-row .question-info {
     margin-top: -20px;
   }
-  html body.page-question .question-row .question-info .question-post {
+  html body.node-type-question .question-row .question-info .question-post {
     font-size: 12px;
     padding-left: 20px;
   }
-  html body.page-question .question-row .question-info .ya-share2__list {
+  html body.node-type-question .question-row .question-info .ya-share2__list {
     display: block;
     text-align: justify;
   }
-  html body.page-question .question-row .question-info .ya-share2__list li {
+  html body.node-type-question .question-row .question-info .ya-share2__list li {
     width: 17%;
   }
-  html body.page-question .views-field-field-question-details .field-content {
+  html body.node-type-question .views-field-field-question-details .field-content {
     font-size: 15px;
     line-height: 18px;
     padding: 10px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {
     min-height: 1px;
     padding: 10px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-picture {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-picture {
     width: 100px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table {
     height: 100px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-name-td {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-name-td {
     vertical-align: bottom;
     height: 50%;
     min-height: 50px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-email-td {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .user-info-row .user-info table .user-email-td {
     vertical-align: top;
     height: 50%;
     min-height: 50px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-body {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-body {
     width: 100%;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media {
     text-align: center;
     vertical-align: middle;
     height: 63px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media > a {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-media > a {
     padding: 0;
     float: none;
     margin: 5px;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate {
     text-align: right;
   }
-  html body.page-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate span {
+  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr .answer-rate span {
     display: inline;
     font-size: 11px;
   }
-  html body.page-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
+  html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row .answer-rate {
     border-left: none;
   }
-  html body.page-question #answer_form_container {
+  html body.node-type-question #answer_form_container {
     right: auto;
     width: 100%;
     margin-left: 0;
+    margin-right: 0;
+    margin-left: -15px;
   }
-  html body.page-question #answer_form_container .row .col-sm-12 {
+  html body.node-type-question #answer_form_container .row .col-sm-12 {
     padding: 0;
   }
-  html body.page-question #answer_form_container .row #answer-node-form:after {
+  html body.node-type-question #answer_form_container .row #answer-node-form:after {
     right: 20px;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div {
     width: 100%;
     min-width: 200px;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div #edit-actions--3 {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div #edit-actions--3 {
     display: none;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div #answer_controls {
     width: 110px;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls a {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div #answer_controls a {
     padding: 0 3px;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div #answer_controls a img {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div #answer_controls a img {
     height: 28px;
   }
-  html body.page-question #answer_form_container .row #answer-node-form > div #edit-body textarea {
+  html body.node-type-question #answer_form_container .row #answer-node-form > div #edit-body textarea {
     font-size: 11px;
     padding: 0.5em;
     height: 28px;
   }
-  html body.page-question .views-field-field-seo-rating .question-query-xs {
+  html body.node-type-question .views-field-field-seo-rating .question-query-xs {
     width: 250px;
     margin: 20px auto;
   }
-  html body.page-question .views-field-field-seo-rating .seo-img-rate {
+  html body.node-type-question .views-field-field-seo-rating .seo-img-rate {
     margin: 20px 0;
     min-height: 200px;
   }
-  html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
+  html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
     left: 50%;
     margin-left: -100px;
   }

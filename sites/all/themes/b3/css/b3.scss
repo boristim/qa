@@ -39,7 +39,6 @@ $silver: #dadada;
 
 html {
   body {
-
     background: #EDEDED;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
@@ -315,6 +314,7 @@ html {
 
         &:hover {
           text-decoration: none;
+          background: $red;
         }
       }
     }
@@ -454,7 +454,8 @@ html {
       }
     }
 
-    &.page-question {
+    &.node-type-question {
+    //&.page-question {
       .views-field-field-question-details {
         .field-content {
           padding-top: 1em;
@@ -1350,13 +1351,13 @@ html {
       .main-container {
 
         &.container-fluid {
-          padding: 0;
+          //padding: 0;
         }
 
         .row {
           & > section {
             &.col-xs-12 {
-              padding: 0;
+              //padding: 0;
             }
           }
         }
@@ -1536,7 +1537,8 @@ html {
         }
       }
 
-      &.page-question {
+      &.node-type-question {
+      //&.page-question {
         .question-row {
           .read-also {
             position: relative;
@@ -1698,7 +1700,8 @@ html {
           right: auto;
           width: 100%;
           margin-left: 0;
-
+          margin-right: 0;
+          margin-left: -15px;
           .row {
             .col-sm-12 {
               padding: 0;
