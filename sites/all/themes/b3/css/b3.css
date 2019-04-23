@@ -326,6 +326,9 @@ html body #block-views-articles-block .views-field-created span {
   color: #9d9d9c;
   font-size: 16px;
 }
+html body.node-type-question .page-header {
+  display: none;
+}
 html body.node-type-question .views-field-field-question-details .field-content {
   padding-top: 1em;
 }

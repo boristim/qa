@@ -79,5 +79,14 @@
  *
  * @ingroup templates
  */
-print views_embed_view('question', 'page', $node->nid);
+if(!$teaser) {
+  print views_embed_view('question', 'page', $node->nid);
+}
+else{
+  ?>
+  <article id="question-<?php print $node->nid?>">
+    <a href="<?php print $node_url;?>"><h3><?php print $title;?></h3></a>
+  </article>
+<?php
+}
 

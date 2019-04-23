@@ -456,6 +456,9 @@ html {
 
     &.node-type-question {
     //&.page-question {
+      .page-header{
+        display: none;
+      }
       .views-field-field-question-details {
         .field-content {
           padding-top: 1em;
