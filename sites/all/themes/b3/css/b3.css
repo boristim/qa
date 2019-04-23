@@ -1129,6 +1129,7 @@ html body header#navbar #navbar-collapse #block-block-2 {
   }
   html body .search-form-xs {
     float: none;
+    margin-bottom: 20px;
   }
   html body .search-form-xs #search-block-form--2 {
     padding: 20px 10px;
@@ -1145,12 +1146,11 @@ html body header#navbar #navbar-collapse #block-block-2 {
   }
   html body.page-question .question-row .read-also {
     position: relative;
-    margin-top: 20px;
   }
   html body.page-question .question-row .read-also a {
-    padding: 3px;
+    padding: 3px 7px;
     position: absolute;
-    top: -40px;
+    top: -30px;
     right: 20px;
     display: inline-block;
     border-radius: 5px 5px 0 0;
@@ -1255,6 +1255,9 @@ html body header#navbar #navbar-collapse #block-block-2 {
   html body.page-question #answer_form_container .row .col-sm-12 {
     padding: 0;
   }
+  html body.page-question #answer_form_container .row #answer-node-form:after {
+    right: 20px;
+  }
   html body.page-question #answer_form_container .row #answer-node-form > div {
     width: 100%;
     min-width: 200px;
@@ -1276,6 +1279,10 @@ html body header#navbar #navbar-collapse #block-block-2 {
     padding: 0.5em;
     height: 28px;
   }
+  html body.page-question .views-field-field-seo-rating .question-query-xs {
+    width: 250px;
+    margin: 20px auto;
+  }
   html body.page-question .views-field-field-seo-rating .seo-img-rate {
     margin: 20px 0;
     min-height: 200px;
@@ -1283,6 +1290,9 @@ html body header#navbar #navbar-collapse #block-block-2 {
   html body.page-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
     left: 50%;
     margin-left: -100px;
+  }
+  html body.page-main .view-id-main .views-row {
+    padding-left: 0;
   }
 }
 

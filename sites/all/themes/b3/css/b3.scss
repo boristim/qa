@@ -1481,7 +1481,7 @@ html {
       }
       .search-form-xs {
         float: none;
-
+        margin-bottom: 20px;
         #search-block-form--2 {
           padding: 20px 10px;
           margin-bottom: -19px;
@@ -1506,11 +1506,11 @@ html {
         .question-row {
           .read-also{
             position: relative;
-            margin-top: 20px;
+            //margin-top: -20px;
             a{
-              padding: 3px;
+              padding: 3px 7px;
               position: absolute;
-              top:-40px;
+              top:-30px;
               right:20px;
               display: inline-block;
               border-radius: 5px 5px 0 0;
@@ -1668,6 +1668,9 @@ html {
             }
 
             #answer-node-form {
+              &:after{
+                right:20px;
+              }
               & > div {
                 width: 100%;
                 min-width: 200px;
@@ -1701,6 +1704,10 @@ html {
           }
         }
         .views-field-field-seo-rating{
+          .question-query-xs{
+            width:250px;
+            margin:20px auto;
+          }
           .seo-img-rate{
             margin: 20px 0;
             min-height: 200px;
@@ -1711,9 +1718,15 @@ html {
           }
         }
       }
+      &.page-main{
+        .view-id-main{
+          .views-row{
+            padding-left: 0;
+          }
+        }
+      }
     }
   }
-
 }
 
 
