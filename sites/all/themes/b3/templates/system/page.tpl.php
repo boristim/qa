@@ -173,7 +173,9 @@ if (!$show_only_content) {
       ?>
       <?php if (!empty($page['sidebar_first'])): ?>
         <aside class="col-sm-2 hidden-xs" role="complementary">
-          <?php print render($page['sidebar_first']); ?>
+          <div id="sidebar-first-content">
+            <?php print render($page['sidebar_first']); ?>
+          </div>
         </aside>  <!-- /#sidebar-first -->
       <?php endif; ?>
 

@@ -997,7 +997,7 @@ html {
       right: 50%;
       width: 900px;
       margin-right: -450px;
-
+      z-index: 1000;
       #answer-node-form {
         width: 100%;
         background: $bg;
@@ -1504,10 +1504,28 @@ html {
 
       &.page-question {
         .question-row {
+          .read-also{
+            position: relative;
+            margin-top: 20px;
+            a{
+              padding: 3px;
+              position: absolute;
+              top:-40px;
+              right:20px;
+              display: inline-block;
+              border-radius: 5px 5px 0 0;
+              background: $bg;
+              color:white;
+              text-decoration: none;
+              &:focus,
+              &:hover{
+                background: $red;
+              }
+            }
+          }
           .question-so {
             font-size: 42px;
           }
-
           .question-info-xs {
             text-align: right;
             fint-size: 10 pz;

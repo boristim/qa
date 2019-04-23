@@ -61,7 +61,7 @@ function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
     $form['body'][LANGUAGE_NONE][0]['value']['#attributes']['required'] = 'required';
 
   }
-  if (!user_access('edit any question content')) {
+
     $js = <<<JS
 (function ($) {
   Drupal.behaviors.qa_module = {
@@ -154,7 +154,7 @@ HTML;
     $form['#attached']['js'][] = ['data' => $js, 'type' => 'inline'];
     $form['#attached']['css'][] = ['data' => $css, 'type' => 'inline'];
     $form['actions']['submit']['#attrributes']['class'][] = 'element-invisible';
-  }
+
 
 //  dpm($form);
 }

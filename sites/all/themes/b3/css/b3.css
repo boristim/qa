@@ -762,6 +762,7 @@ html body #answer_form_container {
   right: 50%;
   width: 900px;
   margin-right: -450px;
+  z-index: 1000;
 }
 html body #answer_form_container #answer-node-form {
   width: 100%;
@@ -1141,6 +1142,24 @@ html body header#navbar #navbar-collapse #block-block-2 {
   }
   html body.page-search-node #search-block-form--2 {
     display: none;
+  }
+  html body.page-question .question-row .read-also {
+    position: relative;
+    margin-top: 20px;
+  }
+  html body.page-question .question-row .read-also a {
+    padding: 3px;
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    background: #1d71d8;
+    color: white;
+    text-decoration: none;
+  }
+  html body.page-question .question-row .read-also a:focus, html body.page-question .question-row .read-also a:hover {
+    background: #e30613;
   }
   html body.page-question .question-row .question-so {
     font-size: 42px;
