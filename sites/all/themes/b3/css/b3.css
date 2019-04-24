@@ -691,10 +691,11 @@ html body .footer .region-footer #block-views-categories-block-1 .views-view-gri
   line-height: 30px;
   font-family: HelveticaBold, sans-serif;
   text-transform: uppercase;
+  transition: text-shadow 500ms ease-in-out;
 }
 html body .footer .region-footer #block-views-categories-block-1 .views-view-grid tr td a:hover {
   text-decoration: none;
-  color: white;
+  text-shadow: 0 0 2px white;
 }
 html body .footer .region-footer #block-block-6 {
   display: table-cell;
