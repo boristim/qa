@@ -1624,11 +1624,18 @@ html {
 
         .answers-list {
           .answers-to-question {
+            .views-row-first{
+              .views-field-field-rate{
+                .answer-row {
+                  &:after{
+                    right:10px;
+                  }
+                }
+              }
+            }
             .views-field-field-rate {
               .answer-row {
-                &:after{
-                  right:10px;
-                }
+
                 table {
                   tr {
                     td {

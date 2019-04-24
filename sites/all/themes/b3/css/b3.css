@@ -1230,7 +1230,7 @@ html body header#navbar #navbar-collapse #block-block-2 {
     line-height: 18px;
     padding: 15px 10px 0 10px;
   }
-  html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row:after {
+  html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row:after {
     right: 10px;
   }
   html body.node-type-question .answers-list .answers-to-question .views-field-field-rate .answer-row table tr td {

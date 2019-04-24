@@ -22,7 +22,7 @@
  * the view is modified.
  */
 
-if ((arg(0) == 'question') && (is_numeric(arg(1)))
+if ((arg(0) == 'node') && (is_numeric(arg(1)))
   && ($q_question = node_load(arg(1)))
   && ($q_question->type == 'question')) {
   $q_question->field_view_count[LANGUAGE_NONE][0]['value'] =
