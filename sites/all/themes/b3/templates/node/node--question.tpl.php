@@ -78,6 +78,8 @@
  * @see template_process()
  *
  * @ingroup templates
+ * @var $attributes
+ * @var $title_attributes
  */
 if (!$teaser) {
   print views_embed_view('question', 'page', $node->nid);

@@ -200,10 +200,12 @@ if (!$show_only_content) {
 
         <?php print render($title_prefix); ?>
         <?php if (!empty($title)): ?>
-          <?php if (arg(0) != 'question'): ?>
-            <h1 class="page-header"><?php print $title; ?></h1>
           <?php
-          endif;
+          if ((arg(0) == 'node') && ($node = node_load(arg(1))) && ($node->type != 'question')) {
+            ?>
+            <h1 class="page-header"><?php print $title; ?></h1>
+            <?php
+          }
           ?>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
