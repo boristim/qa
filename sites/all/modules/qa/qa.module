@@ -372,17 +372,18 @@ function qa_form_video_lefft_node_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_form_FORM_ID_alter().
  */
 function qa_form_user_login_alter(&$form, &$form_state, $form_id) {
-  if (user_access('administer permissions')) {
+  if (user_has_role(4) || user_has_role(3)) {
     return;
   }
 
+  $form['name']['#attributes'][' type'] = 'email';
   $form['pass']['#description'] =
   $form['name']['#description'] = '';
   $form['pass']['#title_display'] =
   $form['name']['#title_display'] = 'invisible';
   $form['name']['#attributes']['required'] =
   $form['pass']['#attributes']['required'] = 'required';
-  $form['name']['#attributes']['placeholder'] = t('username or e-mail');
+  $form['name']['#attributes']['placeholder'] = t('e-mail');
   $form['pass']['#attributes']['placeholder'] = t('password');
 }
 
@@ -414,3 +415,4 @@ function qa_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 function qa_form_search_form_alter(&$form, &$form_state, $form_id) {
   $form['basic']['keys']['#attributes'][' type'] = 'search';
 }
+
