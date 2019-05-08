@@ -451,6 +451,19 @@ html body.node-type-question .question-row .question-info-xs .social-buttons-sha
 html body.node-type-question .question-row .question-info .social-buttons-share .ya-share2__list .ya-share2__item_service_lj .ya-share2__icon {
   background: url(/sites/default/files/theme-img/social/lj-blue.svg) no-repeat center center white;
 }
+html body.node-type-question .views-field-field-seo .field-collection-view-links {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+html body.node-type-question .views-field-field-seo .h2 {
+  color: #1d71d8;
+  font-size: 44px;
+}
 html body.node-type-question .views-field-field-seo-rating {
   min-height: 300px;
 }

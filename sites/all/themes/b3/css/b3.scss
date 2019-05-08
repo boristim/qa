@@ -592,6 +592,22 @@ html {
         }
       }
 
+      .views-field-field-seo {
+        .field-collection-view-links {
+          visibility: hidden;
+          height: 0;
+          width: 0;
+          position: absolute;
+          bottom:0;
+          right: 0;
+          display: none;
+        }
+        .h2 {
+          color: $bg;
+          font-size: 44px;
+        }
+      }
+
       .views-field-field-seo-rating {
         min-height: 300px;
 

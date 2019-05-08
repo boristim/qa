@@ -402,3 +402,17 @@ function qa_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   $form['account']['mail']['#attributes'][' type'] = 'email';
   $form['account']['mail']['#description'] = '';
 }
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function qa_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  $form['search_block_form']['#attributes'][' type'] = 'search';
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function qa_form_search_form_alter(&$form, &$form_state, $form_id) {
+  $form['basic']['keys']['#attributes'][' type'] = 'search';
+}

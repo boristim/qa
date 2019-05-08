@@ -27,7 +27,10 @@ if ((arg(0) == 'node') && (is_numeric(arg(1)))
   && ($q_question->type == 'question')) {
   $q_question->field_view_count[LANGUAGE_NONE][0]['value'] =
     isset($q_question->field_view_count[LANGUAGE_NONE][0]['value']) ? $q_question->field_view_count[LANGUAGE_NONE][0]['value'] + 1 : 1;
-  node_save($q_question);
+  try {
+    node_save($q_question);
+  } catch (Exception $e) {
+  }
 }
 $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
@@ -36,8 +39,7 @@ $url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['RE
   <?php print $output; ?>
   <div class="social-buttons-share">
     <script src="//yastatic.net/share2/share.js"></script>
-    <div class="ya-share2" data-url="<?php print $url; ?>" data-title="<?php drupal_get_title(); ?>"
-         data-services="vkontakte,facebook,twitter,reddit,lj"></div>
+    <div class="ya-share2" data-url="<?php print $url; ?>" data-title="<?php drupal_get_title(); ?>" data-services="vkontakte,facebook,twitter,reddit,lj"></div>
   </div>
 </div>
 </div>
