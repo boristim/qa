@@ -44,14 +44,20 @@ if (!isset($GLOBALS['first item on seo text'])) {
 }
 ?>
 <?php
-$img = image_style_url('medium', $content['field_seo_pictire'][0]['#item']['uri']);
+$img = isset($content['field_seo_pictire']) ? image_style_url('medium', $content['field_seo_pictire'][0]['#item']['uri']) : '';
+$rating = isset($content['field_seo_rating']) ? $content['field_seo_rating'][0]['#markup'] : '';
+$text = isset($content['field_seo_bottom']) ? $content['field_seo_bottom'][0]['#markup'] : '';
 ?>
 <div class="views-field-field-seo-rating field-collection">
   <div class="row">
-    <div class="seo-mottom-text col-sm-9 col-xs-12"><?php print $content['field_seo_bottom'][0]['#markup']; ?></div>
+    <div class="seo-mottom-text col-sm-9 col-xs-12"><?php print $text; ?></div>
     <div class="seo-img-rate col-xs-12 col-sm-3">
-      <div class="seo-rate"><?php print $content['field_seo_rating'][0]['#markup']; ?><span class="of-teen">/10</span><span class="seo-rate-name">рейтинг</span></div>
-      <div class="seo-picture"><img typeof="foaf:image" src="<?php print $img; ?>" alt/></div>
+      <div class="seo-rate"><?php print $rating; ?><span class="of-teen">/10</span><span class="seo-rate-name">рейтинг</span></div>
+      <div class="seo-picture"><?php
+        if ($img){
+        ?><img typeof="foaf:image" src="<?php print $img; ?>" alt/></div><?php
+      }
+      ?>
     </div>
   </div>
 </div>
