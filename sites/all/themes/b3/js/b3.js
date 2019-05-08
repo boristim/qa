@@ -2,6 +2,7 @@
   Drupal.behaviors.b3 = {
     attach: function (context, settings) {
       var bnr = $('#block-block-1');
+      var bnr0 = $('#block-block-9');
       var renderInit = function () {
         bindMenu();
         if ($('#sidebar_second').height() < $('.main-container').height()) {
@@ -10,6 +11,9 @@
         bnr.data('start-fix', bnr.offset().top);
         bnr.data('start-width', bnr.width());
         bnr.data('end-fix', $('#sidebar_second').height() + $('#sidebar_second').offset().top);
+        bnr0.data('start-fix', bnr0.offset().top);
+        bnr0.data('start-width', bnr0.width());
+        bnr0.data('end-fix', $('#sidebar_second').height() + $('#sidebar_second').offset().top);
       };
 
       $(document).ready(function () {
@@ -43,7 +47,6 @@
           }
         }
         if ($('#block-block-1').length) {
-          // console.log(bnr.data('end-fix'), bnr.offset().top + bnr.height())
           if (bnr.data('end-fix') < bnr.offset().top + bnr.height()) {
             bnr.css({'z-index': '-1'});
           } else {
@@ -57,6 +60,22 @@
 
           if ($(window).scrollTop() < bnr.data('start-fix')) {
             bnr.removeClass('pos-fix');
+          }
+        }
+        if ($('#block-block-9').length) {
+          if (bnr0.data('end-fix') < bnr0.offset().top + bnr0.height()) {
+            bnr0.css({'z-index': '-1'});
+          } else {
+            bnr0.css({'z-index': '0'});
+          }
+          if ($(window).scrollTop() > bnr0.offset().top - 30) {
+            bnr0.css({top: '30px'});
+            bnr0.addClass('pos-fix');
+            bnr0.width(bnr0.data('start-width'));
+          }
+
+          if ($(window).scrollTop() < bnr0.data('start-fix')) {
+            bnr0.removeClass('pos-fix');
           }
         }
       });
