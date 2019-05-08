@@ -455,10 +455,11 @@ html {
     }
 
     &.node-type-question {
-    //&.page-question {
-      .page-header{
+      //&.page-question {
+      .page-header {
         display: none;
       }
+
       .views-field-field-question-details {
         .field-content {
           padding-top: 1em;
@@ -593,6 +594,7 @@ html {
 
       .views-field-field-seo-rating {
         min-height: 300px;
+
         .h2 {
           color: $bg;
           font-size: 44px;
@@ -898,7 +900,8 @@ html {
                     text-decoration: none;
                     text-shadow: 0 0 2px white;
                   }
-                  transition: text-shadow 500ms ease-in-out ;
+
+                  transition: text-shadow 500ms ease-in-out;
                 }
               }
             }
@@ -1543,7 +1546,7 @@ html {
       }
 
       &.node-type-question {
-      //&.page-question {
+        //&.page-question {
         .question-row {
           .read-also {
             position: relative;
@@ -1625,15 +1628,16 @@ html {
 
         .answers-list {
           .answers-to-question {
-            .views-row-first{
-              .views-field-field-rate{
+            .views-row-first {
+              .views-field-field-rate {
                 .answer-row {
-                  &:after{
-                    right:10px;
+                  &:after {
+                    right: 10px;
                   }
                 }
               }
             }
+
             .views-field-field-rate {
               .answer-row {
 
@@ -1717,6 +1721,7 @@ html {
           margin-left: 0;
           margin-right: 0;
           margin-left: -15px;
+
           .row {
             .col-sm-12 {
               padding: 0;
@@ -1771,13 +1776,14 @@ html {
             min-height: 200px;
 
             .seo-rate {
-              left: 50%;
-              margin-left: -100px;
+              left: auto;
+              right: 170px;
             }
           }
         }
       }
-// html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row::afte
+
+      // html body.node-type-question .answers-list .answers-to-question .views-row-first .views-field-field-rate .answer-row::afte
       &.page-main {
         .view-id-main {
           .views-row {

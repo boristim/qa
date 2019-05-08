@@ -52,8 +52,9 @@
           } else {
             bnr.css({'z-index': '0'});
           }
-          if ($(window).scrollTop() > bnr.offset().top - 30) {
-            bnr.css({top: '30px'});
+          top_stop = 15;
+          if ($(window).scrollTop() > bnr.offset().top - top_stop) {
+            bnr.css({top: top_stop + 'px'});
             bnr.addClass('pos-fix');
             bnr.width(bnr.data('start-width'));
           }
@@ -68,8 +69,8 @@
           } else {
             bnr0.css({'z-index': '0'});
           }
-          if ($(window).scrollTop() > bnr0.offset().top - 30) {
-            bnr0.css({top: '30px'});
+          if ($(window).scrollTop() > bnr0.offset().top - top_stop) {
+            bnr0.css({top: top_stop + 'px'});
             bnr0.addClass('pos-fix');
             bnr0.width(bnr0.data('start-width'));
           }

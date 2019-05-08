@@ -1320,8 +1320,8 @@ html body header#navbar #navbar-collapse #block-block-2 {
     min-height: 200px;
   }
   html body.node-type-question .views-field-field-seo-rating .seo-img-rate .seo-rate {
-    left: 50%;
-    margin-left: -100px;
+    left: auto;
+    right: 170px;
   }
   html body.page-main .view-id-main .views-row {
     padding-left: 0;
