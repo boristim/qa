@@ -419,3 +419,12 @@ function qa_form_search_form_alter(&$form, &$form_state, $form_id) {
   $form['basic']['keys']['#attributes'][' type'] = 'search';
 }
 
+/**
+ * Implements hook_query_TAG_alter().
+ */
+function qa_query_debug_alter(QueryAlterableInterface $query) {
+  if (!$query->hasTag('debug')) {
+    $query->addTag('debug');
+    dpq($query);
+  }
+}
