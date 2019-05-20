@@ -50,43 +50,43 @@ $text = isset($content['field_seo_bottom']) ? $content['field_seo_bottom'][0]['#
 ?>
 <div class="views-field-field-seo-rating field-collection hidden-xs">
   <div class="row">
-    <div class="seo-mottom-text col-sm-9 col-xs-12"><?php print $text; ?></div>
-    <div class="seo-img-rate col-xs-12 col-sm-3">
+    <div class="seo-mottom-text col-sm-9"><?php print $text; ?></div>
+    <div class="seo-img-rate col-sm-3">
       <?php
       if ($rating) {
         ?>
         <div class="seo-rate"><?php print $rating; ?><span class="of-teen">/10</span><span class="seo-rate-name">рейтинг</span></div>
         <?php
       }
-      if ($img){
+      if ($img) {
+        ?>
+        <div class="seo-picture">
+          <img typeof="foaf:image" src="<?php print $img; ?>" alt/>
+        </div>
+        <?php
+      }
       ?>
-      <div class="seo-picture">
-        <img typeof="foaf:image" src="<?php print $img; ?>" alt/></div>
-
     </div>
-    <?php
-    }
-    ?>
   </div>
 </div>
 <div class="views-field-field-seo-rating field-collection visible-xs">
   <div class="row">
-    <div class="seo-img-rate col-xs-12 col-sm-3">
+    <div class="seo-img-rate col-xs-12">
       <?php
       if ($rating) {
         ?>
         <div class="seo-rate"><?php print $rating; ?><span class="of-teen">/10</span><span class="seo-rate-name">рейтинг</span></div>
         <?php
       }
-      if ($img){
+      if ($img) {
+        ?>
+        <div class="seo-picture">
+          <img typeof="foaf:image" src="<?php print $img; ?>" alt/>
+        </div>
+        <?php
+      }
       ?>
-      <div class="seo-picture">
-        <img typeof="foaf:image" src="<?php print $img; ?>" alt/></div>
-
     </div>
-    <?php
-    }
-    ?>
-    <div class="seo-mottom-text col-sm-9 col-xs-12"><?php print $text; ?></div>
+    <div class="seo-mottom-text col-xs-12"><?php print $text; ?></div>
   </div>
 </div>
