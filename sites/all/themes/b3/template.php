@@ -35,7 +35,46 @@ function b3_links__locale_block(&$vars) {
   $content = theme_links($vars);
   return $content;
 }
+/*function b3_links__locale_block($vars){
+  // the global $language variable tells you what the current language is
+  global $language;
 
+  // an array of list items
+  $items = array();
+  foreach($vars['links'] as $lang => $info) {
+
+    $name     = $info['language']->native;
+    $href     = isset($info['href']) ? $info['href'] : '';
+    $li_classes   = array('list-item-class');
+    // if the global language is that of this item's language, add the active class
+    if($lang === $language->language){
+      $li_classes[] = 'active';
+    }
+    $short_name = mb_substr($info['language']->name, 0, 3);
+//    $vars['links'][$language]['title'] = $name;
+//    $vars['links'][$language]['html'] = TRUE;
+
+    $link_classes = array('link-class1', 'link-class2');
+    $options = array('attributes' => array('class'    => $link_classes),
+      'language' => $info['language'],
+      'html'     => true
+    );
+    $link = l($short_name, $href, $options);
+
+    // display only translated links
+//    if ($href)
+      $items[] = array('data' => $link, 'class' => $li_classes);
+  }
+  $vars['links']['en']['href'] = 'node/124';
+  // output
+  $attributes = array('class' => array('my-list'));
+  $output = theme_item_list(array('items' => $items,
+    'title' => '',
+    'type'  => 'ul',
+    'attributes' => $attributes
+  ));
+  return $output;
+}*/
 function b3_form_alter(array &$form, array &$form_state = array(), $form_id = NULL) {
   if (isset($form_id)) {
     switch ($form_id) {
