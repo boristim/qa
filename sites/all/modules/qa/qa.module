@@ -27,9 +27,12 @@ function qa_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_form_FORM_ID_alter().
  */
 function qa_form_answer_node_form_alter(&$form, &$form_state, $form_id) {
+
   if (user_has_role(4) || user_has_role(3)) {
     return;
   }
+  unset($form['additional_settings']);
+//  var_export($form['additional_settings']);
   $files = (isset($form_state['build_info']['files'])) ? $form_state['build_info']['files'] : array();
   $files[] = drupal_get_path('module', 'node') . '/node.pages.inc';
   $form_state['build_info']['files'] = $files;
