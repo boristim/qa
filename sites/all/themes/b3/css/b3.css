@@ -33,6 +33,7 @@ html body {
 }
 html body .h3 {
   color: black;
+  font-size: 20px;
 }
 html body .h3 a {
   color: black;
@@ -42,8 +43,21 @@ html body .container-fluid.main-container {
   max-width: 1920px;
   padding-bottom: 90px;
 }
+html body h4, html body h3, html body h2, html body h1 {
+  color: #1d71d8;
+  font-family: "Roboto Slab", serif;
+}
+html body h1 {
+  font-size: 36px;
+}
+html body h2 {
+  font-size: 30px;
+}
 html body h3 {
-  font-size: 18px;
+  font-size: 21px;
+}
+html body h4 {
+  font-size: 19px;
 }
 html body #navbar {
   width: 100%;
@@ -356,6 +370,7 @@ html body.node-type-question .question-row .question-so {
   border: 6px solid white;
   padding: 1rem 2rem;
   position: relative;
+  color: white;
 }
 html body.node-type-question .question-row .question-so:before {
   display: block;
