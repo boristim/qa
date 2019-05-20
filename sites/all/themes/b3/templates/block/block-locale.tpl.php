@@ -37,24 +37,26 @@
  * @var $is_admin: Flags true when the current user is an administrator.
  * @var $block_html_id: A valid HTML ID and guaranteed unique.
  *
+ * @see bootstrap_preprocess_block()
  * @see template_preprocess()
  * @see template_preprocess_block()
+ * @see bootstrap_process_block()
  * @see template_process()
  *
- * @ingroup themeable
+ * @ingroup templates
  * @var $attributes
- * @var $content_attributes
+ * @var $title_attributes
+ * @var $title
  */
 ?>
-<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php /* print render($title_prefix); ?>
-<?php if ($block->subject): ?>
-  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-<?php endif;?>
-  <?php print render($title_suffix); */?>
+  <?php if ($title): ?>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+  <?php endif;?>
+  <?php print render($title_suffix); */ ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php print $content ?>
-  </div>
-</div>
+  <?php print $content ?>
+
+</section>
