@@ -139,8 +139,8 @@ html {
       #block-menu-menu-top-menu {
         display: table-cell;
         width: 100%;
-        padding-right: 52px;
-        height: 65px;
+        padding-right: 70px;
+        //height: 65px;
 
         .menu {
           background: $bg;
@@ -150,8 +150,15 @@ html {
             & > li {
               list-style: none;
               display: inline-block;
-              padding: 10px;
-
+              padding: 10px 5px;
+              &.more{
+                padding: 10px 0;
+                position: absolute;
+                width: 62px;
+                a{
+                  padding: 10px 0;
+                }
+              }
               a {
                 text-transform: uppercase;
                 padding: 10px 5px;

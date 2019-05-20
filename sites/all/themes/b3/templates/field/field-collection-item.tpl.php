@@ -38,7 +38,13 @@ if (!isset($GLOBALS['first item on seo text'])) {
     <img src="/sites/default/files/theme-img/query-sign.svg" alt="query" class="query-sign">
     <a href="/node/add/question?width=550&height=340" class="colorbox-node">Задать вопрос</a>
   </div>
+  <?php
+  /*
+  ?>
   <div class="h2 hidden-xs">Статья</div>
+  <?php
+  */
+  ?>
   <?php
   $GLOBALS['first item on seo text'] = 1;
 }
@@ -87,6 +93,8 @@ $text = isset($content['field_seo_bottom']) ? $content['field_seo_bottom'][0]['#
       }
       ?>
     </div>
+  </div>
+  <div class="row">
     <div class="seo-mottom-text col-xs-12"><?php print $text; ?></div>
   </div>
 </div>
