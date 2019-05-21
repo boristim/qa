@@ -378,6 +378,7 @@ html body.node-type-question .question-row .question-so {
   padding: 1rem 2rem;
   position: relative;
   color: white;
+  font-family: "HelveticaBol", Serif;
 }
 html body.node-type-question .question-row .question-so:before {
   display: block;

@@ -46,6 +46,7 @@ html {
     .h3 {
       color: black;
       font-size: 20px;
+
       a {
         color: black;
         font-size: 20px;
@@ -69,22 +70,27 @@ html {
       }
     }
 
-    h4,h3,h2,h1 {
-      color:$bg;
-    font-family:  'Roboto Slab',serif;
+    h4, h3, h2, h1 {
+      color: $bg;
+      font-family: 'Roboto Slab', serif;
     }
-    h1{
+
+    h1 {
       font-size: 36px;
     }
-    h2{
+
+    h2 {
       font-size: 30px;
     }
-    h3{
+
+    h3 {
       font-size: 21px;
     }
-    h4{
+
+    h4 {
       font-size: 19px;
     }
+
     #navbar {
       width: 100%;
 
@@ -151,14 +157,17 @@ html {
               list-style: none;
               display: inline-block;
               padding: 10px 5px;
-              &.more{
+
+              &.more {
                 padding: 10px 0;
                 position: absolute;
                 width: 62px;
-                a{
+
+                a {
                   padding: 10px 0;
                 }
               }
+
               a {
                 text-transform: uppercase;
                 padding: 10px 5px;
@@ -513,6 +522,8 @@ html {
           padding: 1rem 2rem;
           position: relative;
           color: white;
+          font-family: "HelveticaBol",Serif;
+
           &:before {
             display: block;
             width: 3rem;
