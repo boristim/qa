@@ -47,6 +47,12 @@ $silver: #dadada;
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-display: swap;
+  font-family: 'HelveticaBol';
+  src: url('../font/9206.otf');
+  font-style: normal;
+}
 
 html {
   body {
