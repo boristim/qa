@@ -37,6 +37,17 @@ $silver: #dadada;
   src: url("../font/OpenSans-Regular.ttf");
 }
 
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Slab';
+  src: url('../font/robotoslabbold.woff2') format('woff2'),
+  url('../font/robotoslabbold.woff') format('woff'),
+  url('../font/robotoslabbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 html {
   body {
     background: #EDEDED;
@@ -67,6 +78,13 @@ html {
             //z-index: 0;
           }
         }
+      }
+    }
+
+    #sidebar-first-content {
+      .h3,
+      .h2 {
+        color: $bg
       }
     }
 
@@ -522,7 +540,7 @@ html {
           padding: 1rem 2rem;
           position: relative;
           color: white;
-          font-family: "HelveticaBol",Serif;
+          font-family: "HelveticaBol", Serif;
 
           &:before {
             display: block;

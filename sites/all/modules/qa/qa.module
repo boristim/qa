@@ -428,3 +428,25 @@ function qa_query_debug_alter(QueryAlterableInterface $query) {
     dpq($query);
   }
 }
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function qa_html_head_alter(&$head_elements) {
+  //filtrvody.com/sites/all/themes/b3/css/b3.css
+  $el = [
+    '#type' => 'html_tag',
+    '#tag' => 'link',
+    '#attributes' => [
+      'rel' => 'preload',
+      'href' => '/sites/all/themes/b3/css/b3.css',
+      'as' => 'style',
+      'crossorign' => ''
+    ],
+  ];
+
+  $head_elements['bt_css'] = $el;
+}
+
+
+
