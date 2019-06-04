@@ -37,6 +37,11 @@ html body {
   background: #EDEDED;
   font-family: Helvetica, sans-serif;
   font-size: 18px; }
+  html body img {
+    max-width: 100%;
+    height: auto; }
+  html body img[src$=".svg"] {
+    max-width: 1000px; }
   html body .h3 {
     color: black;
     font-size: 20px; }
@@ -758,6 +763,8 @@ html body {
                 white-space: nowrap; }
               html body #answer_form_container #answer-node-form #answer_controls a#add_media_button ul li:hover {
                 background: #e30613; }
+  html body form .captcha {
+    display: none; }
   html body .pos-fix {
     position: fixed; }
   html body .pos-abs {

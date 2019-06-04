@@ -47,6 +47,7 @@ $silver: #dadada;
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-display: swap;
   font-family: 'HelveticaBol';
@@ -56,6 +57,15 @@ $silver: #dadada;
 
 html {
   body {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    img[src$=".svg"] {
+      max-width: 1000px;
+    }
+
     background: #EDEDED;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
@@ -258,7 +268,7 @@ html {
           }
 
           img {
-
+            //max-width: 1000px;
             height: 41.4px;
           }
         }
@@ -950,6 +960,7 @@ html {
             display: block;
 
             img {
+              //max-width: 1000px;
               height: 41.4px;
               display: block;
               margin: 5px auto;
@@ -1233,6 +1244,12 @@ html {
             }
           }
         }
+      }
+    }
+
+    form {
+      .captcha {
+        display: none;
       }
     }
 

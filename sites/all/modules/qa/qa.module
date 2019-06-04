@@ -444,8 +444,11 @@ function qa_html_head_alter(&$head_elements) {
       'crossorign' => ''
     ],
   ];
-
+//  var_export($head_elements);
   $head_elements['bt_css'] = $el;
+  $head_elements['system_meta_generator']['#attributes']['content'] = 'Drupal 8 (https://www.drupal.org)';
+  $head_elements['system_meta_generator']['#attached']['drupal_add_http_header'][0][1] = 'Drupal 8 (https://www.drupal.org)';
+  $head_elements['metatag_generator_0']['#value'] = 'Drupal 8 (https://www.drupal.org)';
 }
 
 
