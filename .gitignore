@@ -6,3 +6,7 @@ sites/*/settings*.php
 sites/*/private
 .idea/
 sites/*/themes/*/css/.sass-cache
+sites/default/files/bootstrap/
+sites/default/files/ctools/
+sites/default/files/inline/
+sites/all/themes/*/yarn.lock
