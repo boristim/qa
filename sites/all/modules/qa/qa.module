@@ -397,7 +397,10 @@ function qa_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   if (user_access('administer permissions')) {
     return;
   }
-
+//  $js = 'window.open("//ya.ru")';
+//  drupal_set_message(t('@js', ['@js' => '<script>'.$js.'</script>']),'status');
+//  drupal_add_js($js,['type'=>'inline']);
+//  drupal_page_is_cacheable(false);
   $form['account']['mail']['#title_display'] = 'invisible';
   $form['account']['mail']['#attributes']['required'] = 'required';
   $form['account']['mail']['#attributes']['placeholder'] = t('your e-mail');
